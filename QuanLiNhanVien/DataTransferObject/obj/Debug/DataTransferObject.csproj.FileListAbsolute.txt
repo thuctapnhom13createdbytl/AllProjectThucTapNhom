@@ -1,0 +1,6 @@
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.dll
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.pdb
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csprojAssemblyReference.cache
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csproj.CoreCompileInputs.cache
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.dll
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.pdb
