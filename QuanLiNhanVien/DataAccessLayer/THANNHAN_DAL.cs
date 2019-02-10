@@ -35,7 +35,8 @@ namespace DataAccessLayer
                 }
                 reader.Close();
                 return listTN;
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return null;
             }
