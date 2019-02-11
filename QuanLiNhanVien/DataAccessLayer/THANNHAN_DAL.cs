@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     class THANNHAN_DAL
     {
-        public static List<THANNHAN_DTO> loadAllTN()
+        public static List<THANNHAN_DTO> layTatCaThanNhan()
         {
             try
             {
