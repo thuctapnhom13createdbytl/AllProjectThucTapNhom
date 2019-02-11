@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    class THANNHAN_DAL
+    public class THANNHAN_DAL
     {
         public static List<THANNHAN_DTO> layTatCaThanNhan()
         {
@@ -31,12 +31,40 @@ namespace DataAccessLayer
                     tnDTO.GioiTinh = reader["GioiTinh"].ToString();
                     tnDTO.QuanHe = reader["QuanHe"].ToString();
                     tnDTO.NgaySinh = (DateTime)reader["NgaySinh"];
+                    tnDTO.tenNV = reader["HoTen"].ToString();
                     listTN.Add(tnDTO);
                 }
                 reader.Close();
                 return listTN;
             }
             catch (Exception e)
+            {
+                return null;
+            }
+        }
+        public static List<NHANVIEN_DTO> LoadComboBoxNV()
+        {
+            try
+            {
+                List<NHANVIEN_DTO> lstNhanVien = new List<NHANVIEN_DTO>();
+                SqlConnection db = DataProvider.dbContext;
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "LoadComboBoxNV";
+                cmd.Connection = db;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    NHANVIEN_DTO nvDTO = new NHANVIEN_DTO();
+                    nvDTO.MaNV = int.Parse(reader["MaNV"].ToString());
+                    nvDTO.Hoten = reader["HoTen"].ToString();
+                    lstNhanVien.Add(nvDTO);
+                }
+                reader.Close();
+                return lstNhanVien;
+            }
+            catch (Exception ex)
             {
                 return null;
             }

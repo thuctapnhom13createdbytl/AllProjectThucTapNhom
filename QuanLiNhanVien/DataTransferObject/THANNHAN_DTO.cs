@@ -13,6 +13,7 @@ namespace DataTransferObject
         public string GioiTinh { get; set; }
         public string QuanHe { get; set; }
         public Nullable<DateTime> NgaySinh { get; set; }
+        public string tenNV { get; set; }
         public THANNHAN_DTO()
         {
             this.MaNV = null;
@@ -20,6 +21,7 @@ namespace DataTransferObject
             this.GioiTinh = "";
             this.QuanHe = "";
             this.NgaySinh = null;
+            this.tenNV = "";
         }
     }
 }
