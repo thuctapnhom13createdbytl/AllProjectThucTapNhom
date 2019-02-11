@@ -507,7 +507,7 @@
             // 
             this.quanhe.HeaderText = "Quan hệ";
             this.quanhe.Name = "quanhe";
-            this.quanhe.Width = 200;
+            this.quanhe.Width = 300;
             // 
             // tenNV
             // 

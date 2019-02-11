@@ -29,5 +29,9 @@ namespace QuanLiNhanVien.GUI
                 frmMain.FrmMain.MetroContainer.Controls.Remove(uc);
             }
         }
+        private void layTatCaNhanVien()
+        {
+
+        }
     }
 }
