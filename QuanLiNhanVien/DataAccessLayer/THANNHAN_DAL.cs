@@ -69,5 +69,27 @@ namespace DataAccessLayer
                 return null;
             }
         }
+        public static int themTN(THANNHAN_DTO tnDTO)
+        {
+            try
+            {
+                DateTime ngaySinh = (DateTime)tnDTO.NgaySinh;
+                string setDate = ngaySinh.ToString("yyyyMMdd");
+                SqlConnection db = DataProvider.dbContext;
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO THANNHAN ( MaNV,TenTN,GioiTinh,NgaySinh,QuanHe)" +
+                                  " VALUES ( '" + tnDTO.MaNV + "', '" + tnDTO.TenTN + "'," +
+                                  " N'" + tnDTO.GioiTinh + "', " + " '" + tnDTO.NgaySinh + "', N'" +
+                                  tnDTO.QuanHe + "' )";
+                cmd.Connection = db;
+                return cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+        }
+
     }
 }

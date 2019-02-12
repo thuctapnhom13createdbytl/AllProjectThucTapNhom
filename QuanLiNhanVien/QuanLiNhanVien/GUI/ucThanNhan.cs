@@ -10,16 +10,18 @@ using System.Windows.Forms;
 using MetroFramework.Controls;
 using BusinessLogicLayer;
 using DataTransferObject;
+using DataAccessLayer;
 
 namespace QuanLiNhanVien.GUI
 {
     public partial class ucThanNhan : UserControl
     {
         BindingSource listNV = new BindingSource();
+        List<THANNHAN_DTO> listTN = THANNHAN_BUL.layTatCaThanNhan();
         public ucThanNhan()
         {
             InitializeComponent();
-            List<THANNHAN_DTO> listTN = THANNHAN_BUL.layTatCaThanNhan();
+            
             List<NHANVIEN_DTO> listNV = THANNHAN_BUL.LoadComboBoxNV();
             cbNhanVien.DisplayMember = "HoTen";
             cbNhanVien.ValueMember = "MaNV";
@@ -49,7 +51,8 @@ namespace QuanLiNhanVien.GUI
             tbQuanHe.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "QuanHe", true, DataSourceUpdateMode.Never));
             tbTenTN.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "TenTN", true, DataSourceUpdateMode.Never));
             cbGioiTinh.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "GioiTinh", true, DataSourceUpdateMode.Never));
-            mtMaNV.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
+           // mtMaNV.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
+            dtpkNgaySinh.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "NgaySinh", true, DataSourceUpdateMode.Never));
         }
 
         private void dtgvThanNhan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -68,7 +71,28 @@ namespace QuanLiNhanVien.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string a = cbGioiTinh.Text;
+
+            try
+            {
+                THANNHAN_DTO tnDTO = new THANNHAN_DTO();
+                tnDTO.MaNV = (int)cbNhanVien.SelectedValue;
+                tnDTO.GioiTinh = cbGioiTinh.Text;
+                tnDTO.NgaySinh = dtpkNgaySinh.Value;
+                tnDTO.QuanHe = tbQuanHe.Text;
+                tnDTO.tenNV = cbNhanVien.Text;
+                tnDTO.TenTN = tbTenTN.Text;
+                THANNHAN_BUL.themTN(tnDTO);
+                dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+            } catch (Exception ex)
+            {
+                MessageBox.Show("có lỗi khi thêm thân nhân");
+            }
+        }
+        private void ResetAll()
+        {
+            
+            tbQuanHe.Text = "";
+            tbTenTN.Text = "";
         }
     }
 }

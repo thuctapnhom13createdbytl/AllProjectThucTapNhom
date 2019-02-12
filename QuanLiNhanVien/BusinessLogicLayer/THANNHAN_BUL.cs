@@ -31,5 +31,9 @@ namespace BusinessLogicLayer
             lstNhanVien.Insert(0, nvDTO);
             return lstNhanVien;
         }
+        public static int themTN(THANNHAN_DTO tn)
+        {
+            return THANNHAN_DAL.themTN(tn);
+        }
     }
 }
