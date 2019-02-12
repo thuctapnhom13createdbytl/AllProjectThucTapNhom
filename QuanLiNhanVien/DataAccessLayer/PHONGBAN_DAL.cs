@@ -38,5 +38,10 @@ namespace DataAccessLayer
                 return null;
             }
         }
+        public void hello()
+        {
+
+        }
     }
+
 }
