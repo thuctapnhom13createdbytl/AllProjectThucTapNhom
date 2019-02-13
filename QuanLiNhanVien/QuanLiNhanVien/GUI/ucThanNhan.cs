@@ -26,6 +26,7 @@ namespace QuanLiNhanVien.GUI
             List<NHANVIEN_DTO> listNV = THANNHAN_BUL.LoadComboBoxNV();
             cbNhanVien.DisplayMember = "HoTen";
             cbNhanVien.ValueMember = "MaNV";
+            cbGioiTinh.Text = "Nam";
             dtgvThanNhan.DataSource = listTN;
             cbNhanVien.DataSource = listNV;
           //  bindingData();
@@ -163,9 +164,15 @@ namespace QuanLiNhanVien.GUI
         {
             cbNhanVien.Text = "Chưa có nhân viên";
             tbTenTN.Text = "";
-            cbGioiTinh.Text = "";
+            cbGioiTinh.Text = "Nam";
             tbQuanHe.Text = "";
             dtpkNgaySinh.Value = DateTime.Now;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            List<THANNHAN_DTO> listTN = THANNHAN_BUL.TimKiemTN(txtSearch.Text);
+            dtgvThanNhan.DataSource = listTN;
         }
     }
 }

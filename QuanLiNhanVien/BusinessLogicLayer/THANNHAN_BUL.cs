@@ -43,5 +43,10 @@ namespace BusinessLogicLayer
         {
             return THANNHAN_DAL.XoaTN(tenTN);
         }
+        public static List<THANNHAN_DTO> TimKiemTN(string str)
+        {
+            List<THANNHAN_DTO> listTN = THANNHAN_DAL.TimKiemTN(str);
+            return listTN;
+        }
     }
 }

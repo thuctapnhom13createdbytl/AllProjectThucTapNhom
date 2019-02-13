@@ -49,8 +49,8 @@ namespace DataAccessLayer
                 List<NHANVIEN_DTO> lstNhanVien = new List<NHANVIEN_DTO>();
                 SqlConnection db = DataProvider.dbContext;
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "LoadComboBoxNV";
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select MaNV, HoTen from NHANVIEN";
                 cmd.Connection = db;
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -126,6 +126,36 @@ namespace DataAccessLayer
             } catch (Exception ex)
             {
                 return -1;
+            }
+        }
+        public static List<THANNHAN_DTO> TimKiemTN(string str)
+        {
+            try
+            {
+                List<THANNHAN_DTO> listTN = new List<THANNHAN_DTO>();
+                SqlConnection db = DataProvider.dbContext;
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select THANNHAN.MaNV,TenTN,THANNHAN.GioiTinh,THANNHAN.NgaySinh,QuanHe,HoTen from THANNHAN,NHANVIEN where THANNHAN.MaNV = NHANVIEN.MaNV and THANNHAN.TenTN like N'%" + str + "%'";
+                cmd.Connection = db;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    THANNHAN_DTO tnDTO = new THANNHAN_DTO();
+                    tnDTO.MaNV = int.Parse(reader["MaNV"].ToString());
+                    tnDTO.TenTN = reader["TenTN"].ToString();
+                    tnDTO.GioiTinh = reader["GioiTinh"].ToString();
+                    tnDTO.QuanHe = reader["QuanHe"].ToString();
+                    tnDTO.NgaySinh = (DateTime)reader["NgaySinh"];
+                    tnDTO.tenNV = reader["HoTen"].ToString();
+                    listTN.Add(tnDTO);
+                }
+                reader.Close();
+                return listTN;
+            } catch (Exception ex)
+            {
+                return null;
             }
         }
     }
