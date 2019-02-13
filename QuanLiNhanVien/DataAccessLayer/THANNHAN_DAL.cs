@@ -79,7 +79,7 @@ namespace DataAccessLayer
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "INSERT INTO THANNHAN ( MaNV,TenTN,GioiTinh,NgaySinh,QuanHe)" +
-                                  " VALUES ( '" + tnDTO.MaNV + "', '" + tnDTO.TenTN + "'," +
+                                  " VALUES ( '" + tnDTO.MaNV + "', N'" + tnDTO.TenTN + "'," +
                                   " N'" + tnDTO.GioiTinh + "', " + " '" + tnDTO.NgaySinh + "', N'" +
                                   tnDTO.QuanHe + "' )";
                 cmd.Connection = db;
@@ -90,6 +90,43 @@ namespace DataAccessLayer
                 return -1;
             }
         }
+        public static int CapNhatTN(THANNHAN_DTO tnDTO,string tenTN)
+        {
+            try
+            {
+                DateTime ngaySinh = (DateTime)tnDTO.NgaySinh;
+                string setDate = ngaySinh.ToString("yyyyMMdd");
+                SqlConnection db = DataProvider.dbContext;
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE THANNHAN SET MaNV = "  + tnDTO.MaNV +
+                  ", NgaySinh = '" + setDate + "', " +
+                  "GioiTinh = N'" + tnDTO.GioiTinh + "', " +
+                  "TenTN = N'" + tnDTO.TenTN + "', " +
+                  "QuanHe = N'" + tnDTO.QuanHe +"'"+
+                  " WHERE TenTN = N'" + tenTN+"'";
+                cmd.Connection = db;
+                return cmd.ExecuteNonQuery();
+            } catch(Exception ex)
+            {
+                return -1;
+            }
+        }
+        public static int XoaTN(string TenTN)
+        {
 
+            try
+            {
+                SqlConnection db = DataProvider.dbContext;
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from THANNHAN where TenTN = N'" + TenTN + "'";
+                cmd.Connection = db;
+                return cmd.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                return -1;
+            }
+        }
     }
 }

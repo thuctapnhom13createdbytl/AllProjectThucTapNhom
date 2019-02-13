@@ -35,5 +35,13 @@ namespace BusinessLogicLayer
         {
             return THANNHAN_DAL.themTN(tn);
         }
+        public static int CapNhapTN(THANNHAN_DTO tn,string tenTN)
+        {
+            return THANNHAN_DAL.CapNhatTN(tn,tenTN);
+        }
+        public static int XoaTN(string tenTN)
+        {
+            return THANNHAN_DAL.XoaTN(tenTN);
+        }
     }
 }

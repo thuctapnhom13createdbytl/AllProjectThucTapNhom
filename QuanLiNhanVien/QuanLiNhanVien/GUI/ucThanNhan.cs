@@ -18,6 +18,7 @@ namespace QuanLiNhanVien.GUI
     {
         BindingSource listNV = new BindingSource();
         List<THANNHAN_DTO> listTN = THANNHAN_BUL.layTatCaThanNhan();
+        string TenTNUpdate;
         public ucThanNhan()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace QuanLiNhanVien.GUI
             cbNhanVien.ValueMember = "MaNV";
             dtgvThanNhan.DataSource = listTN;
             cbNhanVien.DataSource = listNV;
-            bindingData();
+          //  bindingData();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -53,20 +54,26 @@ namespace QuanLiNhanVien.GUI
             cbGioiTinh.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "GioiTinh", true, DataSourceUpdateMode.Never));
            // mtMaNV.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
             dtpkNgaySinh.DataBindings.Add(new Binding("Text", dtgvThanNhan.DataSource, "NgaySinh", true, DataSourceUpdateMode.Never));
+            this.TenTNUpdate = tbTenTN.Text;
         }
 
         private void dtgvThanNhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
-            //    int index = e.RowIndex;
-            //    DataGridViewRow dr = dtgvThanNhan.Rows[index];
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Error");
-            //}
+            try
+            {
+                int index = e.RowIndex;
+                DataGridViewRow dr = dtgvThanNhan.Rows[index];
+                cbNhanVien.Text = dr.Cells["tenNV"].Value.ToString();
+                tbTenTN.Text = dr.Cells["TenTN"].Value.ToString();
+                cbGioiTinh.Text = dr.Cells["GioiTinh"].Value.ToString();
+                tbQuanHe.Text = dr.Cells["QuanHe"].Value.ToString();
+                dtpkNgaySinh.Value = dr.Cells["ngaysinhTN"].Value == null ? DateTime.Now : DateTime.Parse(dr.Cells["ngaysinhTN"].Value.ToString());
+                this.TenTNUpdate = tbTenTN.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -82,10 +89,12 @@ namespace QuanLiNhanVien.GUI
                 tnDTO.tenNV = cbNhanVien.Text;
                 tnDTO.TenTN = tbTenTN.Text;
                 THANNHAN_BUL.themTN(tnDTO);
-                dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+               dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+                bindingData();
+                MessageBox.Show("Thêm mới thành công");
             } catch (Exception ex)
             {
-                MessageBox.Show("có lỗi khi thêm thân nhân");
+                MessageBox.Show(ex.Message);
             }
         }
         private void ResetAll()
@@ -93,6 +102,70 @@ namespace QuanLiNhanVien.GUI
             
             tbQuanHe.Text = "";
             tbTenTN.Text = "";
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                THANNHAN_DTO tnDTO = new THANNHAN_DTO();
+                tnDTO.MaNV = (int)cbNhanVien.SelectedValue;
+                tnDTO.GioiTinh = cbGioiTinh.Text;
+                tnDTO.NgaySinh = dtpkNgaySinh.Value;
+                tnDTO.QuanHe = tbQuanHe.Text;
+                tnDTO.tenNV = cbNhanVien.Text;
+                tnDTO.TenTN = tbTenTN.Text;
+                var a = this.TenTNUpdate;
+                int capnhat = THANNHAN_BUL.CapNhapTN(tnDTO,this.TenTNUpdate);
+                if (capnhat > 0)
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                } else
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+                }
+                dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+             //   bindingData();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dtgvThanNhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int xoa = THANNHAN_BUL.XoaTN(this.TenTNUpdate);
+                if(xoa > 0)
+                {
+                    MessageBox.Show("Xóa thành công");
+                } else
+                {
+                    MessageBox.Show("Xóa thất bại");
+                }
+                dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+                
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cbNhanVien.Text = "Chưa có nhân viên";
+            tbTenTN.Text = "";
+            cbGioiTinh.Text = "";
+            tbQuanHe.Text = "";
+            dtpkNgaySinh.Value = DateTime.Now;
         }
     }
 }
