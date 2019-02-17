@@ -87,10 +87,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnBack, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1320, 70);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1760, 86);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // metroPanel1
@@ -102,25 +103,27 @@
             this.metroPanel1.ForeColor = System.Drawing.Color.White;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel1.HorizontalScrollbarSize = 12;
+            this.metroPanel1.Location = new System.Drawing.Point(4, 4);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(390, 64);
+            this.metroPanel1.Size = new System.Drawing.Size(520, 78);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.UseCustomForeColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 13;
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(99, 26);
+            this.metroLabel1.Location = new System.Drawing.Point(132, 32);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(93, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(101, 25);
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Nhân Viên";
             this.metroLabel1.UseCustomBackColor = true;
@@ -129,7 +132,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QuanLiNhanVien.Properties.Resources.NhanVien;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -140,9 +144,10 @@
             // 
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBack.Image = global::QuanLiNhanVien.Properties.Resources.back;
-            this.btnBack.Location = new System.Drawing.Point(1257, 3);
+            this.btnBack.Location = new System.Drawing.Point(1696, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(60, 64);
+            this.btnBack.Size = new System.Drawing.Size(60, 78);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnBack.TabIndex = 1;
             this.btnBack.TabStop = false;
@@ -158,14 +163,15 @@
             this.metroPanel2.ForeColor = System.Drawing.Color.White;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(0, 70);
+            this.metroPanel2.HorizontalScrollbarSize = 12;
+            this.metroPanel2.Location = new System.Drawing.Point(0, 86);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1320, 515);
+            this.metroPanel2.Size = new System.Drawing.Size(1760, 634);
             this.metroPanel2.TabIndex = 1;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.metroPanel2.VerticalScrollbarSize = 13;
             // 
             // metroPanel5
             // 
@@ -173,16 +179,17 @@
             this.metroPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel5.HorizontalScrollbarBarColor = true;
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.HorizontalScrollbarSize = 10;
-            this.metroPanel5.Location = new System.Drawing.Point(0, 229);
+            this.metroPanel5.HorizontalScrollbarSize = 12;
+            this.metroPanel5.Location = new System.Drawing.Point(0, 281);
+            this.metroPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(1320, 286);
+            this.metroPanel5.Size = new System.Drawing.Size(1760, 353);
             this.metroPanel5.TabIndex = 5;
             this.metroPanel5.UseCustomBackColor = true;
             this.metroPanel5.UseCustomForeColor = true;
             this.metroPanel5.VerticalScrollbarBarColor = true;
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.VerticalScrollbarSize = 10;
+            this.metroPanel5.VerticalScrollbarSize = 13;
             // 
             // dgvNhanVien
             // 
@@ -213,6 +220,7 @@
             this.dgvNhanVien.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 0);
+            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -226,7 +234,7 @@
             this.dgvNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvNhanVien.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhanVien.Size = new System.Drawing.Size(1320, 286);
+            this.dgvNhanVien.Size = new System.Drawing.Size(1760, 353);
             this.dgvNhanVien.TabIndex = 2;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
@@ -242,33 +250,36 @@
             this.metroPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel4.HorizontalScrollbarBarColor = true;
             this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(0, 166);
+            this.metroPanel4.HorizontalScrollbarSize = 12;
+            this.metroPanel4.Location = new System.Drawing.Point(0, 204);
+            this.metroPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(1320, 63);
+            this.metroPanel4.Size = new System.Drawing.Size(1760, 77);
             this.metroPanel4.TabIndex = 4;
             this.metroPanel4.UseCustomBackColor = true;
             this.metroPanel4.UseCustomForeColor = true;
             this.metroPanel4.VerticalScrollbarBarColor = true;
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
+            this.metroPanel4.VerticalScrollbarSize = 13;
             // 
             // btnSearch
             // 
             this.btnSearch.Image = global::QuanLiNhanVien.Properties.Resources.search;
-            this.btnSearch.Location = new System.Drawing.Point(267, 11);
+            this.btnSearch.Location = new System.Drawing.Point(356, 14);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnSearch.Size = new System.Drawing.Size(43, 39);
             this.btnSearch.TabIndex = 22;
             this.btnSearch.TabStop = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(31, 11);
+            this.txtSearch.Location = new System.Drawing.Point(41, 14);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(227, 35);
+            this.txtSearch.Size = new System.Drawing.Size(301, 42);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -277,9 +288,10 @@
             this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
             this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnHuy.Location = new System.Drawing.Point(1083, 11);
+            this.btnHuy.Location = new System.Drawing.Point(1444, 14);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(103, 35);
+            this.btnHuy.Size = new System.Drawing.Size(137, 43);
             this.btnHuy.TabIndex = 17;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseCustomBackColor = true;
@@ -292,9 +304,10 @@
             this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnCapNhat.Location = new System.Drawing.Point(812, 11);
+            this.btnCapNhat.Location = new System.Drawing.Point(1083, 14);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(103, 35);
+            this.btnCapNhat.Size = new System.Drawing.Size(137, 43);
             this.btnCapNhat.TabIndex = 18;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseCustomBackColor = true;
@@ -307,9 +320,10 @@
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnXoa.Location = new System.Drawing.Point(938, 11);
+            this.btnXoa.Location = new System.Drawing.Point(1251, 14);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(103, 35);
+            this.btnXoa.Size = new System.Drawing.Size(137, 43);
             this.btnXoa.TabIndex = 19;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseCustomBackColor = true;
@@ -322,9 +336,10 @@
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.btnThem.Location = new System.Drawing.Point(677, 11);
+            this.btnThem.Location = new System.Drawing.Point(903, 14);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(103, 35);
+            this.btnThem.Size = new System.Drawing.Size(137, 43);
             this.btnThem.TabIndex = 20;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseCustomBackColor = true;
@@ -354,21 +369,23 @@
             this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.HorizontalScrollbarSize = 12;
             this.metroPanel3.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(1320, 166);
+            this.metroPanel3.Size = new System.Drawing.Size(1760, 204);
             this.metroPanel3.TabIndex = 2;
             this.metroPanel3.UseCustomBackColor = true;
             this.metroPanel3.UseCustomForeColor = true;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
+            this.metroPanel3.VerticalScrollbarSize = 13;
             // 
             // lblMaNV
             // 
             this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Location = new System.Drawing.Point(272, 29);
+            this.lblMaNV.Location = new System.Drawing.Point(363, 36);
+            this.lblMaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaNV.Name = "lblMaNV";
             this.lblMaNV.Size = new System.Drawing.Size(0, 0);
             this.lblMaNV.TabIndex = 12;
@@ -378,10 +395,11 @@
             // cboNguoiGS
             // 
             this.cboNguoiGS.FormattingEnabled = true;
-            this.cboNguoiGS.ItemHeight = 23;
-            this.cboNguoiGS.Location = new System.Drawing.Point(895, 75);
+            this.cboNguoiGS.ItemHeight = 24;
+            this.cboNguoiGS.Location = new System.Drawing.Point(1193, 92);
+            this.cboNguoiGS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboNguoiGS.Name = "cboNguoiGS";
-            this.cboNguoiGS.Size = new System.Drawing.Size(256, 29);
+            this.cboNguoiGS.Size = new System.Drawing.Size(340, 30);
             this.cboNguoiGS.TabIndex = 11;
             this.cboNguoiGS.Tag = "TenNGS";
             this.cboNguoiGS.UseSelectable = true;
@@ -390,10 +408,11 @@
             // cboPhongBan
             // 
             this.cboPhongBan.FormattingEnabled = true;
-            this.cboPhongBan.ItemHeight = 23;
-            this.cboPhongBan.Location = new System.Drawing.Point(895, 27);
+            this.cboPhongBan.ItemHeight = 24;
+            this.cboPhongBan.Location = new System.Drawing.Point(1193, 33);
+            this.cboPhongBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboPhongBan.Name = "cboPhongBan";
-            this.cboPhongBan.Size = new System.Drawing.Size(256, 29);
+            this.cboPhongBan.Size = new System.Drawing.Size(340, 30);
             this.cboPhongBan.TabIndex = 10;
             this.cboPhongBan.Tag = "TenPB";
             this.cboPhongBan.UseSelectable = true;
@@ -401,37 +420,41 @@
             // 
             // txtLuong
             // 
-            this.txtLuong.Location = new System.Drawing.Point(573, 120);
+            this.txtLuong.Location = new System.Drawing.Point(764, 148);
+            this.txtLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(200, 20);
+            this.txtLuong.Size = new System.Drawing.Size(265, 22);
             this.txtLuong.TabIndex = 9;
             this.txtLuong.Tag = "Luong";
             this.txtLuong.TextChanged += new System.EventHandler(this.txt_TextChanged);
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(573, 68);
+            this.txtDiaChi.Location = new System.Drawing.Point(764, 84);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(200, 20);
+            this.txtDiaChi.Size = new System.Drawing.Size(265, 22);
             this.txtDiaChi.TabIndex = 8;
             this.txtDiaChi.Tag = "DiaChi";
             this.txtDiaChi.TextChanged += new System.EventHandler(this.txt_TextChanged);
             // 
             // dtpNgaySinh
             // 
-            this.dtpNgaySinh.Location = new System.Drawing.Point(573, 27);
-            this.dtpNgaySinh.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(764, 33);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaySinh.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 29);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(265, 30);
             this.dtpNgaySinh.TabIndex = 7;
             this.dtpNgaySinh.ValueChanged += new System.EventHandler(this.dtpNgaySinh_ValueChanged);
             // 
             // radNu
             // 
             this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(346, 120);
+            this.radNu.Location = new System.Drawing.Point(461, 148);
+            this.radNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(39, 15);
+            this.radNu.Size = new System.Drawing.Size(42, 17);
             this.radNu.TabIndex = 6;
             this.radNu.Tag = "Nữ";
             this.radNu.Text = "Nữ";
@@ -443,9 +466,10 @@
             // radNam
             // 
             this.radNam.AutoSize = true;
-            this.radNam.Location = new System.Drawing.Point(272, 120);
+            this.radNam.Location = new System.Drawing.Point(363, 148);
+            this.radNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(49, 15);
+            this.radNam.Size = new System.Drawing.Size(52, 17);
             this.radNam.TabIndex = 5;
             this.radNam.Tag = "Nam";
             this.radNam.Text = "Nam";
@@ -456,9 +480,10 @@
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(272, 68);
+            this.txtHoTen.Location = new System.Drawing.Point(363, 84);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(173, 20);
+            this.txtHoTen.Size = new System.Drawing.Size(229, 22);
             this.txtHoTen.TabIndex = 4;
             this.txtHoTen.Tag = "HoTen";
             this.txtHoTen.TextChanged += new System.EventHandler(this.txt_TextChanged);
@@ -467,9 +492,10 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(194, 116);
+            this.metroLabel4.Location = new System.Drawing.Point(259, 143);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(71, 20);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Giới Tính:";
             this.metroLabel4.UseCustomBackColor = true;
@@ -479,9 +505,10 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(194, 70);
+            this.metroLabel3.Location = new System.Drawing.Point(259, 86);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(59, 20);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Họ Tên:";
             this.metroLabel3.UseCustomBackColor = true;
@@ -490,9 +517,10 @@
             // metroLabel9
             // 
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.Location = new System.Drawing.Point(795, 68);
+            this.metroLabel9.Location = new System.Drawing.Point(1060, 84);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(79, 42);
+            this.metroLabel9.Size = new System.Drawing.Size(105, 52);
             this.metroLabel9.TabIndex = 2;
             this.metroLabel9.Text = "Người Giám Sát:";
             this.metroLabel9.UseCustomBackColor = true;
@@ -503,9 +531,10 @@
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(492, 116);
+            this.metroLabel7.Location = new System.Drawing.Point(656, 143);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(54, 20);
             this.metroLabel7.TabIndex = 2;
             this.metroLabel7.Text = "Lương:";
             this.metroLabel7.UseCustomBackColor = true;
@@ -515,9 +544,10 @@
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel8.Location = new System.Drawing.Point(795, 30);
+            this.metroLabel8.Location = new System.Drawing.Point(1060, 37);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(83, 20);
             this.metroLabel8.TabIndex = 2;
             this.metroLabel8.Text = "Phòng Ban:";
             this.metroLabel8.UseCustomBackColor = true;
@@ -527,9 +557,10 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(492, 70);
+            this.metroLabel6.Location = new System.Drawing.Point(656, 86);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(60, 20);
             this.metroLabel6.TabIndex = 2;
             this.metroLabel6.Text = "Địa Chỉ:";
             this.metroLabel6.UseCustomBackColor = true;
@@ -539,9 +570,10 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(492, 30);
+            this.metroLabel5.Location = new System.Drawing.Point(656, 37);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(79, 20);
             this.metroLabel5.TabIndex = 2;
             this.metroLabel5.Text = "Ngày Sinh:";
             this.metroLabel5.UseCustomBackColor = true;
@@ -551,9 +583,10 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(194, 30);
+            this.metroLabel2.Location = new System.Drawing.Point(259, 37);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(57, 20);
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Mã NV:";
             this.metroLabel2.UseCustomBackColor = true;
@@ -561,12 +594,13 @@
             // 
             // ucNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucNhanVien";
-            this.Size = new System.Drawing.Size(1320, 585);
+            this.Size = new System.Drawing.Size(1760, 720);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
