@@ -46,14 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fmain.Designer.cs">
+      <DependentUpon>fmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fNhapHang.Designer.cs">
+      <DependentUpon>fNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fSanPham.Designer.cs">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fXuatHang.Designer.cs">
+      <DependentUpon>fXuatHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +92,26 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VIEW\fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fmain.resx">
+      <DependentUpon>fmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fNhapHang.resx">
+      <DependentUpon>fNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fSanPham.resx">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fXuatHang.resx">
+      <DependentUpon>fXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +124,47 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="Database\" />
+    <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suport-F-online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessmen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_48_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_f2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dooradd_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editadd_48_hot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1124957994-197.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

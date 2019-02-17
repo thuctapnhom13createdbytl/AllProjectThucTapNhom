@@ -24,3 +24,6 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVie
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucThanNhan.resources
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.pdb
+D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe.config
+D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.exe
+D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.pdb

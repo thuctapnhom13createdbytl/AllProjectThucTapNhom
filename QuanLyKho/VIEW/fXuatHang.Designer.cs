@@ -1,6 +1,6 @@
-﻿namespace QuanLyKho
+﻿namespace QuanLyKho.VIEW
 {
-    partial class Form1
+    partial class fXuatHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // fXuatHang
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1031, 569);
+            this.Name = "fXuatHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Xuất sản phẩm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

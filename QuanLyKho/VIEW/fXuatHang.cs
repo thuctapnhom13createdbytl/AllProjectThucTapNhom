@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKho
+namespace QuanLyKho.VIEW
 {
-    public partial class Form1 : Form
+    public partial class fXuatHang : Form
     {
-        public Form1()
+        public fXuatHang()
         {
             InitializeComponent();
         }
