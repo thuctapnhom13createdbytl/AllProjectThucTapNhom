@@ -34,6 +34,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -48,16 +50,16 @@
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnHuy = new MetroFramework.Controls.MetroButton();
             this.btnCapNhat = new MetroFramework.Controls.MetroButton();
             this.btnXoa = new MetroFramework.Controls.MetroButton();
             this.btnThem = new MetroFramework.Controls.MetroButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBack = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel3.SuspendLayout();
@@ -65,8 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -118,6 +118,28 @@
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLiNhanVien.Properties.Resources.DuAn;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnBack.Image = global::QuanLiNhanVien.Properties.Resources.back;
+            this.btnBack.Location = new System.Drawing.Point(1301, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(60, 64);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnBack.TabIndex = 1;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -157,7 +179,6 @@
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.UseCustomForeColor = true;
             this.metroPanel2.UseStyleColors = true;
-            this.metroPanel2.UseWaitCursor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
@@ -168,7 +189,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(234, 20);
             this.textBox2.TabIndex = 8;
-            this.textBox2.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -176,7 +196,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.UseWaitCursor = true;
             // 
             // metroComboBox1
             // 
@@ -187,7 +206,6 @@
             this.metroComboBox1.Size = new System.Drawing.Size(234, 29);
             this.metroComboBox1.TabIndex = 5;
             this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.UseWaitCursor = true;
             // 
             // metroLabel6
             // 
@@ -200,7 +218,6 @@
             this.metroLabel6.Text = "007";
             this.metroLabel6.UseCustomBackColor = true;
             this.metroLabel6.UseCustomForeColor = true;
-            this.metroLabel6.UseWaitCursor = true;
             // 
             // metroLabel5
             // 
@@ -212,7 +229,6 @@
             this.metroLabel5.Text = "Phòng Ban Phụ Trách:";
             this.metroLabel5.UseCustomBackColor = true;
             this.metroLabel5.UseCustomForeColor = true;
-            this.metroLabel5.UseWaitCursor = true;
             this.metroLabel5.WrapToLine = true;
             // 
             // metroLabel4
@@ -226,7 +242,6 @@
             this.metroLabel4.Text = "Địa Điểm:";
             this.metroLabel4.UseCustomBackColor = true;
             this.metroLabel4.UseCustomForeColor = true;
-            this.metroLabel4.UseWaitCursor = true;
             // 
             // metroLabel3
             // 
@@ -239,7 +254,6 @@
             this.metroLabel3.Text = "Tên Dự Án:";
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
-            this.metroLabel3.UseWaitCursor = true;
             // 
             // metroLabel2
             // 
@@ -252,7 +266,6 @@
             this.metroLabel2.Text = "Mã Dự Án:";
             this.metroLabel2.UseCustomBackColor = true;
             this.metroLabel2.UseCustomForeColor = true;
-            this.metroLabel2.UseWaitCursor = true;
             // 
             // metroPanel3
             // 
@@ -351,10 +364,18 @@
             this.metroPanel4.UseCustomBackColor = true;
             this.metroPanel4.UseCustomForeColor = true;
             this.metroPanel4.UseStyleColors = true;
-            this.metroPanel4.UseWaitCursor = true;
             this.metroPanel4.VerticalScrollbarBarColor = true;
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QuanLiNhanVien.Properties.Resources.search;
+            this.pictureBox2.Location = new System.Drawing.Point(265, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // txtSearch
             // 
@@ -363,7 +384,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(227, 35);
             this.txtSearch.TabIndex = 0;
-            this.txtSearch.UseWaitCursor = true;
             // 
             // btnHuy
             // 
@@ -378,7 +398,6 @@
             this.btnHuy.UseCustomBackColor = true;
             this.btnHuy.UseCustomForeColor = true;
             this.btnHuy.UseSelectable = true;
-            this.btnHuy.UseWaitCursor = true;
             // 
             // btnCapNhat
             // 
@@ -393,7 +412,6 @@
             this.btnCapNhat.UseCustomBackColor = true;
             this.btnCapNhat.UseCustomForeColor = true;
             this.btnCapNhat.UseSelectable = true;
-            this.btnCapNhat.UseWaitCursor = true;
             // 
             // btnXoa
             // 
@@ -408,7 +426,6 @@
             this.btnXoa.UseCustomBackColor = true;
             this.btnXoa.UseCustomForeColor = true;
             this.btnXoa.UseSelectable = true;
-            this.btnXoa.UseWaitCursor = true;
             // 
             // btnThem
             // 
@@ -423,38 +440,6 @@
             this.btnThem.UseCustomBackColor = true;
             this.btnThem.UseCustomForeColor = true;
             this.btnThem.UseSelectable = true;
-            this.btnThem.UseWaitCursor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QuanLiNhanVien.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(265, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLiNhanVien.Properties.Resources.DuAn;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnBack.Image = global::QuanLiNhanVien.Properties.Resources.back;
-            this.btnBack.Location = new System.Drawing.Point(1301, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(60, 64);
-            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnBack.TabIndex = 1;
-            this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // ucDuAn
             // 
@@ -468,6 +453,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
@@ -477,8 +464,6 @@
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
