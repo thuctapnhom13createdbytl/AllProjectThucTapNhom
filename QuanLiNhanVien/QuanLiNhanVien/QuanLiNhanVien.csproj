@@ -149,6 +149,10 @@
       <Project>{86a07891-138b-4fc3-a730-0a56943b130f}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{970581B7-05EB-4543-8FD4-00571B8F5FD7}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">
       <Project>{9f476e32-bd89-4fad-97b8-7c95139cc26f}</Project>
       <Name>DataTransferObject</Name>

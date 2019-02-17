@@ -31,5 +31,22 @@ namespace BusinessLogicLayer
             lstNhanVien.Insert(0, nvDTO);
             return lstNhanVien;
         }
+        public static int themTN(THANNHAN_DTO tn)
+        {
+            return THANNHAN_DAL.themTN(tn);
+        }
+        public static int CapNhapTN(THANNHAN_DTO tn,string tenTN)
+        {
+            return THANNHAN_DAL.CapNhatTN(tn,tenTN);
+        }
+        public static int XoaTN(string tenTN)
+        {
+            return THANNHAN_DAL.XoaTN(tenTN);
+        }
+        public static List<THANNHAN_DTO> TimKiemTN(string str)
+        {
+            List<THANNHAN_DTO> listTN = THANNHAN_DAL.TimKiemTN(str);
+            return listTN;
+        }
     }
 }
