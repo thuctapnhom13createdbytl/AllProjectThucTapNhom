@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DUAN_DAL.cs" />
     <Compile Include="NHANVIEN_DAL.cs" />
+    <Compile Include="PHANCONG_DAL.cs" />
     <Compile Include="PHONGBAN_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="THANNHAN_DAL.cs" />
