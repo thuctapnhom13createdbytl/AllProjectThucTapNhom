@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\SanPham_DAO.cs" />
+    <Compile Include="DTO\SanPham_DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VIEW\fKhachHang.cs">
@@ -126,9 +129,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="Database\" />
-    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.png" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKho.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,29 +13,32 @@ namespace QuanLyKho.VIEW
 {
     public partial class fSanPham : Form
     {
+        BindingSource DanhSachSP = new BindingSource();
         public fSanPham()
         {
             InitializeComponent();
+            Load();
+            
         }
-
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        void Load()
         {
-
+            dtgvSanPham.DataSource = DanhSachSP;
+            LayTatCaSP();
+            bindingSanPham();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        void LayTatCaSP()
         {
-
+            DanhSachSP.DataSource = SanPham_DAO.Instance.LayTatCaSanPham();
         }
-
-        private void label9_Click(object sender, EventArgs e)
+        void bindingSanPham()
         {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
+            txtDonGia.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "DonGia", true, DataSourceUpdateMode.Never));
+            txtMaSanPham.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "MaSP", true, DataSourceUpdateMode.Never));
+            txtTenSanPham.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "TenSP", true, DataSourceUpdateMode.Never));
+            txtThongSoKyThuat.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "ThongSoKyThuat", true, DataSourceUpdateMode.Never));
+            nrudSoLuong.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
+            cbLoaiSanPham.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "tenLoaiSP", true, DataSourceUpdateMode.Never));
+            cbTenNhaSanXuat.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "TenNSX", true, DataSourceUpdateMode.Never));
         }
     }
 }
