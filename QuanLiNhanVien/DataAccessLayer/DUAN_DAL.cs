@@ -43,11 +43,6 @@ namespace DataAccessLayer
         }
 
 
-        public static object TimKiemDuAn(string searchStr)
-        {
-            throw new NotImplementedException();
-        }
-
         public static int CapNhatDuAn(DUAN_DTO daDTO)
         {
             try
@@ -82,7 +77,39 @@ namespace DataAccessLayer
             }
 
         }
+        public static List<DUAN_DTO> TimKiemDuAn(string searchStr)
+        {
+            try
+            {
+                List<DUAN_DTO> lstDuAn = new List<DUAN_DTO>();
+                SqlConnection db = DataProvider.dbContext;
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * " +
+                                  "FROM DUAN as d " +
+                                  "WHERE d.TenDA LIKE " + "N'%" + searchStr + "%'";
+                //cmd.Parameters.Add("@HoTen", SqlDbType.NVarChar).Value = searchStr;
+                cmd.Connection = db;
+                SqlDataReader reader = cmd.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    int MaPB;
+                    DUAN_DTO daDTO = new DUAN_DTO();
+                    daDTO.MaDA = int.Parse(reader["MaDA"].ToString());
+                    daDTO.TenDA = reader["TenDA"].ToString();
+                    daDTO.MaPB = int.TryParse(reader["MaPB"].ToString(), out MaPB) == true ? MaPB : 0;
+                    daDTO.DiaDiem= reader["DiaDiem"].ToString();
+                    lstDuAn.Add(daDTO);
+                }
+                reader.Close();
+                return lstDuAn;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
 
 
         public static int XoaDuAn(int MaDA)

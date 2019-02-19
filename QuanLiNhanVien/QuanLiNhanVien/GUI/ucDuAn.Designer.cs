@@ -425,6 +425,7 @@
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.UseWaitCursor = true;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // txtSearch
             // 
@@ -434,6 +435,7 @@
             this.txtSearch.Size = new System.Drawing.Size(227, 35);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.UseWaitCursor = true;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnHuy
             // 

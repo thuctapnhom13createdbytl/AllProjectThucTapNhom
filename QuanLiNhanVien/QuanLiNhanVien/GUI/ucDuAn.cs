@@ -22,6 +22,7 @@ namespace QuanLiNhanVien.GUI
         }
         List<PHONGBAN_DTO> lstPhongBan;
         List<DUAN_DTO> lstDuAn;
+        List<DUAN_DTO> lstTimKiemDuAn;
         protected override void OnLoad(EventArgs e)
         {
             lstDuAn = DUAN_BUL.LoadTatCaDuAn();
@@ -178,6 +179,30 @@ namespace QuanLiNhanVien.GUI
                     MessageBox.Show("Xóa dự án thất bại", "Thông báo");
                 }
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearch.Text=="")
+            {
+                dtgvDuAn.DataSource = typeof(List<DUAN_DTO>);
+                dtgvDuAn.DataSource = lstDuAn;
+                EditDataGridView();
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string searchStr = txtSearch.Text;
+            lstTimKiemDuAn = DUAN_BUL.TimKiemDuAn(searchStr);
+            if (lstTimKiemDuAn == null || lstTimKiemDuAn.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy kết quả");
+                return;
+            }
+            dtgvDuAn.DataSource = typeof(List<DUAN_DTO>);
+            dtgvDuAn.DataSource = lstTimKiemDuAn;
+            EditDataGridView();
         }
     }
 }

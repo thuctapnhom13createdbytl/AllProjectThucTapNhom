@@ -34,6 +34,18 @@ namespace BusinessLogicLayer
         {
             return DUAN_DAL.CapNhatDuAn(daDTO);
         }
+        public static List<DUAN_DTO> TimKiemDuAn(string searchStr)
+        {
+            var lstDuAn = DUAN_DAL.TimKiemDuAn(searchStr);
+            //for (int i = 0; i < lstDuAn.Count; i++)
+            //{
+            //     if (lstDuAn[i].MaPB == 0)
+            //    {
+            //        lstDuAn[i].TenPB = "Chưa Có Phòng Ban";
+            //    }
+            //}
+            return lstDuAn;
+        }
     }
 }
 
