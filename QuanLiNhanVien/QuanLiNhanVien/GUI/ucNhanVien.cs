@@ -96,7 +96,7 @@ namespace QuanLiNhanVien.GUI
                 MessageBox.Show(ex.Message, "Error");
             }
         }
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
             NHANVIEN_DTO nvDTO = new NHANVIEN_DTO();
@@ -292,6 +292,16 @@ namespace QuanLiNhanVien.GUI
             dgvNhanVien.DataSource = typeof(List<NHANVIEN_DTO>);
             dgvNhanVien.DataSource = lstNhanVien;
             EditDataGridView();
+        }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

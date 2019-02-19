@@ -15,7 +15,7 @@ namespace DataAccessLayer
         {
             get
             {
-                string conStr = "Server = (local); Database = TTN_QLNV; Integrated Security = true";
+                string conStr = "Data Source=DESKTOP-PGUCCN0\\SQLEXPRESS;Initial Catalog=TTN_QLNV;Integrated Security=True";
                 if (con == null)
                 {
                     con = new SqlConnection(conStr);

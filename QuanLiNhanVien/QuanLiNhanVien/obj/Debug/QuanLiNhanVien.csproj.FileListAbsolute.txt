@@ -24,3 +24,29 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVie
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucThanNhan.resources
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe.config
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\BusinessLogicLayer.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataTransferObject.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.Design.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.Fonts.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\BusinessLogicLayer.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataTransferObject.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csprojAssemblyReference.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.frmMain.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucDuAn.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucMenu.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucNhanVien.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucPhanCong.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucPhongBan.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucThanNhan.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.Properties.Resources.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.GenerateResource.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CoreCompileInputs.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CopyComplete
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.exe
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.pdb
