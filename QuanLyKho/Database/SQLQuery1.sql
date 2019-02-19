@@ -34,4 +34,7 @@ from SanPham,NhaSanXuat,LoaiSanPham
 where SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP and SanPham.Ma_NSX = NhaSanXuat.Ma_NSX
 end
 LayTatCaSanPham
+create proc ThemSanPham(@Ten nvarchar())
+as begin 
+end
 
