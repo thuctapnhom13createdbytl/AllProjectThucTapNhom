@@ -31,18 +31,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.dgvPhongBan = new MetroFramework.Controls.MetroGrid();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnHuy = new MetroFramework.Controls.MetroButton();
             this.btnCapNhat = new MetroFramework.Controls.MetroButton();
             this.btnXoa = new MetroFramework.Controls.MetroButton();
             this.btnThem = new MetroFramework.Controls.MetroButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.txtTenPhongBan = new System.Windows.Forms.TextBox();
+            this.dtpNgayNhanChuc = new MetroFramework.Controls.MetroDateTime();
+            this.cboTruongPhong = new MetroFramework.Controls.MetroComboBox();
+            this.lblMaPB = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -52,24 +53,23 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.metroPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroGrid1
+            // dgvPhongBan
             // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPhongBan.AllowUserToResizeRows = false;
+            this.dgvPhongBan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvPhongBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPhongBan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvPhongBan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -77,8 +77,8 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -86,14 +86,14 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.metroGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(0, 314);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPhongBan.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPhongBan.EnableHeadersVisualStyles = false;
+            this.dgvPhongBan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgvPhongBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvPhongBan.Location = new System.Drawing.Point(0, 314);
+            this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -101,17 +101,18 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(1056, 319);
-            this.metroGrid1.TabIndex = 8;
+            this.dgvPhongBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPhongBan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhongBan.Size = new System.Drawing.Size(1056, 319);
+            this.dgvPhongBan.TabIndex = 8;
+            this.dgvPhongBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
             // metroPanel4
             // 
             this.metroPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
             this.metroPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel4.Controls.Add(this.pictureBox2);
+            this.metroPanel4.Controls.Add(this.btnSearch);
             this.metroPanel4.Controls.Add(this.txtSearch);
             this.metroPanel4.Controls.Add(this.btnHuy);
             this.metroPanel4.Controls.Add(this.btnCapNhat);
@@ -134,6 +135,16 @@
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Image = global::QuanLiNhanVien.Properties.Resources.search;
+            this.btnSearch.Location = new System.Drawing.Point(264, 11);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.UseWaitCursor = true;
+            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(31, 11);
@@ -142,6 +153,7 @@
             this.txtSearch.Size = new System.Drawing.Size(227, 35);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.UseWaitCursor = true;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnHuy
             // 
@@ -202,14 +214,15 @@
             this.btnThem.UseCustomForeColor = true;
             this.btnThem.UseSelectable = true;
             this.btnThem.UseWaitCursor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // metroPanel2
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
-            this.metroPanel2.Controls.Add(this.textBox1);
-            this.metroPanel2.Controls.Add(this.metroDateTime1);
-            this.metroPanel2.Controls.Add(this.metroComboBox1);
-            this.metroPanel2.Controls.Add(this.metroLabel6);
+            this.metroPanel2.Controls.Add(this.txtTenPhongBan);
+            this.metroPanel2.Controls.Add(this.dtpNgayNhanChuc);
+            this.metroPanel2.Controls.Add(this.cboTruongPhong);
+            this.metroPanel2.Controls.Add(this.lblMaPB);
             this.metroPanel2.Controls.Add(this.metroLabel5);
             this.metroPanel2.Controls.Add(this.metroLabel4);
             this.metroPanel2.Controls.Add(this.metroLabel3);
@@ -231,46 +244,47 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // textBox1
+            // txtTenPhongBan
             // 
-            this.textBox1.Location = new System.Drawing.Point(244, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.UseWaitCursor = true;
+            this.txtTenPhongBan.Location = new System.Drawing.Point(244, 85);
+            this.txtTenPhongBan.Name = "txtTenPhongBan";
+            this.txtTenPhongBan.Size = new System.Drawing.Size(236, 20);
+            this.txtTenPhongBan.TabIndex = 7;
+            this.txtTenPhongBan.UseWaitCursor = true;
+            this.txtTenPhongBan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // metroDateTime1
+            // dtpNgayNhanChuc
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(650, 87);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(234, 29);
-            this.metroDateTime1.TabIndex = 6;
-            this.metroDateTime1.UseWaitCursor = true;
+            this.dtpNgayNhanChuc.Location = new System.Drawing.Point(650, 87);
+            this.dtpNgayNhanChuc.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpNgayNhanChuc.Name = "dtpNgayNhanChuc";
+            this.dtpNgayNhanChuc.Size = new System.Drawing.Size(234, 29);
+            this.dtpNgayNhanChuc.TabIndex = 6;
+            this.dtpNgayNhanChuc.UseWaitCursor = true;
             // 
-            // metroComboBox1
+            // cboTruongPhong
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(650, 29);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(234, 29);
-            this.metroComboBox1.TabIndex = 5;
-            this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.UseWaitCursor = true;
+            this.cboTruongPhong.FormattingEnabled = true;
+            this.cboTruongPhong.ItemHeight = 23;
+            this.cboTruongPhong.Location = new System.Drawing.Point(650, 29);
+            this.cboTruongPhong.Name = "cboTruongPhong";
+            this.cboTruongPhong.Size = new System.Drawing.Size(234, 29);
+            this.cboTruongPhong.TabIndex = 5;
+            this.cboTruongPhong.UseSelectable = true;
+            this.cboTruongPhong.UseWaitCursor = true;
             // 
-            // metroLabel6
+            // lblMaPB
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(244, 29);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(33, 19);
-            this.metroLabel6.TabIndex = 3;
-            this.metroLabel6.Text = "007";
-            this.metroLabel6.UseCustomBackColor = true;
-            this.metroLabel6.UseCustomForeColor = true;
-            this.metroLabel6.UseWaitCursor = true;
+            this.lblMaPB.AutoSize = true;
+            this.lblMaPB.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblMaPB.Location = new System.Drawing.Point(244, 29);
+            this.lblMaPB.Name = "lblMaPB";
+            this.lblMaPB.Size = new System.Drawing.Size(33, 19);
+            this.lblMaPB.TabIndex = 3;
+            this.lblMaPB.Text = "007";
+            this.lblMaPB.UseCustomBackColor = true;
+            this.lblMaPB.UseCustomForeColor = true;
+            this.lblMaPB.UseWaitCursor = true;
             // 
             // metroLabel5
             // 
@@ -395,28 +409,20 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::QuanLiNhanVien.Properties.Resources.search;
-            this.pictureBox2.Location = new System.Drawing.Point(264, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
             // ucPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.metroGrid1);
+            this.Controls.Add(this.dgvPhongBan);
             this.Controls.Add(this.metroPanel4);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ucPhongBan";
             this.Size = new System.Drawing.Size(1056, 633);
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -425,14 +431,13 @@
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroGrid dgvPhongBan;
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private System.Windows.Forms.TextBox txtSearch;
         private MetroFramework.Controls.MetroButton btnHuy;
@@ -440,10 +445,10 @@
         private MetroFramework.Controls.MetroButton btnXoa;
         private MetroFramework.Controls.MetroButton btnThem;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private System.Windows.Forms.TextBox txtTenPhongBan;
+        private MetroFramework.Controls.MetroDateTime dtpNgayNhanChuc;
+        private MetroFramework.Controls.MetroComboBox cboTruongPhong;
+        private MetroFramework.Controls.MetroLabel lblMaPB;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
@@ -453,6 +458,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btnBack;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnSearch;
     }
 }

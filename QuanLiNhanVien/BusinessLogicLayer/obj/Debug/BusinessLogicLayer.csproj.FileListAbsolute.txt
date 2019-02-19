@@ -9,3 +9,25 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\BusinessLogic
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

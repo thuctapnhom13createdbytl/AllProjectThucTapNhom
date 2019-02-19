@@ -4,3 +4,15 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferO
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csproj.CoreCompileInputs.cache
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.pdb

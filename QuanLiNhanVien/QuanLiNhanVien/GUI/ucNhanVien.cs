@@ -293,5 +293,15 @@ namespace QuanLiNhanVien.GUI
             dgvNhanVien.DataSource = lstNhanVien;
             EditDataGridView();
         }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

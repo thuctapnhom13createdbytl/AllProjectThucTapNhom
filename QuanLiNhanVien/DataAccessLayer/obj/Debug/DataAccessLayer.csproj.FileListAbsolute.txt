@@ -7,3 +7,21 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataAccessLay
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete

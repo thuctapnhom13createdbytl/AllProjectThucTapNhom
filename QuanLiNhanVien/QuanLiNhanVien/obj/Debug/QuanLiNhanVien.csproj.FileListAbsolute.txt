@@ -24,3 +24,55 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVie
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucThanNhan.resources
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Project\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe.config
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.Design.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.frmMain.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucDuAn.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucMenu.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucNhanVien.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucPhanCong.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucPhongBan.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucThanNhan.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.Properties.Resources.resources
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CopyComplete
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.exe
+C:\Users\Asus\Desktop\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe.config
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.exe
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\QuanLiNhanVien.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\BusinessLogicLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataTransferObject.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.Design.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataTransferObject.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.frmMain.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucDuAn.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucMenu.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucNhanVien.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucPhanCong.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucPhongBan.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.GUI.ucThanNhan.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.Properties.Resources.resources
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.csproj.CopyComplete
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.exe
+C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLiNhanVien\QuanLiNhanVien\obj\Debug\QuanLiNhanVien.pdb
