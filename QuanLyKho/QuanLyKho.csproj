@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHang_DAO.cs" />
     <Compile Include="DAO\SanPham_DAO.cs" />
+    <Compile Include="DTO\KhachHang_DTO.cs" />
     <Compile Include="DTO\SanPham_DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

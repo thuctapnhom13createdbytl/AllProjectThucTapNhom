@@ -12,3 +12,18 @@ D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\Quan
 D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fSanPham.resources
 D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fXuatHang.resources
 D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csprojAssemblyReference.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fKhachHang.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fmain.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fNhanVien.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fNhapHang.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fSanPham.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fXuatHang.resources
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.exe
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.pdb

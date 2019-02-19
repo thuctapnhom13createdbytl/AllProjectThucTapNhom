@@ -23,3 +23,12 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhan
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Thuc tap nhom\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

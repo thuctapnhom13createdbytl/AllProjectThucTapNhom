@@ -27,15 +27,39 @@ insert into SanPham values(N'Sản phẩm 4',4,N'thông số kỹ thuật 4',4,4
 insert into SanPham values(N'Sản phẩm 5',5,N'thông số kỹ thuật 5',5,5,5)
 insert into SanPham values(N'Sản phẩm 6',6,N'thông số kỹ thuật 6',6,6,6)
 
+
 create proc LayTatCaSanPham
 as begin
 select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX 
 from SanPham,NhaSanXuat,LoaiSanPham 
 where SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP and SanPham.Ma_NSX = NhaSanXuat.Ma_NSX
 end
-LayTatCaSanPham
+
+exec LayTatCaSanPham
+
 create proc ThemSanPham(@Ten nvarchar(50), @maNSX int,@thongso nvarchar(255), @maLoai int,@gia int, @soluong int )
 as begin 
 insert into SanPham values(@Ten,@maNSX,@thongso,@maLoai,@gia,@soluong)
 end
 ThemSanPham N'Sản phẩm 7',6,N'thông số kỹ thuật 6',6,6,6
+go
+
+select * from dbo.KhachHang
+insert into dbo.KhachHang values (N'Nguyễn Ngọc Hiệp',N'Hà Nội','111111','1111111@gmail.com') 
+insert into dbo.KhachHang values (N'Nguyễn Gia Tuấn',N'Hà Nội','222222','222222@gmail.com') 
+insert into dbo.KhachHang values (N'Hoàng Văn Tuyền',N'Vĩnh Phúc','333333','333333@gmail.com') 
+insert into dbo.KhachHang values (N'Bùi Đình Thủy',N'Nam Định','444444','444444@gmail.com') 
+
+go
+/*Tạo thủ tục lấy tất cả khách hàng*/
+alter proc LayTatCaKhachHang
+as
+begin
+/*
+	select k.Ma_KH,k.Ten_KH,k.SDT_KH,k.DiaChi_KH,k.Email_KH
+	from KhachHang k, PhieuXuat px
+	where k.Ma_KH=px.Ma_KH
+	*/
+	select * from KhachHang 
+end
+go
