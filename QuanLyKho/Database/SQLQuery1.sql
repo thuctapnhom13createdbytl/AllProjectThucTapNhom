@@ -39,3 +39,5 @@ as begin
 insert into SanPham values(@Ten,@maNSX,@thongso,@maLoai,@gia,@soluong)
 end
 ThemSanPham N'Sản phẩm 7',6,N'thông số kỹ thuật 6',6,6,6
+select * from LoaiSanPham
+select * from NhaSanXuat
