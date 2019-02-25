@@ -34,6 +34,10 @@ from SanPham,NhaSanXuat,LoaiSanPham
 where SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP and SanPham.Ma_NSX = NhaSanXuat.Ma_NSX
 end
 LayTatCaSanPham
+create proc ThemSanPham(@Ten nvarchar())
+as begin 
+end
+
 create proc ThemSanPham(@Ten nvarchar(50), @maNSX int,@thongso nvarchar(255), @maLoai int,@gia int, @soluong int )
 as begin 
 insert into SanPham values(@Ten,@maNSX,@thongso,@maLoai,@gia,@soluong)
