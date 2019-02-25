@@ -36,7 +36,7 @@ namespace QuanLyKho.DTO
             Ngaysinh_NV = (DateTime)dr["Ngaysinh_NV"];
             SDT_NV = (string)dr["SDT_NV"];
             Email_NV = (string)dr["Email_NV"];
-            ThongTin = (string)dr["ThongTin"];
+            ThongTin = Ten_NV + " - " + SDT_NV;
         }
     }
 }

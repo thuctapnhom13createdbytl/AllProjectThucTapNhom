@@ -48,7 +48,7 @@ namespace QuanLyKho.VIEW
             cboLoaiSP.DisplayMember = "TenLoai";
             cboLoaiSP.ValueMember = "Ma_LoaiSP";
 
-            dgvPhieuNhap.DataSource = typeof(List<NhanVien_DTO>);
+            dgvPhieuNhap.DataSource = typeof(List<NhapHang_DTO>);
             dgvPhieuNhap.DataSource = lstPhieuNhap;
             EditDataGridView();
         }
@@ -82,9 +82,9 @@ namespace QuanLyKho.VIEW
             DataGridViewRow dr = dgvPhieuNhap.Rows[idx];
             txtTenSP.Text = dr.Cells["TenSanPham"].Value.ToString();
             txtDonGia.Text = dr.Cells["DonGia"].Value.ToString();
-            cboLoaiSP.SelectedItem = dr.Cells["TenLoai"].Value;
-            cboNhanVien.SelectedItem = dr.Cells["Ten_NV"].Value;
-            cboNSX.SelectedItem = dr.Cells["Ten_NSX"].Value;
+            cboLoaiSP.Text = dr.Cells["TenLoai"].Value.ToString();
+            cboNhanVien.Text = dr.Cells["Ten_NV"].Value.ToString();
+            cboNSX.Text = dr.Cells["Ten_NSX"].Value.ToString();
             numSoLuong.Value = (int)dr.Cells["SoLuong"].Value;
         }
 
@@ -107,7 +107,7 @@ namespace QuanLyKho.VIEW
             phieuNhap.Ten_NSX = cboNSX.Text;
 
             lstPhieuNhap.Add(phieuNhap);
-            dgvPhieuNhap.DataSource = typeof(List<NhanVien_DTO>);
+            dgvPhieuNhap.DataSource = typeof(List<NhapHang_DTO>);
             dgvPhieuNhap.DataSource = lstPhieuNhap;
             EditDataGridView();
         }
@@ -148,7 +148,7 @@ namespace QuanLyKho.VIEW
             {
                 MessageBox.Show("Đã thêm phiếu nhập thất bại", "Thông báo");
                 lstPhieuNhap = lstPhieuNhapGoc;
-                dgvPhieuNhap.DataSource = typeof(List<NhanVien_DTO>);
+                dgvPhieuNhap.DataSource = typeof(List<NhapHang_DTO>);
                 dgvPhieuNhap.DataSource = lstPhieuNhap;
                 EditDataGridView();
             }

@@ -64,7 +64,7 @@ namespace QuanLyKho.DAO
                     else //Sản phẩm cũ
                     {
                         int kq = DataProvider.Instance.ExecuteNonQuery
-                            ("ThemPhieuNhap_SPCu @Ma_NSX @Ma_Sanpham @SoLuong @DonGia @Ma_NV",
+                            ("ThemPhieuNhap_SPCu @Ma_NSX , @Ma_Sanpham , @SoLuong , @DonGia , @Ma_NV",
                             new object[] { phieuNhap.Ma_NSX, phieuNhap.Ma_SanPham, phieuNhap.SoLuong, phieuNhap.DonGia, phieuNhap.Ma_NV }
                             );
                         if (kq > 0) ketQua++;

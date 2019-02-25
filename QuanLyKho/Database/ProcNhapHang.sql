@@ -12,10 +12,27 @@ AS
 	INNER JOIN dbo.LoaiSanPham lsp ON lsp.Ma_LoaiSP = sp.Ma_LoaiSP
 GO
 
+CREATE PROC LoadToanBoPhieuXuat
+AS
+	SELECT kh.*, nsx.*, nv.*, lsp.*, ct.Ma_CTPX, ct.Ma_PX, ct.Ma_Sanpham, ct.Soluong, ct.Dongia, sp.TenSanPham
+	FROM dbo.PhieuXuat px INNER JOIN dbo.NhanVien nv ON nv.Ma_NV = px.Ma_NV
+	INNER JOIN dbo.KhachHang kh ON kh.Ma_KH = px.Ma_KH
+	INNER JOIN dbo.CT_PhieuXuat ct ON ct.Ma_PX = px.Ma_PX
+	INNER JOIN dbo.SanPham sp ON sp.Ma_Sanpham = ct.Ma_Sanpham
+	INNER JOIN dbo.LoaiSanPham lsp ON lsp.Ma_LoaiSP = sp.Ma_LoaiSP
+	INNER JOIN dbo.NhaSanXuat nsx ON nsx.Ma_NSX = sp.Ma_NSX
+GO
+
 CREATE PROC LoadToanBoNhaSanXuat
 AS 
 	SELECT *
 	FROM dbo.NhaSanXuat
+GO
+
+CREATE PROC LoadToanBoKhachHang
+AS 
+	SELECT *
+	FROM dbo.KhachHang
 GO
 
 CREATE PROC LoadToanBoNhanVien
@@ -122,4 +139,92 @@ AS
 	SELECT @Ma_PN = @@IDENTITY
 
 	EXEC dbo.ThemChiTietPhieuNhap @Ma_PN, @Ma_Sanpham, @SoLuong, @DonGia
+GO
+
+
+-- ========================================================
+CREATE PROC ThemKhachHangMoi
+@Ten_KH NVARCHAR(MAX),
+@DiaChi_KH NVARCHAR(MAX),
+@SDT_KH VARCHAR(50),
+@Email_KH VARCHAR(255)
+AS 
+	INSERT dbo.KhachHang
+	        ( Ten_KH, DiaChi_KH, SDT_KH, Email_KH )
+	VALUES  ( @Ten_KH, -- Ten_KH - nvarchar(max)
+	          @DiaChi_KH, -- DiaChi_KH - nvarchar(max)
+	          @SDT_KH, -- SDT_KH - varchar(50)
+	          @Email_KH  -- Email_KH - varchar(255)
+	          )
+GO
+
+
+CREATE PROC ThemPhieuXuatMoi
+@Ma_NV INT,
+@Ma_KH INT
+AS 
+	INSERT dbo.PhieuXuat
+	        ( Ma_NV, Ma_KH, Ngayxuat )
+	VALUES  ( @Ma_NV, -- Ma_NV - int
+	          @Ma_KH, -- Ma_KH - int
+	          GETDATE()  -- Ngayxuat - datetime
+	          )
+GO
+
+CREATE PROC ThemChiTietPhieuXuat
+@Ma_PX INT,
+@Ma_Sanpham INT,
+@SoLuong INT,
+@DonGia INT
+AS
+	INSERT dbo.CT_PhieuXuat
+	        ( Ma_PX, Ma_Sanpham, Soluong, Dongia )
+	VALUES  ( @Ma_PX, -- Ma_PN - int
+	          @Ma_Sanpham, -- Ma_Sanpham - int
+	          @SoLuong, -- SoLuong - int
+	          @DonGia  -- DonGia - int
+	          )
+GO
+
+
+CREATE PROC ThemPhieuXuat_KHCu
+@Ma_KH INT,
+@Ma_Sanpham INT,
+@SoLuong INT,
+@DonGia INT,
+@Ma_NV INT
+AS
+	DECLARE @Ma_PX INT
+	UPDATE dbo.SanPham 
+	SET SoLuong = SoLuong - @SoLuong
+	WHERE Ma_Sanpham = @Ma_Sanpham
+
+	EXEC dbo.ThemPhieuXuatMoi @Ma_NV, @Ma_KH
+	SELECT @Ma_PX = @@IDENTITY
+
+	EXEC dbo.ThemChiTietPhieuXuat @Ma_PX, @Ma_Sanpham, @SoLuong, @DonGia
+GO
+
+CREATE PROC ThemPhieuXuat_KHMoi
+@Ten_KH NVARCHAR(MAX),
+@DiaChi_KH NVARCHAR(MAX),
+@SDT_KH VARCHAR(50),
+@Email_KH VARCHAR(255)
+@Ma_Sanpham INT,
+@SoLuong INT,
+@DonGia INT,
+@Ma_NV INT
+AS
+	DECLARE @Ma_PX INT, @Ma_KH INT
+	EXEC ThemKhachHangMoi @Ten_KH, @DiaChi_KH, @SDT_KH, @Email_KH
+	SELECT @Ma_KH = @@IDENTITY
+
+	UPDATE dbo.SanPham
+	SET SoLuong = SoLuong - @SoLuong
+	WHERE Ma_Sanpham = @Ma_Sanpham
+
+	EXEC dbo.ThemPhieuXuatMoi @Ma_NV, @Ma_KH
+	SELECT @Ma_PX = @@IDENTITY
+
+	EXEC dbo.ThemChiTietPhieuXuat @Ma_PX, @Ma_Sanpham, @SoLuong, @DonGia
 GO
