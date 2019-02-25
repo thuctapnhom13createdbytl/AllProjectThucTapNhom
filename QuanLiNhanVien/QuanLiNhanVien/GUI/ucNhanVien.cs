@@ -194,7 +194,7 @@ namespace QuanLiNhanVien.GUI
             }
         }
 
-        private void txt_TextChanged(object sender, EventArgs e)
+        private void txt_TextChanged(object sender, EventArgs e) //txtLuong
         {
             if (dgvNhanVien.SelectedRows.Count == 0)
             {

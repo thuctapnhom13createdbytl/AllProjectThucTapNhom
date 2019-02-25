@@ -19,7 +19,7 @@ namespace DataAccessLayer
                 SqlConnection db = DataProvider.dbContext;
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "LoadAllPhongBan";
+                cmd.CommandText = "LoadTatCaPhongBan";
                 cmd.Connection = db;
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -122,7 +122,7 @@ namespace DataAccessLayer
                 SqlConnection db = DataProvider.dbContext;
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "LoadComboBoxPhongBan";
+                cmd.CommandText = "LoadComboBoxTenTruongPhong";
                 cmd.Connection = db;
                 SqlDataReader reader = cmd.ExecuteReader();
 
