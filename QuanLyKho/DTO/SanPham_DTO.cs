@@ -35,14 +35,14 @@ namespace QuanLyKho.DTO
         public SanPham_DTO (DataRow row)
         {
             this.SoLuong = (int)row["soLuong"];
-            this.TenNSX = row["Ten_NSX"].ToString();
+            this.TenNSX = row["Ten_NSX"].ToString()!= "" ? row["Ten_NSX"].ToString(): "chưa có nhà sản xuất" ;
             this.DonGia = (int)row["Gia"];
             this.MaSP = (int)row["Ma_Sanpham"];
             this.TenSP = row["TenSanPham"].ToString();
             this.ThongSoKyThuat = row["Thongso_Kt"].ToString();
-            this.TenLoaiSP = row["TenLoai"].ToString();
-            this.MaLoaiSP = (int)row["ma_loaiSP"]; ;
-            this.MaNSX = (int)row["Ma_NSX"];
+            this.TenLoaiSP = row["TenLoai"].ToString() != "" ? row["TenLoai"].ToString() : "chưa có loại sản phẩm" ;
+            this.MaLoaiSP = row["ma_loaiSP"].ToString() != "" ? (int)row["ma_loaiSP"] : 0;
+            this.MaNSX = row["Ma_NSX"].ToString() != "" ? (int)row["Ma_NSX"] : 0 ;
         }
         public int MaSP
         {

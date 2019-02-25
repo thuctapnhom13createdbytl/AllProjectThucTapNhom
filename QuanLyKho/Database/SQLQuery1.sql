@@ -8,8 +8,7 @@ insert into NhaSanXuat
 values (N'Nhà sản xuất 4',N'Tân Lập - Đan Phượng - Hà Nội','4444444','4444@gmail.com')
 insert into NhaSanXuat 
 values (N'Nhà sản xuất 5',N'Tân Hội - Đan Phượng - Hà Nội','555555','55555@gmail.com')
-insert into NhaSanXuat 
-values (N'Nhà sản xuất 6',N'Đà Nẵng','66666666','666666@gmail.com')
+insert into NhaSanXuat values (N'Nhà sản xuất 6',N'Đà Nẵng','66666666','666666@gmail.com')
 
 select * from LoaiSanPham
 
@@ -26,18 +25,58 @@ insert into SanPham values(N'Sản phẩm 3',3,N'thông số kỹ thuật 3',3,3
 insert into SanPham values(N'Sản phẩm 4',4,N'thông số kỹ thuật 4',4,4,4)
 insert into SanPham values(N'Sản phẩm 5',5,N'thông số kỹ thuật 5',5,5,5)
 insert into SanPham values(N'Sản phẩm 6',6,N'thông số kỹ thuật 6',6,6,6)
-
+-- tạo proc lấy tất cả sản phẩm---------------------------------------------------
 create proc LayTatCaSanPham
 as begin
-select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX 
-from SanPham,NhaSanXuat,LoaiSanPham 
-where SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP and SanPham.Ma_NSX = NhaSanXuat.Ma_NSX
+select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX,SanPham.Ma_NSX,SanPham.Ma_LoaiSP
+from SanPham left join NhaSanXuat on SanPham.Ma_NSX = NhaSanXuat.Ma_NSX left join  LoaiSanPham on SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP
 end
+------------------------------------------------------------------------------------
 LayTatCaSanPham
+
+----------------tạo proc thêm sản phẩm---------------------------------------------------
 create proc ThemSanPham(@Ten nvarchar(50), @maNSX int,@thongso nvarchar(255), @maLoai int,@gia int, @soluong int )
 as begin 
 insert into SanPham values(@Ten,@maNSX,@thongso,@maLoai,@gia,@soluong)
 end
+-----------------------------------------------------------------------------------------
 ThemSanPham N'Sản phẩm 7',6,N'thông số kỹ thuật 6',6,6,6
 select * from LoaiSanPham
 select * from NhaSanXuat
+
+
+
+update LoaiSanPham set TenLoai = N'Loai 1', GhiChu = N'Ghi chú mới sửa của loại 1' where Ma_LoaiSP = 1
+--------------------tạo trigger xóa loại sản phẩm ---------------------------------------------------
+ create trigger xoaLSP on LoaiSanPham instead of delete
+ as declare @maLSP int
+ begin
+ select @maLSP = Ma_LoaiSP from deleted
+ update SanPham set Ma_LoaiSP = null where SanPham.Ma_LoaiSP = @maLSP
+ delete from LoaiSanPham where Ma_LoaiSP = @maLSP
+ end
+ -----------------------------------------------------------------------------------------------------
+ select * from LoaiSanPham
+ select * from SanPham
+ delete from LoaiSanPham where Ma_LoaiSP = 6
+ LayTatCaSanPham
+ select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai 
+from SanPham left join  LoaiSanPham on SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP
+delete from SanPham where Ma_LoaiSP 
+select * from LoaiSanPham where TenLoai like N'%1%'
+update NhaSanXuat set Ten_NSX = N'1',DiaChi_NSX = N'1',SDT_NSX = '11',Website_NSX = '1@gmail.com' where Ma_NSX = 1
+
+---- tạo trigger xóa nhà sản xuất-----------------------------
+ alter trigger xoaNSX on NhaSanXuat instead of delete
+ as declare @maNSX int
+ begin
+ select @maNSX = Ma_NSX from deleted
+ update SanPham set Ma_NSX = null where SanPham.Ma_LoaiSP = @maNSX
+ delete from NhaSanXuat where Ma_NSX = @maNSX
+ end
+
+ ----------------------------------------------------------------------
+ delete from NhaSanXuat where Ma_NSX =1
+ select * from NhaSanXuat
+ select * from SanPham
+ select * from LoaiSanPham
