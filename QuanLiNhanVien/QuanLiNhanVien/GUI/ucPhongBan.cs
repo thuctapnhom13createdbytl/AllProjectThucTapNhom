@@ -29,7 +29,7 @@ namespace QuanLiNhanVien.GUI
             lstPhongBan_TruongPhong = PHONGBAN_BUL.LoadComboBoxPhongBan();
 
             cboTruongPhong.DataSource = lstPhongBan_TruongPhong;
-            cboTruongPhong.DisplayMember = "Ho";
+            cboTruongPhong.DisplayMember = "TenTP";
             cboTruongPhong.ValueMember = "MaTP";
 
             dgvPhongBan.DataSource = typeof(List<PHONGBAN_DTO>);
@@ -115,21 +115,34 @@ namespace QuanLiNhanVien.GUI
         //    return err;
         //}
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if(dgvPhongBan.SelectedRows.Count == 0)
-            {
-                return;
-            }
-            TextBox txt = sender as TextBox;
-            DataGridViewRow dr = dgvPhongBan.SelectedRows[0];
-            dr.Cells[txt.Tag.ToString()].Value = txt.Text;
-        }
+        //private void textBox1_TextChanged(object sender, EventArgs e)
+        //{
+        //    if(dgvPhongBan.SelectedRows.Count == 0)
+        //    {
+        //        return;
+        //    }
+        //    TextBox txt = sender as TextBox;
+        //    DataGridViewRow dr = dgvPhongBan.SelectedRows[0];
+        //    dr.Cells[txt.Tag.ToString()].Value = txt.Text;
+        //}
 
-        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        //private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    try
+        //    {
+        //        int index = e.RowIndex;
+        //        DataGridViewRow  dr = dgvPhongBan.Rows[index];
+        //        lblMaPB.Text = dr.Cells["MaPB"].Value == null ? "" : dr.Cells["MaPB"].Value.ToString();
+        //        txtTenPhongBan.Text = dr.Cells["TenPB"].Value.ToString();
+        //        cboTruongPhong.SelectedValue = dr.Cells["TenTP"];
+        //        dtpNgayNhanChuc.Value = dr.Cells["NgayNhanChuc"].Value == null ? DateTime.Now : DateTime.Parse(dr.Cells["NgayNhanChuc"].Value.ToString()); 
+                
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Error");
+        //    }
+        //}
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -185,16 +198,15 @@ namespace QuanLiNhanVien.GUI
             }
         }
 
-        //private void txt_TextChanged(object sender, EventArgs e)
-        //{
-        //    if(dgvPhongBan.SelectedRows.Count == 0)
-        //    {
-        //        return;
-        //    }
-        //    TextBox txt = sender as TextBox;
-        //    DataGridViewRow dr = dgvPhongBan.SelectedRows[0];
-        //    dr.Cells[txt.Tag.ToString()].Value = txt.Text;
-        //}
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvPhongBan.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            DataGridViewRow dr = dgvPhongBan.SelectedRows[0];
+            dr.Cells["TenPB"].Value = txtTenPhongBan.Text;
+        }
 
         private void dtpNgayNhanChuc_ValueChanged(object sender, EventArgs e)
         {
@@ -223,13 +235,12 @@ namespace QuanLiNhanVien.GUI
 
         private void cboTruongPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MetroComboBox cbo = sender as MetroComboBox;
-            if(dgvPhongBan.SelectedRows.Count == 0)
+            if (dgvPhongBan.SelectedRows.Count == 0)
             {
                 return;
             }
             DataGridViewRow dr = dgvPhongBan.SelectedRows[0];
-            dr.Cells[cbo.Tag.ToString()].Value = cbo.Text;
+            dr.Cells["TenTP"].Value = cboTruongPhong.Text;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -262,6 +273,28 @@ namespace QuanLiNhanVien.GUI
                 {
                     MessageBox.Show("Cập Nhật Thất Bại", "Thông Báo");
                 }
+            }
+            lstPhongBan = PHONGBAN_BUL.LoadTatCaPhongBan();
+            dgvPhongBan.DataSource = typeof(List<PHONGBAN_DTO>);
+            dgvPhongBan.DataSource = lstPhongBan;
+            EditDataGridView();
+        }
+
+        private void dgvPhongBan_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int index = e.RowIndex;
+                DataGridViewRow dr = dgvPhongBan.Rows[index];
+                lblMaPB.Text = dr.Cells["MaPB"].Value == null ? "" : dr.Cells["MaPB"].Value.ToString();
+                txtTenPhongBan.Text = dr.Cells["TenPB"].Value.ToString();
+                cboTruongPhong.SelectedValue = dr.Cells["MaTP"].Value;
+                dtpNgayNhanChuc.Value = dr.Cells["NgayNhanChuc"].Value == null ? DateTime.Now : DateTime.Parse(dr.Cells["NgayNhanChuc"].Value.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
             }
         }
     }

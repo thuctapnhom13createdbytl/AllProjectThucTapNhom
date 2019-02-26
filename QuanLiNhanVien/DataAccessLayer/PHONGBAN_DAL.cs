@@ -88,9 +88,9 @@ namespace DataAccessLayer
                     SqlConnection db = DataProvider.dbContext;
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO PHONGBAN ( TenPB , setMaTP, NgayNhanChuc) " +
-                                       " VALUES (N' " + pbDTO.TenPB + "','" + setMaTP + "'," +
-                                       " N'" + setDate + ")";
+                    cmd.CommandText = "INSERT INTO PHONGBAN ( TenPB , MaTP, NgayNhanChuc) " +
+                                       " VALUES (N'" + pbDTO.TenPB + "'," + setMaTP + "," +
+                                       " '" + setDate + "')";
                     cmd.Connection = db;
                     return cmd.ExecuteNonQuery();
                 }
@@ -103,8 +103,8 @@ namespace DataAccessLayer
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = " UPDATE PHONGBAN SET TenPB = " + " N'" + pbDTO.TenPB + "'," +
-                                      "MaTP = " + setMaTP + "'," +
-                                      " NgayNhanChuc = " + setDate + "WHERE MaPB = " + pbDTO.MaPB;
+                                      "MaTP = " + setMaTP + "," +
+                                      " NgayNhanChuc = '" + setDate + "' WHERE MaPB = " + pbDTO.MaPB;
                     cmd.Connection = db;
                     return cmd.ExecuteNonQuery();
                 }
@@ -129,8 +129,8 @@ namespace DataAccessLayer
                 while (reader.Read())
                 {
                     PHONGBAN_DTO pbDTO = new PHONGBAN_DTO();
-                    pbDTO.MaPB = int.Parse(reader["MaPB"].ToString());
-                    pbDTO.TenPB = reader["TenPB"].ToString();
+                    pbDTO.MaTP = int.Parse(reader["MaNV"].ToString());
+                    pbDTO.TenTP = reader["HoTen"].ToString();
                     lstPhongBan.Add(pbDTO);
                 }
                 reader.Close();

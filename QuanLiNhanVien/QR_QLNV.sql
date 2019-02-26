@@ -8,9 +8,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROC [dbo].[LoadTatCaPhongBan]
+alter PROC [dbo].[LoadTatCaPhongBan]
 AS 
-	SELECT pb.MaPB, pb.TenPB, pb.NgayNhanChuc, nv.HoTen as TenTP
+	SELECT pb.MaPB, pb.TenPB, pb.NgayNhanChuc, nv.HoTen as TenTP, pb.MaTP
 	FROM PHONGBAN pb left join NHANVIEN nv on nv.MaNV = pb.MaTP
 
 GO
@@ -45,3 +45,9 @@ as
 	begin 
 	delete from PHONGBAN where MaPB = @maPB
 	end 
+LoadTatCaPhongBan
+
+LoadComboBoxTenTruongPhong
+
+delete PHONGBAN where MaPB = 1
+select * from NHANVIEN left join PHONGBAN on NHANVIEN.MaPB = PHONGBAN.MaPB

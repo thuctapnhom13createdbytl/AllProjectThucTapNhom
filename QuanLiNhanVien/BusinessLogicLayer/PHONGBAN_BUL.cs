@@ -27,8 +27,8 @@ namespace BusinessLogicLayer
         {
             List<PHONGBAN_DTO> lstPhongBan = PHONGBAN_DAL.LoadComboBoxPhongBan();
             PHONGBAN_DTO pbDTO = new PHONGBAN_DTO();
-            pbDTO.MaPB = 0;
-            pbDTO.TenPB = "Chưa Có Phòng Ban";
+            pbDTO.MaTP = 0;
+            pbDTO.TenTP = "Chưa Có Trưởng Phòng";
             lstPhongBan.Insert(0, pbDTO);
             return lstPhongBan;
         }
