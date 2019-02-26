@@ -38,6 +38,7 @@ namespace QuanLyKho.VIEW
             bindingLoaiSP();
             bindingNSX();
         }
+        #region load
         void LayTatCaSP()
         {
             DanhSachSP.DataSource = SanPham_DAO.Instance.LayTatCaSanPham();
@@ -50,6 +51,21 @@ namespace QuanLyKho.VIEW
         {
             DanhSachNSX.DataSource = NhaSanXuat_DAO.Instance.LayTatCaNSX();
         }
+        void loadcbNSX(ComboBox cb)
+        {
+            cb.DataSource = NhaSanXuat_DAO.Instance.LayTatCaNSX();
+            cb.DisplayMember = "TenNSX";
+            cb.ValueMember = "MaNSX";
+        }
+        void loadcbLSP(ComboBox cb)
+        {
+            cb.DataSource = LoaiSanPham_DAO.Instance.LayTatCaLoaiSanPham();
+            cb.DisplayMember = "TenLSP";
+            cb.ValueMember = "MaLSP";
+        }
+        #endregion
+
+        #region binding
         void bindingSanPham()
         {
             txtDonGia.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "DonGia", true, DataSourceUpdateMode.Never));
@@ -74,7 +90,8 @@ namespace QuanLyKho.VIEW
             txtSDT.DataBindings.Add(new Binding("Text", dtgvNSX.DataSource, "sdtNSX", true, DataSourceUpdateMode.Never));
             txtWebsite.DataBindings.Add(new Binding("Text", dtgvNSX.DataSource, "WebsiteNSX", true, DataSourceUpdateMode.Never));
         }
-
+        #endregion
+        #region event
         private void btnThemLSP_Click(object sender, EventArgs e)
         {
             try
@@ -304,17 +321,7 @@ namespace QuanLyKho.VIEW
                 LayTatCaNSX();
             }
         }
-        void loadcbNSX(ComboBox cb)
-        {
-            cb.DataSource = NhaSanXuat_DAO.Instance.LayTatCaNSX();
-            cb.DisplayMember = "TenNSX";
-            cb.ValueMember = "MaNSX";
-        }
-        void loadcbLSP(ComboBox cb)
-        {
-            cb.DataSource = LoaiSanPham_DAO.Instance.LayTatCaLoaiSanPham();
-            cb.DisplayMember = "TenLSP";
-            cb.ValueMember = "MaLSP";
-        }
+        #endregion
+
     }
 }
