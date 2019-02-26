@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace QuanLyKho.DTO
 {
@@ -11,6 +11,12 @@ namespace QuanLyKho.DTO
     {
         private int maNSX;
         private string tenNSX, diaChiNSX, sdtNSX, websiteNSX;
+
+        public NhaSanXuat_DTO()
+        {
+            maNSX = 0;
+            tenNSX = diaChiNSX = sdtNSX = websiteNSX = "";
+        }
 
         public NhaSanXuat_DTO(int mansx, string tennsx, string diachi, string sdt, string web)
         {

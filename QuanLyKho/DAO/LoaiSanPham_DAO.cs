@@ -1,10 +1,10 @@
-﻿using QuanLyKho.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using QuanLyKho.DTO;
 
 namespace QuanLyKho.DAO
 {
@@ -16,6 +16,19 @@ namespace QuanLyKho.DAO
             get { if (instance == null) instance = new LoaiSanPham_DAO(); return instance; }
             private set { instance = value; }
         }
+
+        public List<LoaiSanPham_DTO> LoadToanBoLoaiSanPham()
+        {
+            List<LoaiSanPham_DTO> lstLoaiSP = new List<LoaiSanPham_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("LoadToanBoLoaiSanPham");
+            foreach (DataRow item in data.Rows)
+            {
+                LoaiSanPham_DTO loaiSP = new LoaiSanPham_DTO(item);
+                lstLoaiSP.Add(loaiSP);
+            }
+            return lstLoaiSP;
+        }
+
         public List<LoaiSanPham_DTO> LayTatCaLoaiSanPham()
         {
             List<LoaiSanPham_DTO> DanhSachLSP = new List<LoaiSanPham_DTO>();

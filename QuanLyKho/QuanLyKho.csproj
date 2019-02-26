@@ -47,12 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHang_DAO.cs" />
     <Compile Include="DAO\LoaiSanPham_DAO.cs" />
+    <Compile Include="DAO\NhanVien_DAO.cs" />
+    <Compile Include="DAO\NhapHang_DAO.cs" />
     <Compile Include="DAO\NhaSanXuat_DAO.cs" />
     <Compile Include="DAO\SanPham_DAO.cs" />
+    <Compile Include="DAO\XuatHang_DAO.cs" />
+    <Compile Include="DTO\KhachHang_DTO.cs" />
     <Compile Include="DTO\LoaiSanPham_DTO.cs" />
+    <Compile Include="DTO\NhanVien_DTO.cs" />
+    <Compile Include="DTO\NhapHang_DTO.cs" />
     <Compile Include="DTO\NhaSanXuat_DTO.cs" />
     <Compile Include="DTO\SanPham_DTO.cs" />
+    <Compile Include="DTO\XuatHang_DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VIEW\fKhachHang.cs">

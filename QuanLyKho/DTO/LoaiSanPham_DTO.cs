@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace QuanLyKho.DTO
 {
@@ -12,6 +12,13 @@ namespace QuanLyKho.DTO
         private int maLSP;
         private string tenLSP;
         private string ghiChu;
+
+        public LoaiSanPham_DTO()
+        {
+            maLSP = 0;
+            tenLSP = "";
+            ghiChu = "";
+        }
         public LoaiSanPham_DTO(int malsp, string tenlsp, string ghichu)
         {
             this.GhiChu = ghichu;
