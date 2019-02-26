@@ -81,8 +81,8 @@ namespace QuanLyKho.VIEW
             txtEmail.Text = phieuXuat.KhachHang.Email_KH;
             txtSDT.Text = phieuXuat.KhachHang.SDT_KH;
             cboNhanVien.Text = phieuXuat.NhanVien.ThongTin;
-            txtLoaiSP.Text = phieuXuat.LoaiSanPham.TenLoai;
-            txtNSX.Text = phieuXuat.NhaSanXuat.Ten_NSX;
+            txtLoaiSP.Text = phieuXuat.LoaiSanPham.TenLSP;
+            txtNSX.Text = phieuXuat.NhaSanXuat.TenNSX;
             cboTenSP.Text = phieuXuat.TenSanPham;
             numSoLuong.Value = (int)phieuXuat.SoLuong;
             txtDonGia.Text = phieuXuat.DonGia.ToString();

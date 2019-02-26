@@ -41,12 +41,12 @@ namespace QuanLyKho.VIEW
             cboNhanVien.ValueMember = "Ma_NV";
 
             cboNSX.DataSource = lstNSX;
-            cboNSX.DisplayMember = "Ten_NSX";
-            cboNSX.ValueMember = "Ma_NSX";
+            cboNSX.DisplayMember = "TenNSX";
+            cboNSX.ValueMember = "MaNSX";
 
             cboLoaiSP.DataSource = lstLoaiSP;
-            cboLoaiSP.DisplayMember = "TenLoai";
-            cboLoaiSP.ValueMember = "Ma_LoaiSP";
+            cboLoaiSP.DisplayMember = "TenLSP";
+            cboLoaiSP.ValueMember = "MaLSP";
 
             dgvPhieuNhap.DataSource = typeof(List<NhapHang_DTO>);
             dgvPhieuNhap.DataSource = lstPhieuNhap;
