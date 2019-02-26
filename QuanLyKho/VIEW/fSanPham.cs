@@ -323,5 +323,127 @@ namespace QuanLyKho.VIEW
         }
         #endregion
 
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTenSanPham.Text == "")
+                {
+                    MessageBox.Show("Không được để trống tên sản phẩm");
+                }
+                else
+                {
+                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                    if (them)
+                    {
+                        MessageBox.Show("Thêm sản phẩm thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
+                }
+                LayTatCaSP();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuySP_Click(object sender, EventArgs e)
+        {
+            txtTenSanPham.Text = "";
+            txtMaSanPham.Text = "";
+            txtThongSoKyThuat.Text = "";
+            txtDonGia.Text = "";
+            //cbTenNhaSanXuat.SelectedText = "Chưa có tên nhà sản xuất";
+            //cbTenNhaSanXuat.SelectedValue = "";
+            //cbLoaiSanPham.SelectedText = "Chưa có loại sản phẩm";
+            //cbLoaiSanPham.SelectedValue = "";
+            loadcbLSP(cbLoaiSanPham);
+            loadcbNSX(cbTenNhaSanXuat);
+            nrudSoLuong.Value = 0;
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTenSanPham.Text == "")
+                {
+                    MessageBox.Show("Không được để trống tên sản phẩm");
+                }
+                else
+                {
+                    bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                    if (sua)
+                    {
+                        MessageBox.Show("Cập nhật sản phẩm thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }
+                }
+                LayTatCaSP();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMaSanPham.Text == "")
+                {
+                    MessageBox.Show("Chọn 1 sản phẩm để xóa");
+                }
+                else
+                {
+                    bool xoa = SanPham_DAO.Instance.XoaSanPham(Convert.ToInt32(txtMaSanPham.Text));
+                    if (xoa)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+                LayTatCaSP();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            List<SanPham_DTO> SP = SanPham_DAO.Instance.TimKiemSP(txtTimKiem.Text.ToString());
+            if (SP.Count <= 0)
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm nào.");
+            }
+            else
+            {
+                this.DanhSachSP.DataSource = SP;
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == "")
+            {
+                LayTatCaSP();
+            }
+        }
     }
 }

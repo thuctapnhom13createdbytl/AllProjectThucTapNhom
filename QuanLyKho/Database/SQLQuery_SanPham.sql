@@ -80,3 +80,32 @@ update NhaSanXuat set Ten_NSX = N'1',DiaChi_NSX = N'1',SDT_NSX = '11',Website_NS
  select * from NhaSanXuat
  select * from SanPham
  select * from LoaiSanPham
+ update SanPham set TenSanPham = N'sp1',Ma_NSX = 2, Thongso_Kt = N'Thông số 1', Ma_LoaiSP = 2,Gia = 11,SoLuong = 11 where Ma_Sanpham = 1
+
+ ---------------------------------------------tạo trigger xóa sản phẩm ------------------------------
+ create trigger xoaSP on SanPham instead of delete
+ as declare @maSP int
+ begin
+ select @maSP = Ma_Sanpham from deleted
+ update CT_PhieuNhap set Ma_Sanpham = null where Ma_Sanpham = @maSP
+ update CT_PhieuNhap set Ma_Sanpham = null where Ma_Sanpham = @maSP
+ delete from SanPham where Ma_Sanpham = @maSP
+ end
+
+
+ -------------------------------------------------------------------
+ delete from SanPham where Ma_Sanpham = 1
+ select * from SanPham
+ -------------------------------tạo proc tìm kiếm sản phẩm theo tên------------------------
+create proc TimKiemSP(@tenSP nvarchar(50))
+as begin
+select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX,SanPham.Ma_NSX,SanPham.Ma_LoaiSP
+from SanPham left join NhaSanXuat on SanPham.Ma_NSX = NhaSanXuat.Ma_NSX left join  LoaiSanPham on SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP
+where TenSanPham like N'%'+@tenSP+'%'
+end
+TimKiemSP N'sản phẩm'
+
+
+select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX,SanPham.Ma_NSX,SanPham.Ma_LoaiSP
+from SanPham left join NhaSanXuat on SanPham.Ma_NSX = NhaSanXuat.Ma_NSX left join  LoaiSanPham on SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP
+where TenSanPham like N'%Sản phẩm%'
