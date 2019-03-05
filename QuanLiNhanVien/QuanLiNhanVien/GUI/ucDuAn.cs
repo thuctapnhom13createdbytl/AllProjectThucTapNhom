@@ -204,5 +204,21 @@ namespace QuanLiNhanVien.GUI
             dtgvDuAn.DataSource = lstTimKiemDuAn;
             EditDataGridView();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < lstDuAn.Count; i++)
+            {
+                if (lstDuAn[i].MaDA == null || lstDuAn[i].MaDA == 0)
+                {
+                    lstDuAn.Remove(lstDuAn[i]);
+                    i--;
+                }
+            }
+            dtgvDuAn.DataSource = typeof(List<DUAN_DTO>);
+            dtgvDuAn.DataSource = lstDuAn;
+            EditDataGridView();
+        }
     }
 }
