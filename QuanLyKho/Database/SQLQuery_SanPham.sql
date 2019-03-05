@@ -109,3 +109,10 @@ TimKiemSP N'sản phẩm'
 select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX,SanPham.Ma_NSX,SanPham.Ma_LoaiSP
 from SanPham left join NhaSanXuat on SanPham.Ma_NSX = NhaSanXuat.Ma_NSX left join  LoaiSanPham on SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP
 where TenSanPham like N'%Sản phẩm%'
+
+// Thêm khách hàng mới
+create proc ThemKhachHang(@tenkh nvarchar(50),@diachi nvarchar(50),@sdt varchar(50),@mail varchar(255))
+as
+begin
+	insert into KhachHang values(@tenkh,@diachi,@sdt,@mail)
+end

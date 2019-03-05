@@ -445,5 +445,10 @@ namespace QuanLyKho.VIEW
                 LayTatCaSP();
             }
         }
+
+        private void dtgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

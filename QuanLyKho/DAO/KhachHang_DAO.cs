@@ -27,7 +27,7 @@ namespace QuanLyKho.DAO
         public List<KhachHang_DTO> LoadToanBoKhachHang()
         {
             List<KhachHang_DTO> lstKhachHang = new List<KhachHang_DTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("LoadToanBoKhachHang");
+            DataTable data = DataProvider.Instance.ExecuteQuery("LayTatCaKhachHang");
             foreach (DataRow item in data.Rows)
             {
                 KhachHang_DTO kh = new KhachHang_DTO(item);
@@ -35,5 +35,19 @@ namespace QuanLyKho.DAO
             }
             return lstKhachHang;
         }
+        public bool ThemKhachHang(string tenkh, string diachi, string sdt, string email)
+        {
+            try
+            {
+                string query = string.Format("insert into KhachHang values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')",tenkh, diachi, sdt, email);
+                DataProvider.Instance.ExecuteNonQuery(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
     }
 }
