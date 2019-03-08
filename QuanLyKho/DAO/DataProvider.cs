@@ -18,7 +18,7 @@ namespace QuanLyKho.DAO
             private set { DataProvider.instance = value; }
         }
         private DataProvider() { }
-        private String connectionSTR = "Data Source=DESKTOP-7107S2D\\SQLEXPRESS;Initial Catalog=QuanLyKho;Integrated Security=True";
+        private String connectionSTR = @"Data Source=LAPTOP-N9H76J8E;Initial Catalog=QuanLyKho;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

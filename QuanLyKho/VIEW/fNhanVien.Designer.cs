@@ -46,6 +46,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Ten_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,10 +198,51 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 145);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Ten_NV,
+            this.GioiTinh,
+            this.NgaySinh_NV,
+            this.SDT_NV,
+            this.Email_NV});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 144);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(959, 355);
             this.dataGridView1.TabIndex = 65;
+            // 
+            // Ten_NV
+            // 
+            this.Ten_NV.DataPropertyName = "Ten_NV";
+            this.Ten_NV.HeaderText = "Tên Nhân Viên";
+            this.Ten_NV.Name = "Ten_NV";
+            this.Ten_NV.Width = 175;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới Tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.Width = 150;
+            // 
+            // NgaySinh_NV
+            // 
+            this.NgaySinh_NV.DataPropertyName = "Ngaysinh_NV";
+            this.NgaySinh_NV.HeaderText = "Ngày Sinh";
+            this.NgaySinh_NV.Name = "NgaySinh_NV";
+            this.NgaySinh_NV.Width = 170;
+            // 
+            // SDT_NV
+            // 
+            this.SDT_NV.DataPropertyName = "SDT_NV";
+            this.SDT_NV.HeaderText = "Số Điện Thoại";
+            this.SDT_NV.Name = "SDT_NV";
+            this.SDT_NV.Width = 150;
+            // 
+            // Email_NV
+            // 
+            this.Email_NV.DataPropertyName = "Email_NV";
+            this.Email_NV.HeaderText = "Email";
+            this.Email_NV.Name = "Email_NV";
+            this.Email_NV.Width = 270;
             // 
             // fNhanVien
             // 
@@ -250,5 +296,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_NV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh_NV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT_NV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email_NV;
     }
 }

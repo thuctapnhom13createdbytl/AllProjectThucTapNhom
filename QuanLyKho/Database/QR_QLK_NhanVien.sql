@@ -60,3 +60,7 @@ VALUES
 	    'tuyet@gmail.com'         -- Email_NV - varchar(255)
 	   )
 SELECT * FROM dbo.NhanVien
+
+USE QuanLyKho
+GO
+dbo.LoadToanBoNhanVien
