@@ -51,6 +51,7 @@
             this.NgaySinh_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ma_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,7 +204,8 @@
             this.GioiTinh,
             this.NgaySinh_NV,
             this.SDT_NV,
-            this.Email_NV});
+            this.Email_NV,
+            this.Ma_NV});
             this.dataGridView1.Location = new System.Drawing.Point(12, 144);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(959, 355);
@@ -243,6 +245,13 @@
             this.Email_NV.HeaderText = "Email";
             this.Email_NV.Name = "Email_NV";
             this.Email_NV.Width = 270;
+            // 
+            // Ma_NV
+            // 
+            this.Ma_NV.DataPropertyName = "Ma_NV";
+            this.Ma_NV.HeaderText = "Mã Nhân Viên";
+            this.Ma_NV.Name = "Ma_NV";
+            this.Ma_NV.Visible = false;
             // 
             // fNhanVien
             // 
@@ -301,5 +310,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh_NV;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT_NV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email_NV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ma_NV;
     }
 }

@@ -64,3 +64,14 @@ SELECT * FROM dbo.NhanVien
 USE QuanLyKho
 GO
 dbo.LoadToanBoNhanVien
+
+alter TRIGGER XoaNhanVien1 ON NhanVien FOR DELETE
+AS DECLARE @maNV INT
+BEGIN
+    SELECT @maNV = Ma_NV FROM DELETE
+END
+
+SELECT *FROM INFORMATION_SCHEMA.TRIGGER
+WHERE TRIGGER_SCHEMA= 'QuanLyKho' AND
+EVENT_object_table = 'NhanVien';
+
