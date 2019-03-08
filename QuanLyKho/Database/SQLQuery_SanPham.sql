@@ -47,6 +47,7 @@ select * from NhaSanXuat
 
 
 update LoaiSanPham set TenLoai = N'Loai 1', GhiChu = N'Ghi chú mới sửa của loại 1' where Ma_LoaiSP = 1
+SELECT * FROM LoaiSanPham
 --------------------tạo trigger xóa loại sản phẩm ---------------------------------------------------
  create trigger xoaLSP on LoaiSanPham instead of delete
  as declare @maLSP int

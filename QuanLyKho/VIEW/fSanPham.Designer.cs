@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnHuySP = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.txtThongSoKyThuat = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -79,9 +80,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTenLSP = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnHuyNSX = new System.Windows.Forms.Button();
             this.txtMa_NSX = new System.Windows.Forms.TextBox();
             this.txtTen_NSX = new System.Windows.Forms.TextBox();
             this.dtgvNSX = new System.Windows.Forms.DataGridView();
+            this.Ma_NSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten_NSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdtNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WebsiteNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoaNSX = new System.Windows.Forms.Button();
             this.btnSuaNSX = new System.Windows.Forms.Button();
             this.btnThemNSX = new System.Windows.Forms.Button();
@@ -95,13 +102,6 @@
             this.txtWebsite = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnHuyNSX = new System.Windows.Forms.Button();
-            this.Ma_NSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten_NSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdtNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WebsiteNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnHuySP = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSanPham)).BeginInit();
@@ -152,6 +152,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý sản phẩm";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnHuySP
+            // 
+            this.btnHuySP.Location = new System.Drawing.Point(991, 220);
+            this.btnHuySP.Name = "btnHuySP";
+            this.btnHuySP.Size = new System.Drawing.Size(75, 23);
+            this.btnHuySP.TabIndex = 38;
+            this.btnHuySP.Text = "Hủy";
+            this.btnHuySP.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -599,6 +608,16 @@
             this.tabPage3.Text = "Quản lý nhà sản xuất";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnHuyNSX
+            // 
+            this.btnHuyNSX.Location = new System.Drawing.Point(455, 120);
+            this.btnHuyNSX.Name = "btnHuyNSX";
+            this.btnHuyNSX.Size = new System.Drawing.Size(78, 23);
+            this.btnHuyNSX.TabIndex = 47;
+            this.btnHuyNSX.Text = "Hủy";
+            this.btnHuyNSX.UseVisualStyleBackColor = true;
+            this.btnHuyNSX.Click += new System.EventHandler(this.btnHuyNSX_Click);
+            // 
             // txtMa_NSX
             // 
             this.txtMa_NSX.Enabled = false;
@@ -631,6 +650,47 @@
             this.dtgvNSX.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvNSX.Size = new System.Drawing.Size(1308, 475);
             this.dtgvNSX.TabIndex = 44;
+            // 
+            // Ma_NSX
+            // 
+            this.Ma_NSX.DataPropertyName = "MaNSX";
+            this.Ma_NSX.HeaderText = "Mã nhà sản xuất";
+            this.Ma_NSX.Name = "Ma_NSX";
+            this.Ma_NSX.ReadOnly = true;
+            this.Ma_NSX.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Ma_NSX.Width = 150;
+            // 
+            // Ten_NSX
+            // 
+            this.Ten_NSX.DataPropertyName = "TenNSX";
+            this.Ten_NSX.HeaderText = "Tên nhà sản xuất";
+            this.Ten_NSX.Name = "Ten_NSX";
+            this.Ten_NSX.ReadOnly = true;
+            this.Ten_NSX.Width = 250;
+            // 
+            // ChiNSX
+            // 
+            this.ChiNSX.DataPropertyName = "DiaChiNSX";
+            this.ChiNSX.HeaderText = "Địa chỉ nhà sản xuất";
+            this.ChiNSX.Name = "ChiNSX";
+            this.ChiNSX.ReadOnly = true;
+            this.ChiNSX.Width = 415;
+            // 
+            // sdtNSX
+            // 
+            this.sdtNSX.DataPropertyName = "SdtNSX";
+            this.sdtNSX.HeaderText = "Số điện thoại ";
+            this.sdtNSX.Name = "sdtNSX";
+            this.sdtNSX.ReadOnly = true;
+            this.sdtNSX.Width = 150;
+            // 
+            // WebsiteNSX
+            // 
+            this.WebsiteNSX.DataPropertyName = "WebsiteNSX";
+            this.WebsiteNSX.HeaderText = "Website";
+            this.WebsiteNSX.Name = "WebsiteNSX";
+            this.WebsiteNSX.ReadOnly = true;
+            this.WebsiteNSX.Width = 300;
             // 
             // btnXoaNSX
             // 
@@ -749,66 +809,6 @@
             this.label11.Size = new System.Drawing.Size(90, 13);
             this.label11.TabIndex = 30;
             this.label11.Text = "Tên nhà sản xuất";
-            // 
-            // btnHuyNSX
-            // 
-            this.btnHuyNSX.Location = new System.Drawing.Point(455, 120);
-            this.btnHuyNSX.Name = "btnHuyNSX";
-            this.btnHuyNSX.Size = new System.Drawing.Size(78, 23);
-            this.btnHuyNSX.TabIndex = 47;
-            this.btnHuyNSX.Text = "Hủy";
-            this.btnHuyNSX.UseVisualStyleBackColor = true;
-            this.btnHuyNSX.Click += new System.EventHandler(this.btnHuyNSX_Click);
-            // 
-            // Ma_NSX
-            // 
-            this.Ma_NSX.DataPropertyName = "MaNSX";
-            this.Ma_NSX.HeaderText = "Mã nhà sản xuất";
-            this.Ma_NSX.Name = "Ma_NSX";
-            this.Ma_NSX.ReadOnly = true;
-            this.Ma_NSX.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Ma_NSX.Width = 150;
-            // 
-            // Ten_NSX
-            // 
-            this.Ten_NSX.DataPropertyName = "TenNSX";
-            this.Ten_NSX.HeaderText = "Tên nhà sản xuất";
-            this.Ten_NSX.Name = "Ten_NSX";
-            this.Ten_NSX.ReadOnly = true;
-            this.Ten_NSX.Width = 250;
-            // 
-            // ChiNSX
-            // 
-            this.ChiNSX.DataPropertyName = "DiaChiNSX";
-            this.ChiNSX.HeaderText = "Địa chỉ nhà sản xuất";
-            this.ChiNSX.Name = "ChiNSX";
-            this.ChiNSX.ReadOnly = true;
-            this.ChiNSX.Width = 415;
-            // 
-            // sdtNSX
-            // 
-            this.sdtNSX.DataPropertyName = "SdtNSX";
-            this.sdtNSX.HeaderText = "Số điện thoại ";
-            this.sdtNSX.Name = "sdtNSX";
-            this.sdtNSX.ReadOnly = true;
-            this.sdtNSX.Width = 150;
-            // 
-            // WebsiteNSX
-            // 
-            this.WebsiteNSX.DataPropertyName = "WebsiteNSX";
-            this.WebsiteNSX.HeaderText = "Website";
-            this.WebsiteNSX.Name = "WebsiteNSX";
-            this.WebsiteNSX.ReadOnly = true;
-            this.WebsiteNSX.Width = 300;
-            // 
-            // btnHuySP
-            // 
-            this.btnHuySP.Location = new System.Drawing.Point(991, 220);
-            this.btnHuySP.Name = "btnHuySP";
-            this.btnHuySP.Size = new System.Drawing.Size(75, 23);
-            this.btnHuySP.TabIndex = 38;
-            this.btnHuySP.Text = "Hủy";
-            this.btnHuySP.UseVisualStyleBackColor = true;
             // 
             // fSanPham
             // 
