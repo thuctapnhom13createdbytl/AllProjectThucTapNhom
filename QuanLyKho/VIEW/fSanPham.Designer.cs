@@ -224,6 +224,7 @@
             this.btnCapNhat.TabIndex = 31;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // txtTimKiem
             // 
@@ -380,6 +381,7 @@
             this.cbTenNhaSanXuat.Name = "cbTenNhaSanXuat";
             this.cbTenNhaSanXuat.Size = new System.Drawing.Size(383, 21);
             this.cbTenNhaSanXuat.TabIndex = 21;
+            this.cbTenNhaSanXuat.SelectedIndexChanged += new System.EventHandler(this.cbTenNhaSanXuat_SelectedIndexChanged);
             // 
             // label2
             // 

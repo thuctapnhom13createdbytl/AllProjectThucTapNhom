@@ -69,12 +69,21 @@ select * from LoaiSanPham where TenLoai like N'%1%'
 update NhaSanXuat set Ten_NSX = N'1',DiaChi_NSX = N'1',SDT_NSX = '11',Website_NSX = '1@gmail.com' where Ma_NSX = 1
 
 ---- tạo trigger xóa nhà sản xuất-----------------------------
- alter trigger xoaNSX on NhaSanXuat instead of delete
+ CREATE trigger xoaNSX on NhaSanXuat instead of delete
  as declare @maNSX int
  begin
  select @maNSX = Ma_NSX from deleted
  update SanPham set Ma_NSX = null where SanPham.Ma_LoaiSP = @maNSX
  delete from NhaSanXuat where Ma_NSX = @maNSX
+ END
+ 
+  CREATE trigger xoaNhanVien on NhanVien instead of delete
+ as declare @maNV int
+ begin
+ select @maNV = Ma_NV from deleted
+ update dbo.PhieuNhap set Ma_NV = null where dbo.PhieuNhap.Ma_NV = @maNV
+ UPDATE dbo.PhieuXuat SET Ma_NV = NULL WHERE dbo.PhieuXuat.Ma_NV = @maNV
+ delete from dbo.NhanVien where Ma_NV = @maNV
  end
 
  ----------------------------------------------------------------------
@@ -82,3 +91,12 @@ update NhaSanXuat set Ten_NSX = N'1',DiaChi_NSX = N'1',SDT_NSX = '11',Website_NS
  select * from NhaSanXuat
  select * from SanPham
  select * from LoaiSanPham
+
+ USE QuanLyKho
+LoadToanBoNhanVien
+update NhanVien set Ten_NV = N'abv', GioiTinh = N'Nam', Ngaysinh_NV = '1998-02-02', SDT_NV ='123123', Email_NV='1313' where Ma_NV = 2
+
+CREATE PROC ThemNhanVien (@tenNV nvarchar(50), @gioitinh nvarchar(10), @ngaysinh date, @sdtNV varchar(50), @emailNV varchar(255))
+as begin 
+INSERT INTO dbo.NhanVien VALUES(@tenNV, @gioitinh, @ngaysinh, @sdtNV, @emailNV)
+END

@@ -323,5 +323,14 @@ namespace QuanLyKho.VIEW
         }
         #endregion
 
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbTenNhaSanXuat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

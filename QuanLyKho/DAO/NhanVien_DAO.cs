@@ -40,7 +40,8 @@ namespace QuanLyKho.DAO
         {
             try
             {
-                string query = string.Format("insert into NhanVien values (N'{0}', N'{1}','{2}','{3}','{4}')", tenNV, gioitinh, ngaysinh, sdtNV, emailNV); 
+                string query = string.Format("insert into NhanVien values (N'{0}', N'{1}','{2}','{3}','{4}')", tenNV, gioitinh, ngaysinh.ToShortDateString(), sdtNV, emailNV);
+                var a = query;
                 DataProvider.Instance.ExecuteNonQuery(query);
                 return true;
             }
@@ -54,7 +55,7 @@ namespace QuanLyKho.DAO
         {
             try
             {
-                string query = string.Format("update NhanVien set Ten_NV = N'{0}', GioiTinh = N'{1}', Ngaysinh_NV = '{2}', SDT_NV ='{3}', Email_NV='{4}' where Ma_NV = " + maNV, tenNV, gioitinh, ngaysinh, sdtNV, emailNV); //check lai giong bai hiep
+                string query = string.Format("update NhanVien set Ten_NV = N'{0}', GioiTinh = N'{1}', Ngaysinh_NV = '{2}', SDT_NV ='{3}', Email_NV='{4}' where Ma_NV = " + maNV,  tenNV, gioitinh, ngaysinh.ToShortDateString(), sdtNV, emailNV); //check lai giong bai hiep
                 DataProvider.Instance.ExecuteNonQuery(query);
                 return true;
             }
