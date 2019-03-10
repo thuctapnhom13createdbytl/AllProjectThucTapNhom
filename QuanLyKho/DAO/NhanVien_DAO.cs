@@ -83,7 +83,7 @@ namespace QuanLyKho.DAO
         {
             List<NhanVien_DTO> DanhSachNhanVien = new List<NhanVien_DTO>();
 
-            string query = "select Ma_NV, Ten_NV, Gioitinh, NgaysinhNv, SDT_NV, Email_NV "
+            string query = "select Ma_NV, Ten_NV, Gioitinh, Ngaysinh_NV, SDT_NV, Email_NV "
                             + "from NhanVIen where Ten_NV like N'%" + str + "%'";
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);

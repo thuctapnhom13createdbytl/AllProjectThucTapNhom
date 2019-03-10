@@ -147,7 +147,7 @@ namespace QuanLyKho.VIEW
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            List<NhanVien_DTO> NV = NhanVien_DAO.Instance.TimKiemNV(txtTimKiemNhanVien.Text.ToString());
+            List<NhanVien_DTO> NV = NhanVien_DAO.Instance.TimKiemNV(txtTimKiemNhanVien.Text);
             if(NV.Count<= 0)
             {
                 MessageBox.Show("Không tìm thấy nhân viên");
