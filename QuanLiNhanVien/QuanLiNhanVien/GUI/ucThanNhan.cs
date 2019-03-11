@@ -107,32 +107,38 @@ namespace QuanLiNhanVien.GUI
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa thân nhân này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
             {
-                THANNHAN_DTO tnDTO = new THANNHAN_DTO();
-                tnDTO.MaNV = (int)cbNhanVien.SelectedValue;
-                tnDTO.GioiTinh = cbGioiTinh.Text;
-                tnDTO.NgaySinh = dtpkNgaySinh.Value;
-                tnDTO.QuanHe = tbQuanHe.Text;
-                tnDTO.tenNV = cbNhanVien.Text;
-                tnDTO.TenTN = tbTenTN.Text;
-                var a = this.TenTNUpdate;
-                int capnhat = THANNHAN_BUL.CapNhapTN(tnDTO,this.TenTNUpdate);
-                if (capnhat > 0)
+                try
                 {
-                    MessageBox.Show("Cập nhật thành công");
-                } else
-                {
-                    MessageBox.Show("Cập nhật thất bại");
+                    THANNHAN_DTO tnDTO = new THANNHAN_DTO();
+                    tnDTO.MaNV = (int)cbNhanVien.SelectedValue;
+                    tnDTO.GioiTinh = cbGioiTinh.Text;
+                    tnDTO.NgaySinh = dtpkNgaySinh.Value;
+                    tnDTO.QuanHe = tbQuanHe.Text;
+                    tnDTO.tenNV = cbNhanVien.Text;
+                    tnDTO.TenTN = tbTenTN.Text;
+                    var a = this.TenTNUpdate;
+                    int capnhat = THANNHAN_BUL.CapNhapTN(tnDTO, this.TenTNUpdate);
+                    if (capnhat > 0)
+                    {
+                        MessageBox.Show("Cập nhật thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }
+                    dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+                    //   bindingData();
+
                 }
-                dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
-             //   bindingData();
-                
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         private void dtgvThanNhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -142,22 +148,29 @@ namespace QuanLiNhanVien.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sxóa thân nhân này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
             {
-                int xoa = THANNHAN_BUL.XoaTN(this.TenTNUpdate);
-                if(xoa > 0)
+                try
                 {
-                    MessageBox.Show("Xóa thành công");
-                } else
-                {
-                    MessageBox.Show("Xóa thất bại");
+                    int xoa = THANNHAN_BUL.XoaTN(this.TenTNUpdate);
+                    if (xoa > 0)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                    dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
+
                 }
-                dtgvThanNhan.DataSource = THANNHAN_BUL.layTatCaThanNhan();
-                
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+   
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
