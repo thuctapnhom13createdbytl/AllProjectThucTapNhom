@@ -32,9 +32,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnCapNhapKH = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtTimKiemKH = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -85,15 +85,17 @@
             this.button7.TabIndex = 75;
             this.button7.Text = "Xóa";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btnCapNhapKH
             // 
-            this.button8.Location = new System.Drawing.Point(220, 116);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(86, 23);
-            this.button8.TabIndex = 74;
-            this.button8.Text = "Cập nhật";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnCapNhapKH.Location = new System.Drawing.Point(220, 116);
+            this.btnCapNhapKH.Name = "btnCapNhapKH";
+            this.btnCapNhapKH.Size = new System.Drawing.Size(86, 23);
+            this.btnCapNhapKH.TabIndex = 74;
+            this.btnCapNhapKH.Text = "Cập nhật";
+            this.btnCapNhapKH.UseVisualStyleBackColor = true;
+            this.btnCapNhapKH.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -105,12 +107,12 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // textBox14
+            // txtTimKiemKH
             // 
-            this.textBox14.Location = new System.Drawing.Point(117, 90);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(383, 20);
-            this.textBox14.TabIndex = 72;
+            this.txtTimKiemKH.Location = new System.Drawing.Point(117, 90);
+            this.txtTimKiemKH.Name = "txtTimKiemKH";
+            this.txtTimKiemKH.Size = new System.Drawing.Size(383, 20);
+            this.txtTimKiemKH.TabIndex = 72;
             // 
             // button6
             // 
@@ -120,6 +122,7 @@
             this.button6.TabIndex = 71;
             this.button6.Text = "Tìm kiếm";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label13
             // 
@@ -234,9 +237,9 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnCapNhapKH);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.txtTimKiemKH);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtSDT);
@@ -259,9 +262,9 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnCapNhapKH;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtTimKiemKH;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtSDT;

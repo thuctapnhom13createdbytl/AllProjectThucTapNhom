@@ -69,7 +69,7 @@ namespace QuanLyKho.VIEW
                 }
                 else
                 {
-                    bool them = KhachHang_DAO.Instance.ThemKhachHang(txtTenKH.Text.ToString(),txtDiaChi.Text.ToString(),txtEmail.Text.ToString(),txtSDT.Text.ToString());
+                    bool them = KhachHang_DAO.Instance.ThemKhachHang(txtTenKH.Text,txtDiaChi.Text,txtSDT.Text,txtEmail.Text);
                     if (them)
                     {
                         MessageBox.Show("Thêm khách hàng thành công");
@@ -87,6 +87,77 @@ namespace QuanLyKho.VIEW
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtMaKH.Text == "")
+                {
+                    MessageBox.Show("Chọn 1 khach hang để xóa");
+                }
+                else
+                {
+                    bool xoa = KhachHang_DAO.Instance.XoaKhachHang(Convert.ToInt32(txtMaKH.Text));
+                    if (xoa)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+                LayTatCaKH();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTenKH.Text == "")
+                {
+                    MessageBox.Show("Không được để trống tên khach hang");
+                }
+                else
+                {
+                    bool sua = KhachHang_DAO.Instance.CapNhatKhachhang(Convert.ToInt16(txtMaKH.Text),txtTenKH.Text.ToString(), txtDiaChi.Text.ToString(), Convert.ToInt32(txtSDT.Text),txtEmail.Text.ToString());
+                    if (sua)
+                    {
+                        MessageBox.Show("Cập nhật khach hang thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại");
+                    }
+                }
+                LayTatCaKH();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            List<KhachHang_DTO> KH = KhachHang_DAO.Instance.TimKiemKH(txtTimKiemKH.Text.ToString());
+            if (KH.Count <= 0)
+            {
+                MessageBox.Show("Không tìm thấy khach hang nào.");
+            }
+            else
+            {
+                this.DanhSachKH.DataSource = KH;
+            }
         }
     }
 }

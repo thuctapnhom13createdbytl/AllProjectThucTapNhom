@@ -110,9 +110,18 @@ select Ma_Sanpham,TenSanPham, Thongso_Kt,Gia,SoLuong, TenLoai, Ten_NSX,SanPham.M
 from SanPham left join NhaSanXuat on SanPham.Ma_NSX = NhaSanXuat.Ma_NSX left join  LoaiSanPham on SanPham.Ma_LoaiSP = LoaiSanPham.Ma_LoaiSP
 where TenSanPham like N'%Sản phẩm%'
 
-// Thêm khách hàng mới
+-- Thêm khách hàng mới
 create proc ThemKhachHang(@tenkh nvarchar(50),@diachi nvarchar(50),@sdt varchar(50),@mail varchar(255))
 as
 begin
 	insert into KhachHang values(@tenkh,@diachi,@sdt,@mail)
 end
+-- trigger xóa khách hàng
+create trigger XoaKH on KhachHang instead of delete
+as declare @maKH int
+ begin
+ select @maKH = Ma_KH from deleted
+ update PhieuXuat set Ma_KH = null where Ma_KH = @maKH
+ delete from KhachHang where Ma_KH = @maKH
+ end
+
