@@ -1,4 +1,5 @@
-﻿INSERT INTO dbo.NhanVien
+﻿--Thêm dữ liệu bảng nhân viên
+INSERT INTO dbo.NhanVien
 (
     Ten_NV,
     GioiTinh,
@@ -43,35 +44,36 @@ VALUES
     '098765412',        -- SDT_NV - varchar(50)
     'ty@gmail.com'         -- Email_NV - varchar(255)
     )
-
-	INSERT INTO dbo.NhanVien
-	(
-	    Ten_NV,
-	    GioiTinh,
-	    Ngaysinh_NV,
-	    SDT_NV,
-	    Email_NV
-	)
-	VALUES
+INSERT INTO dbo.NhanVien
+	( Ten_NV, GioiTinh, Ngaysinh_NV, SDT_NV, Email_NV)
+VALUES
 	(   N'Trần Thị Tuyết',       -- Ten_NV - nvarchar(max)
 	    N'Nữ',       -- GioiTinh - nvarchar(10)
 	    '1999-11-19', -- Ngaysinh_NV - date
 	    '038912312',        -- SDT_NV - varchar(50)
 	    'tuyet@gmail.com'         -- Email_NV - varchar(255)
 	   )
-SELECT * FROM dbo.NhanVien
 
-USE QuanLyKho
+ -- tạo trigger xóa nhân viên---------------------------
+  CREATE trigger xoaNhanVien on NhanVien instead of delete
+ as declare @maNV int
+ begin
+ select @maNV = Ma_NV from deleted
+ update dbo.PhieuNhap set Ma_NV = null where dbo.PhieuNhap.Ma_NV = @maNV
+ UPDATE dbo.PhieuXuat SET Ma_NV = NULL WHERE dbo.PhieuXuat.Ma_NV = @maNV
+ delete from dbo.NhanVien where Ma_NV = @maNV
+ end
+
+ --tạo proc load toàn bộ nhân viên----------------
+ CREATE PROC LoadToanBoNhanVien
+AS 
+	
+	SELECT nv.Ma_NV, nv.Ten_NV + ' - ' + nv.SDT_NV AS ThongTin, nv.Ten_NV, nv.Ngaysinh_NV, nv.GioiTinh, nv.SDT_NV, nv.Email_NV
+	FROM dbo.NhanVien nv
 GO
-dbo.LoadToanBoNhanVien
 
-alter TRIGGER XoaNhanVien1 ON NhanVien FOR DELETE
-AS DECLARE @maNV INT
-BEGIN
-    SELECT @maNV = Ma_NV FROM DELETE
+-------tạo proc thêm mới nhân viên -------------
+ALTER PROC [dbo].[ThemNhanVien] (@tenNV nvarchar(50), @gioitinh nvarchar(10), @ngaysinh date, @sdtNV varchar(50), @emailNV varchar(255))
+as begin 
+INSERT INTO dbo.NhanVien VALUES(@tenNV, @gioitinh, @ngaysinh, @sdtNV, @emailNV)
 END
-
-SELECT *FROM INFORMATION_SCHEMA.TRIGGER
-WHERE TRIGGER_SCHEMA= 'QuanLyKho' AND
-EVENT_object_table = 'NhanVien';
-
