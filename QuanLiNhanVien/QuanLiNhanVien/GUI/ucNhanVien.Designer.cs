@@ -379,7 +379,8 @@
             this.metroPanel3.UseCustomForeColor = true;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 13;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            this.metroPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel3_Paint);
             // 
             // lblMaNV
             // 

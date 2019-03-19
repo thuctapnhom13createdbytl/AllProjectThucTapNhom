@@ -44,6 +44,7 @@
             this.mPanelMain.VerticalScrollbarBarColor = true;
             this.mPanelMain.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelMain.VerticalScrollbarSize = 10;
+            this.mPanelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.mPanelMain_Paint);
             // 
             // frmMain
             // 

@@ -96,7 +96,7 @@ namespace QuanLiNhanVien.GUI
                 MessageBox.Show(ex.Message, "Error");
             }
         }
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
             NHANVIEN_DTO nvDTO = new NHANVIEN_DTO();
@@ -299,7 +299,7 @@ namespace QuanLiNhanVien.GUI
 
         }
 
-        private void metroLabel9_Click(object sender, EventArgs e)
+        private void metroPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
