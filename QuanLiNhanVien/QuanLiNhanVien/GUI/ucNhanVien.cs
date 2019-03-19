@@ -194,7 +194,7 @@ namespace QuanLiNhanVien.GUI
             }
         }
 
-        private void txt_TextChanged(object sender, EventArgs e)
+        private void txt_TextChanged(object sender, EventArgs e) //txtLuong
         {
             if (dgvNhanVien.SelectedRows.Count == 0)
             {
@@ -292,6 +292,16 @@ namespace QuanLiNhanVien.GUI
             dgvNhanVien.DataSource = typeof(List<NHANVIEN_DTO>);
             dgvNhanVien.DataSource = lstNhanVien;
             EditDataGridView();
+        }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metroLabel9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
