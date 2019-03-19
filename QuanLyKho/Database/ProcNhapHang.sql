@@ -42,6 +42,8 @@ AS
 	FROM dbo.NhanVien nv
 GO
 
+dbo.LoadToanBoNhanVien
+
 CREATE PROC LoadToanBoLoaiSanPham
 AS 
 	SELECT *

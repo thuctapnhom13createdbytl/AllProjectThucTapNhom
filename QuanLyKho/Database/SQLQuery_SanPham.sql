@@ -1,4 +1,4 @@
-﻿
+﻿use QuanLyKho
 select * from NhaSanXuat
 insert into NhaSanXuat 
 values (N'Nhà sản xuất 2',N'Hà Nam','2222222','22222@gmail.com')
@@ -47,8 +47,10 @@ select * from NhaSanXuat
 
 
 update LoaiSanPham set TenLoai = N'Loai 1', GhiChu = N'Ghi chú mới sửa của loại 1' where Ma_LoaiSP = 1
+SELECT * FROM LoaiSanPham
 --------------------tạo trigger xóa loại sản phẩm ---------------------------------------------------
- create trigger xoaLSP on LoaiSanPham instead of delete
+ USE QuanLyKho
+ CREATE trigger xoaLSP on LoaiSanPham instead of delete
  as declare @maLSP int
  begin
  select @maLSP = Ma_LoaiSP from deleted
@@ -67,12 +69,21 @@ select * from LoaiSanPham where TenLoai like N'%1%'
 update NhaSanXuat set Ten_NSX = N'1',DiaChi_NSX = N'1',SDT_NSX = '11',Website_NSX = '1@gmail.com' where Ma_NSX = 1
 
 ---- tạo trigger xóa nhà sản xuất-----------------------------
- alter trigger xoaNSX on NhaSanXuat instead of delete
+ CREATE trigger xoaNSX on NhaSanXuat instead of delete
  as declare @maNSX int
  begin
  select @maNSX = Ma_NSX from deleted
  update SanPham set Ma_NSX = null where SanPham.Ma_LoaiSP = @maNSX
  delete from NhaSanXuat where Ma_NSX = @maNSX
+ END
+ -- tạo trigger xóa nhân viên
+  CREATE trigger xoaNhanVien on NhanVien instead of delete
+ as declare @maNV int
+ begin
+ select @maNV = Ma_NV from deleted
+ update dbo.PhieuNhap set Ma_NV = null where dbo.PhieuNhap.Ma_NV = @maNV
+ UPDATE dbo.PhieuXuat SET Ma_NV = NULL WHERE dbo.PhieuXuat.Ma_NV = @maNV
+ delete from dbo.NhanVien where Ma_NV = @maNV
  end
 
  ----------------------------------------------------------------------
@@ -125,3 +136,13 @@ as declare @maKH int
  delete from KhachHang where Ma_KH = @maKH
  end
 
+ USE QuanLyKho
+LoadToanBoNhanVien
+update NhanVien set Ten_NV = N'abv', GioiTinh = N'Nam', Ngaysinh_NV = '1998-02-02', SDT_NV ='123123', Email_NV='1313' where Ma_NV = 2
+
+
+--TRIGGER THÊM NHÂN VIÊN
+CREATE PROC ThemNhanVien (@tenNV nvarchar(50), @gioitinh nvarchar(10), @ngaysinh date, @sdtNV varchar(50), @emailNV varchar(255))
+as begin 
+INSERT INTO dbo.NhanVien VALUES(@tenNV, @gioitinh, @ngaysinh, @sdtNV, @emailNV)
+END

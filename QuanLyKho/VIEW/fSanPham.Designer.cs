@@ -395,6 +395,7 @@
             this.cbTenNhaSanXuat.Name = "cbTenNhaSanXuat";
             this.cbTenNhaSanXuat.Size = new System.Drawing.Size(383, 21);
             this.cbTenNhaSanXuat.TabIndex = 21;
+            this.cbTenNhaSanXuat.SelectedIndexChanged += new System.EventHandler(this.cbTenNhaSanXuat_SelectedIndexChanged);
             // 
             // label2
             // 

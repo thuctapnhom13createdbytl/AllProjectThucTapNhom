@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fSanPham : Form
+    public partial class fSanPham:Form
     {
         BindingSource DanhSachSP = new BindingSource();
         BindingSource DanhSachLSP = new BindingSource();
