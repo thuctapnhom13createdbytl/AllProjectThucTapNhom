@@ -271,6 +271,7 @@
             this.dtgvSanPham.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvSanPham.Size = new System.Drawing.Size(1318, 370);
             this.dtgvSanPham.TabIndex = 28;
+            this.dtgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSanPham_CellContentClick);
             // 
             // TenSP
             // 
@@ -828,7 +829,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1338, 661);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.tabControl1);
             this.Name = "fSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
