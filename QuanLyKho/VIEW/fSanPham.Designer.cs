@@ -261,6 +261,7 @@
             // 
             // dtgvSanPham
             // 
+            this.dtgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvSanPham.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
@@ -311,7 +312,6 @@
             this.TenSP.HeaderText = "Tên sản phẩm";
             this.TenSP.Name = "TenSP";
             this.TenSP.ReadOnly = true;
-            this.TenSP.Width = 200;
             // 
             // MaLoaiSP
             // 
@@ -343,7 +343,6 @@
             this.tenLoaiSP.HeaderText = "Loại sản phẩm";
             this.tenLoaiSP.Name = "tenLoaiSP";
             this.tenLoaiSP.ReadOnly = true;
-            this.tenLoaiSP.Width = 200;
             // 
             // DonGia
             // 
@@ -351,7 +350,6 @@
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 150;
             // 
             // TenNSX
             // 
@@ -359,7 +357,6 @@
             this.TenNSX.HeaderText = "Tên nhà sản xuất";
             this.TenNSX.Name = "TenNSX";
             this.TenNSX.ReadOnly = true;
-            this.TenNSX.Width = 200;
             // 
             // SoLuong
             // 
@@ -374,7 +371,6 @@
             this.ThongSoKyThuat.HeaderText = "Thông số  kỹ thuật";
             this.ThongSoKyThuat.Name = "ThongSoKyThuat";
             this.ThongSoKyThuat.ReadOnly = true;
-            this.ThongSoKyThuat.Width = 432;
             // 
             // label5
             // 
@@ -432,6 +428,7 @@
             this.cbTenNhaSanXuat.Name = "cbTenNhaSanXuat";
             this.cbTenNhaSanXuat.Size = new System.Drawing.Size(383, 21);
             this.cbTenNhaSanXuat.TabIndex = 21;
+            this.cbTenNhaSanXuat.SelectedIndexChanged += new System.EventHandler(this.cbTenNhaSanXuat_SelectedIndexChanged);
             // 
             // label2
             // 

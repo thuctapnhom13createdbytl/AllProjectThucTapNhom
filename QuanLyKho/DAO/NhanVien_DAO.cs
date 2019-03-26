@@ -35,5 +35,65 @@ namespace QuanLyKho.DAO
             }
             return lstNhanVien;
         }
+
+        public bool ThemNhanVien(string tenNV, string gioitinh, DateTime ngaysinh, string sdtNV, string emailNV)
+        {
+            try
+            {
+                string query = string.Format("insert into NhanVien values (N'{0}', N'{1}','{2}','{3}','{4}')", tenNV, gioitinh, ngaysinh.ToShortDateString(), sdtNV, emailNV);
+                var a = query;
+                DataProvider.Instance.ExecuteNonQuery(query);
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool SuaNhanVien(int maNV, string tenNV, string gioitinh, DateTime ngaysinh, string sdtNV, string emailNV)
+        {
+            try
+            {
+                string query = string.Format("update NhanVien set Ten_NV = N'{0}', GioiTinh = N'{1}', Ngaysinh_NV = '{2}', SDT_NV ='{3}', Email_NV='{4}' where Ma_NV = " + maNV,  tenNV, gioitinh, ngaysinh.ToShortDateString(), sdtNV, emailNV); //check lai giong bai hiep
+                DataProvider.Instance.ExecuteNonQuery(query);
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool XoaNhanVien(int maNV)
+        {
+            try
+            {
+                string query = "delete from NhanVien where Ma_NV = " + maNV;
+                DataProvider.Instance.ExecuteNonQuery(query);
+                return true;
+            }
+             catch(Exception e)
+            {
+                return false;
+            }
+        }
+
+        public List<NhanVien_DTO> TimKiemNV(string str)
+        {
+            List<NhanVien_DTO> DanhSachNhanVien = new List<NhanVien_DTO>();
+
+            string query = "select Ma_NV, Ten_NV, Gioitinh, Ngaysinh_NV, SDT_NV, Email_NV "
+                            + "from NhanVIen where Ten_NV like N'%" + str + "%'";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                NhanVien_DTO NV = new NhanVien_DTO(item);
+                DanhSachNhanVien.Add(NV);
+            }
+            return DanhSachNhanVien;
+        }
     }
 }
