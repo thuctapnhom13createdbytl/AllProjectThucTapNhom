@@ -32,9 +32,9 @@ public class NhaXuatBan_DTO
             this.DiaChi = row["DiaChi"].ToString();
         }
         
-        public string TenNXB { get => tenNXB; set => tenNXB = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string MaNXB { get => maNXB; set => maNXB = value; }
+        public string TenNXB { get; set; }
+        public string DiaChi { get; set; }
+        public string MaNXB { get; set; }
     }
 
 }

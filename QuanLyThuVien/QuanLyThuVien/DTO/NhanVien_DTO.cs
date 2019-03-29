@@ -36,10 +36,10 @@ namespace QuanLyThuVien.DTO
         }
 
      
-        public string HoTen { get => hoTen; set => hoTen = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string Sdt { get => sdt; set => sdt = value; }
-        public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
+        public string HoTen { get ; set ; }
+        public string DiaChi { get ; set ; }
+        public string Sdt { get ; set ; }
+        public string MaNhanVien { get; set ; }
     }
 
 }

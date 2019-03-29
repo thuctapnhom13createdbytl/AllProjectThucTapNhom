@@ -36,11 +36,11 @@ namespace QuanLyThuVien.DTO
             this.DiaChi = row["DiaChi"].ToString();
             this.Sdt = row["SDT"].ToString();
         }
-      
-        public string TenDocGia { get => tenDocGia; set => tenDocGia = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string Sdt { get => sdt; set => sdt = value; }
-        public string MaDocGia { get => maDocGia; set => maDocGia = value; }
+
+        public string TenDocGia { get; set; }
+        public string DiaChi { get; set; }
+        public string Sdt { get ; set; }
+        public string MaDocGia { get ; set; }
     }
 
 }

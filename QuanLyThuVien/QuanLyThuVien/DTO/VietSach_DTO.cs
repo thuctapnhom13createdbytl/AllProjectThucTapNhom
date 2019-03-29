@@ -24,10 +24,10 @@ namespace QuanLyThuVien.DTO
             this.VaiTro = row["VaiTro"].ToString();
         }
 
-        public string MaDauSach { get => maDauSach; set => maDauSach = value; }
-        public string MaTacGia { get => maTacGia; set => maTacGia = value; }
-        public int SoTrang { get => soTrang; set => soTrang = value; }
-        public string VaiTro { get => vaiTro; set => vaiTro = value; }
+        public string MaDauSach { get ; set ; }
+        public string MaTacGia { get ; set ; }
+        public int SoTrang { get ; set ; }
+        public string VaiTro { get ; set ; }
     }
 }
 

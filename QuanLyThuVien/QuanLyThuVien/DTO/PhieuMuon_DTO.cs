@@ -31,11 +31,11 @@ namespace QuanLyThuVien.DTO
             this.MaDocGia = row["MaDocGia"].ToString();
         }
 
-        public string SoPhieuMuon { get => soPhieuMuon; set => soPhieuMuon = value; }
-        public string NgayMuon { get => ngayMuon; set => ngayMuon = value; }
-        public string NgayHenTra { get => ngayHenTra; set => ngayHenTra = value; }
-        public string MaNhanVien { get => maNhanVien; set => maNhanVien = value; }
-        public string MaDocGia { get => maDocGia; set => maDocGia = value; }
+        public string SoPhieuMuon { get ; set; }
+        public string NgayMuon { get ; set ; }
+        public string NgayHenTra { get; set ; }
+        public string MaNhanVien { get; set; }
+        public string MaDocGia { get; set; }
     }
 
 }

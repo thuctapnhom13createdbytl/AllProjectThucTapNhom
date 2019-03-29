@@ -29,10 +29,10 @@ namespace QuanLyThuVien.DTO
         }
 
     
-        public string NgayBatDau { get => ngayBatDau; set => ngayBatDau = value; }
-        public string NgayKetThuc { get => ngayKetThuc; set => ngayKetThuc = value; }
-        public int MaDocGia { get => maDocGia; set => maDocGia = value; }
-        public string SoThe { get => soThe; set => soThe = value; }
+        public string NgayBatDau { get ; set ; }
+        public string NgayKetThuc { get ; set ; }
+        public int MaDocGia { get ; set; }
+        public string SoThe { get ; set ; }
     }
 }
 

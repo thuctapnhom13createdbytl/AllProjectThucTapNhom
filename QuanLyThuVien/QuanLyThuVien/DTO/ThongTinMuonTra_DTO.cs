@@ -27,11 +27,11 @@ namespace QuanLyThuVien.DTO
             this.MaViPham = row["MaViPham"].ToString();
         }
 
-        public string MaCuonSach { get => maCuonSach; set => maCuonSach = value; }
-        public string SoPhieuMuon { get => soPhieuMuon; set => soPhieuMuon = value; }
-        public string NgayTra { get => ngayTra; set => ngayTra = value; }
-        public int TinhTrangSach { get => tinhTrangSach; set => tinhTrangSach = value; }
-        public string MaViPham { get => maViPham; set => maViPham = value; }
+        public string MaCuonSach { get ; set ; }
+        public string SoPhieuMuon { get ; set; }
+        public string NgayTra { get ; set ; }
+        public int TinhTrangSach { get ; set ; }
+        public string MaViPham { get ; set ; }
     }
 
 }
