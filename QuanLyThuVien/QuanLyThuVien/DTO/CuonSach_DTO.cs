@@ -14,9 +14,9 @@ namespace QuanLyThuVien.DTO
         private int tinhTrangSach;
         private string maDauSach;
 
-        public string MaCuonSach { get => maCuonSach; set => maCuonSach = value; }
-        public int TinhTrangSach { get => tinhTrangSach; set => tinhTrangSach = value; }
-        public string MaDauSach { get => maDauSach; set => maDauSach = value; }
+        public string MaCuonSach { get ; set; }
+        public int TinhTrangSach { get; set; }
+        public string MaDauSach { get; set ; }
 
         public CuonSach_DTO()
         {

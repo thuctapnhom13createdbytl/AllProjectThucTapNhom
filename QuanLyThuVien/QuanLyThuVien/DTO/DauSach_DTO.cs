@@ -15,10 +15,10 @@ namespace QuanLyThuVien.DTO
         private string maTheLoai;
         private string maNXB;
 
-        public string MaDauSach { get => maDauSach; set => maDauSach = value; }
-        public string TenDauSach { get => tenDauSach; set => tenDauSach = value; }
-        public string MaTheLoai { get => maTheLoai; set => maTheLoai = value; }
-        public string MaNXB { get => maNXB; set => maNXB = value; }
+        public string MaDauSach { get; set; }
+        public string TenDauSach { get ; set; }
+        public string MaTheLoai { get; set; }
+        public string MaNXB { get ; set; }
 
         public DauSach_DTO()
         {

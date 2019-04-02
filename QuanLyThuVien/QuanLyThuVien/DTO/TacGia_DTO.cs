@@ -30,10 +30,10 @@ namespace QuanLyThuVien.DTO
         }
 
         
-        public string TenTacGia { get => tenTacGia; set => tenTacGia = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string Sdt { get => sdt; set => sdt = value; }
-        public string MaTacGia { get => maTacGia; set => maTacGia = value; }
+        public string TenTacGia { get; set ; }
+        public string DiaChi { get; set; }
+        public string Sdt { get; set; }
+        public string MaTacGia { get; set; }
     }
 
 }

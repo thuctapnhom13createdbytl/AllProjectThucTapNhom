@@ -21,9 +21,9 @@ namespace QuanLyThuVien.DTO
             this.HinhThucPhat = row["HinhThucPhat"].ToString();
         }
 
-        public string MaViPham { get => maViPham; set => maViPham = value; }
-        public string TenViPham { get => tenViPham; set => tenViPham = value; }
-        public string HinhThucPhat { get => hinhThucPhat; set => hinhThucPhat = value; }
+        public string MaViPham { get ; set ; }
+        public string TenViPham { get ; set ; }
+        public string HinhThucPhat { get ; set ; }
     }
 
 }

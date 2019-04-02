@@ -19,8 +19,8 @@ namespace QuanLyThuVien.DTO
         }
 
        
-        public string TenTheLoai { get => tenTheLoai; set => tenTheLoai = value; }
-        public string MaTheLoai { get => maTheLoai; set => maTheLoai = value; }
+        public string TenTheLoai { get; set; }
+        public string MaTheLoai { get; set; }
     }
 
 }
