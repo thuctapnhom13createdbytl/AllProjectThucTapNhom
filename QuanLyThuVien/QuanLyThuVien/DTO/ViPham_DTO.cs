@@ -5,9 +5,6 @@ namespace QuanLyThuVien.DTO
 {
     public class ViPham_DTO
     {
-        private string maViPham;
-        private string tenViPham;
-        private string hinhThucPhat;
         public ViPham_DTO()
         {
             this.MaViPham = "";

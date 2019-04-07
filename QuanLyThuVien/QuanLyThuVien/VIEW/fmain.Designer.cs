@@ -96,6 +96,7 @@
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnSach);
             this.Name = "fmain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmain";
             this.ResumeLayout(false);
 
