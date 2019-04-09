@@ -12,26 +12,26 @@ namespace QuanLyThuVien.DTO
         private string soThe;
         private string ngayBatDau;
         private string ngayKetThuc;
-        private int maDocGia;
+        private string maDocGia;
         public TheThuVien_DTO()
 	    {
             this.SoThe = "";
             this.NgayBatDau = "";
             this.NgayKetThuc = "";
-            this.MaDocGia = 0;
+            this.MaDocGia = "";
 	    }
         public TheThuVien_DTO(DataRow row)
         {
             this.SoThe = row["SoThe"].ToString();
             this.NgayBatDau =row["NgayBatDau"].ToString();
             this.NgayKetThuc = row["NgayKetThuc"].ToString();
-            this.MaDocGia = (int)row["MaDocGia"];
+            this.MaDocGia = row["MaDocGia"].ToString();
         }
 
     
         public string NgayBatDau { get ; set ; }
         public string NgayKetThuc { get ; set ; }
-        public int MaDocGia { get ; set; }
+        public string MaDocGia { get ; set; }
         public string SoThe { get ; set ; }
     }
 }

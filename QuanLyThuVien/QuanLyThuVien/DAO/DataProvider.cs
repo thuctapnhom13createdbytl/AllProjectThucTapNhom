@@ -18,7 +18,7 @@ namespace QuanLyThuVien.DAO
             private set { DataProvider.instance = value; }
         }
         private DataProvider() { }
-        private String connectionSTR = "Data Source=DESKTOP-PGUCCN0\\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True";
+        private String connectionSTR = @"Data Source=DESKTOP-63VJRHT;Initial Catalog=QLTV;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
