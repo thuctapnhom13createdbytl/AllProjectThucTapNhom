@@ -10,27 +10,27 @@ namespace QuanLyThuVien.DTO
     public class TheThuVien_DTO
     {
         private string soThe;
-        private string ngayBatDau;
-        private string ngayKetThuc;
+        private Nullable<DateTime> ngayBatDau;
+        private Nullable<DateTime> ngayKetThuc;
         private string maDocGia;
         public TheThuVien_DTO()
 	    {
             this.SoThe = "";
-            this.NgayBatDau = "";
-            this.NgayKetThuc = "";
+            this.NgayBatDau = null;
+            this.NgayKetThuc = null;
             this.MaDocGia = "";
 	    }
         public TheThuVien_DTO(DataRow row)
         {
             this.SoThe = row["SoThe"].ToString();
-            this.NgayBatDau =row["NgayBatDau"].ToString();
-            this.NgayKetThuc = row["NgayKetThuc"].ToString();
-            this.MaDocGia = row["MaDocGia"].ToString();
+            this.NgayBatDau =(DateTime)row["ngayBatDau"];
+            this.NgayKetThuc = (DateTime)row["ngayKetThuc"];
+            this.MaDocGia = row["TenDocGia"].ToString();
         }
 
     
-        public string NgayBatDau { get ; set ; }
-        public string NgayKetThuc { get ; set ; }
+        public Nullable<DateTime> NgayBatDau { get ; set ; }
+        public Nullable<DateTime> NgayKetThuc { get ; set ; }
         public string MaDocGia { get ; set; }
         public string SoThe { get ; set ; }
     }

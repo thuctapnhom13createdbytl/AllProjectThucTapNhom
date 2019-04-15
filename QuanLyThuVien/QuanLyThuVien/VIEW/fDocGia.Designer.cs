@@ -51,9 +51,14 @@
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tbMaDocGia = new System.Windows.Forms.TextBox();
-            this.tbNgayKetThuc = new System.Windows.Forms.TextBox();
-            this.tbNgayBatDau = new System.Windows.Forms.TextBox();
+            this.cbTenDocGia = new System.Windows.Forms.ComboBox();
+            this.dtpNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.tbTimKiemTTV = new System.Windows.Forms.TextBox();
+            this.btnXoaTTV = new System.Windows.Forms.Button();
+            this.btnCapNhatTheTTV = new System.Windows.Forms.Button();
+            this.btnThemTTV = new System.Windows.Forms.Button();
+            this.btnTimKiemTTV = new System.Windows.Forms.Button();
             this.tbSoThe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -274,9 +279,14 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.tbMaDocGia);
-            this.tabPage2.Controls.Add(this.tbNgayKetThuc);
-            this.tabPage2.Controls.Add(this.tbNgayBatDau);
+            this.tabPage2.Controls.Add(this.cbTenDocGia);
+            this.tabPage2.Controls.Add(this.dtpNgayKetThuc);
+            this.tabPage2.Controls.Add(this.dtpNgayBatDau);
+            this.tabPage2.Controls.Add(this.tbTimKiemTTV);
+            this.tabPage2.Controls.Add(this.btnXoaTTV);
+            this.tabPage2.Controls.Add(this.btnCapNhatTheTTV);
+            this.tabPage2.Controls.Add(this.btnThemTTV);
+            this.tabPage2.Controls.Add(this.btnTimKiemTTV);
             this.tabPage2.Controls.Add(this.tbSoThe);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
@@ -291,32 +301,81 @@
             this.tabPage2.Text = "Thẻ Thư Viện";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tbMaDocGia
+            // cbTenDocGia
             // 
-            this.tbMaDocGia.Location = new System.Drawing.Point(180, 115);
-            this.tbMaDocGia.Name = "tbMaDocGia";
-            this.tbMaDocGia.Size = new System.Drawing.Size(130, 20);
-            this.tbMaDocGia.TabIndex = 4;
+            this.cbTenDocGia.FormattingEnabled = true;
+            this.cbTenDocGia.Location = new System.Drawing.Point(180, 119);
+            this.cbTenDocGia.Name = "cbTenDocGia";
+            this.cbTenDocGia.Size = new System.Drawing.Size(185, 21);
+            this.cbTenDocGia.TabIndex = 12;
             // 
-            // tbNgayKetThuc
+            // dtpNgayKetThuc
             // 
-            this.tbNgayKetThuc.Location = new System.Drawing.Point(180, 89);
-            this.tbNgayKetThuc.Name = "tbNgayKetThuc";
-            this.tbNgayKetThuc.Size = new System.Drawing.Size(185, 20);
-            this.tbNgayKetThuc.TabIndex = 4;
+            this.dtpNgayKetThuc.Location = new System.Drawing.Point(180, 88);
+            this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
+            this.dtpNgayKetThuc.Size = new System.Drawing.Size(185, 20);
+            this.dtpNgayKetThuc.TabIndex = 11;
             // 
-            // tbNgayBatDau
+            // dtpNgayBatDau
             // 
-            this.tbNgayBatDau.Location = new System.Drawing.Point(180, 52);
-            this.tbNgayBatDau.Name = "tbNgayBatDau";
-            this.tbNgayBatDau.Size = new System.Drawing.Size(185, 20);
-            this.tbNgayBatDau.TabIndex = 4;
+            this.dtpNgayBatDau.Location = new System.Drawing.Point(180, 59);
+            this.dtpNgayBatDau.Name = "dtpNgayBatDau";
+            this.dtpNgayBatDau.Size = new System.Drawing.Size(185, 20);
+            this.dtpNgayBatDau.TabIndex = 10;
+            // 
+            // tbTimKiemTTV
+            // 
+            this.tbTimKiemTTV.Location = new System.Drawing.Point(575, 70);
+            this.tbTimKiemTTV.Name = "tbTimKiemTTV";
+            this.tbTimKiemTTV.Size = new System.Drawing.Size(185, 20);
+            this.tbTimKiemTTV.TabIndex = 9;
+            this.tbTimKiemTTV.TextChanged += new System.EventHandler(this.tbTimKiemTTV_TextChanged);
+            // 
+            // btnXoaTTV
+            // 
+            this.btnXoaTTV.Location = new System.Drawing.Point(685, 149);
+            this.btnXoaTTV.Name = "btnXoaTTV";
+            this.btnXoaTTV.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaTTV.TabIndex = 8;
+            this.btnXoaTTV.Text = "Xóa";
+            this.btnXoaTTV.UseVisualStyleBackColor = true;
+            this.btnXoaTTV.Click += new System.EventHandler(this.btnXoaTTV_Click);
+            // 
+            // btnCapNhatTheTTV
+            // 
+            this.btnCapNhatTheTTV.Location = new System.Drawing.Point(575, 149);
+            this.btnCapNhatTheTTV.Name = "btnCapNhatTheTTV";
+            this.btnCapNhatTheTTV.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhatTheTTV.TabIndex = 7;
+            this.btnCapNhatTheTTV.Text = "Cập Nhật";
+            this.btnCapNhatTheTTV.UseVisualStyleBackColor = true;
+            this.btnCapNhatTheTTV.Click += new System.EventHandler(this.btnCapNhatTheTTV_Click);
+            // 
+            // btnThemTTV
+            // 
+            this.btnThemTTV.Location = new System.Drawing.Point(469, 149);
+            this.btnThemTTV.Name = "btnThemTTV";
+            this.btnThemTTV.Size = new System.Drawing.Size(75, 23);
+            this.btnThemTTV.TabIndex = 6;
+            this.btnThemTTV.Text = "Thêm";
+            this.btnThemTTV.UseVisualStyleBackColor = true;
+            this.btnThemTTV.Click += new System.EventHandler(this.btnThemTTV_Click);
+            // 
+            // btnTimKiemTTV
+            // 
+            this.btnTimKiemTTV.Location = new System.Drawing.Point(469, 70);
+            this.btnTimKiemTTV.Name = "btnTimKiemTTV";
+            this.btnTimKiemTTV.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiemTTV.TabIndex = 5;
+            this.btnTimKiemTTV.Text = "Tìm Kiếm";
+            this.btnTimKiemTTV.UseVisualStyleBackColor = true;
+            this.btnTimKiemTTV.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbSoThe
             // 
             this.tbSoThe.Location = new System.Drawing.Point(180, 26);
             this.tbSoThe.Name = "tbSoThe";
-            this.tbSoThe.Size = new System.Drawing.Size(107, 20);
+            this.tbSoThe.Size = new System.Drawing.Size(185, 20);
             this.tbSoThe.TabIndex = 2;
             // 
             // label4
@@ -324,9 +383,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(84, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Mã độc giả";
+            this.label4.Text = "Tên độc giả";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
@@ -391,7 +450,7 @@
             // THV_MaDocGia
             // 
             this.THV_MaDocGia.DataPropertyName = "MaDocGia";
-            this.THV_MaDocGia.HeaderText = "Mã độc giả";
+            this.THV_MaDocGia.HeaderText = "Tên độc giả";
             this.THV_MaDocGia.Name = "THV_MaDocGia";
             // 
             // fDocGia
@@ -424,13 +483,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridView dtgTheThuVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn THV_MaDocGia;
-        private System.Windows.Forms.TextBox tbMaDocGia;
-        private System.Windows.Forms.TextBox tbNgayKetThuc;
-        private System.Windows.Forms.TextBox tbNgayBatDau;
         private System.Windows.Forms.TextBox tbSoThe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -451,5 +503,17 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox tbTimKiem;
         private System.Windows.Forms.TextBox tbSDTDG;
+        private System.Windows.Forms.TextBox tbTimKiemTTV;
+        private System.Windows.Forms.Button btnXoaTTV;
+        private System.Windows.Forms.Button btnCapNhatTheTTV;
+        private System.Windows.Forms.Button btnThemTTV;
+        private System.Windows.Forms.Button btnTimKiemTTV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn THV_MaDocGia;
+        private System.Windows.Forms.ComboBox cbTenDocGia;
+        private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
+        private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
     }
 }
