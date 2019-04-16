@@ -33,7 +33,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.tbSDTDG = new System.Windows.Forms.TextBox();
             this.btnTimkiem = new System.Windows.Forms.Button();
@@ -69,6 +68,7 @@
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THV_MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDocGia)).BeginInit();
@@ -142,15 +142,6 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(450, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button2";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // tbTimKiem
             // 
             this.tbTimKiem.Location = new System.Drawing.Point(87, 142);
@@ -193,14 +184,14 @@
             // 
             this.tbTenDG.Location = new System.Drawing.Point(214, 29);
             this.tbTenDG.Name = "tbTenDG";
-            this.tbTenDG.Size = new System.Drawing.Size(153, 20);
+            this.tbTenDG.Size = new System.Drawing.Size(179, 20);
             this.tbTenDG.TabIndex = 2;
             // 
             // tbMaDG
             // 
             this.tbMaDG.Location = new System.Drawing.Point(214, 3);
             this.tbMaDG.Name = "tbMaDG";
-            this.tbMaDG.Size = new System.Drawing.Size(153, 20);
+            this.tbMaDG.Size = new System.Drawing.Size(179, 20);
             this.tbMaDG.TabIndex = 2;
             // 
             // label8
@@ -453,6 +444,15 @@
             this.THV_MaDocGia.HeaderText = "Tên độc giả";
             this.THV_MaDocGia.Name = "THV_MaDocGia";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(450, 142);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "button2";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // fDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,7 +490,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox tbDiaChiDG;
@@ -515,5 +514,6 @@
         private System.Windows.Forms.ComboBox cbTenDocGia;
         private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
         private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
+        private System.Windows.Forms.Button button3;
     }
 }
