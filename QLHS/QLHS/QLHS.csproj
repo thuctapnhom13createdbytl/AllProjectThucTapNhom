@@ -56,7 +56,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\Diem_DAO.cs" />
+    <Compile Include="DAO\GiaoVien_DAO.cs" />
+    <Compile Include="DAO\HocSinh_DAO.cs" />
+    <Compile Include="DAO\Khoi_DAO.cs" />
+    <Compile Include="DAO\Lop_DAO.cs" />
+    <Compile Include="DAO\MonHoc_DAO.cs" />
+    <Compile Include="DTO\Diem_DTO.cs" />
+    <Compile Include="DTO\GiaoVien_DTO.cs" />
     <Compile Include="DTO\HocSinh_DTO.cs" />
+    <Compile Include="DTO\Khoi_DTO.cs" />
+    <Compile Include="DTO\Lop_DTO.cs" />
+    <Compile Include="DTO\MonHoc_DTO.cs" />
+    <Compile Include="QLDiemHocSinhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemHocSinhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\fGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +105,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VIEW\fDiem.resx">
+      <DependentUpon>fDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fGiaoVien.resx">
+      <DependentUpon>fGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fHocSinh.resx">
+      <DependentUpon>fHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\fLop.resx">
       <DependentUpon>fLop.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,10 +140,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLDiemHocSinhDataSet.xsc">
+      <DependentUpon>QLDiemHocSinhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDiemHocSinhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDiemHocSinhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDiemHocSinhDataSet.xss">
+      <DependentUpon>QLDiemHocSinhDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\background-07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thai2-1483-1440041682.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-male-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-classroom-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-school-director-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-card-96.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
