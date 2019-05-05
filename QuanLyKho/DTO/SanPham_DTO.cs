@@ -42,7 +42,7 @@ namespace QuanLyKho.DTO
             this.ThongSoKyThuat = row["Thongso_Kt"].ToString();
             this.TenLoaiSP = row["TenLoai"].ToString() != "" ? row["TenLoai"].ToString() : "chưa có loại sản phẩm" ;
             this.MaLoaiSP = row["ma_loaiSP"].ToString() != "" ? (int)row["ma_loaiSP"] : 0;
-            this.MaNSX = row["Ma_NSX"].ToString() != "" ? (int)row["Ma_NSX"] : 0 ;
+            this.MaNSX = row["Ma_NSX"].ToString() != "" ? (int)row["Ma_NSX"] : 0;
         }
         public int MaSP
         {
