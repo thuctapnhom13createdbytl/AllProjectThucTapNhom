@@ -58,12 +58,16 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\Diem_DAO.cs" />
     <Compile Include="DAO\GiaoVien_DAO.cs" />
+    <Compile Include="DAO\GVCN_DAO.cs" />
+    <Compile Include="DAO\HocKi_DAO.cs" />
     <Compile Include="DAO\HocSinh_DAO.cs" />
     <Compile Include="DAO\Khoi_DAO.cs" />
     <Compile Include="DAO\Lop_DAO.cs" />
     <Compile Include="DAO\MonHoc_DAO.cs" />
     <Compile Include="DTO\Diem_DTO.cs" />
     <Compile Include="DTO\GiaoVien_DTO.cs" />
+    <Compile Include="DTO\GVCN_DTO.cs" />
+    <Compile Include="DTO\HocKi_DTO.cs" />
     <Compile Include="DTO\HocSinh_DTO.cs" />
     <Compile Include="DTO\Khoi_DTO.cs" />
     <Compile Include="DTO\Lop_DTO.cs" />
