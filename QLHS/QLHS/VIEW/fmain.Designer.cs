@@ -28,28 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDiem = new System.Windows.Forms.Button();
             this.btnHocSinh = new System.Windows.Forms.Button();
-            this.btnLop = new System.Windows.Forms.Button();
             this.btnGiaoVien = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnDiem
-            // 
-            this.btnDiem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnDiem.BackgroundImage = global::QLHS.Properties.Resources.icons8_report_card_96;
-            this.btnDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDiem.ForeColor = System.Drawing.Color.Gold;
-            this.btnDiem.Location = new System.Drawing.Point(452, 122);
-            this.btnDiem.Name = "btnDiem";
-            this.btnDiem.Size = new System.Drawing.Size(118, 97);
-            this.btnDiem.TabIndex = 0;
-            this.btnDiem.Text = "ĐIỂM";
-            this.btnDiem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDiem.UseVisualStyleBackColor = false;
-            this.btnDiem.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnHocSinh
             // 
@@ -58,7 +41,7 @@
             this.btnHocSinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnHocSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHocSinh.ForeColor = System.Drawing.Color.Gold;
-            this.btnHocSinh.Location = new System.Drawing.Point(12, 122);
+            this.btnHocSinh.Location = new System.Drawing.Point(160, 94);
             this.btnHocSinh.Name = "btnHocSinh";
             this.btnHocSinh.Size = new System.Drawing.Size(118, 97);
             this.btnHocSinh.TabIndex = 1;
@@ -67,22 +50,6 @@
             this.btnHocSinh.UseVisualStyleBackColor = false;
             this.btnHocSinh.Click += new System.EventHandler(this.fHocSinh_Click);
             // 
-            // btnLop
-            // 
-            this.btnLop.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnLop.BackgroundImage = global::QLHS.Properties.Resources.icons8_classroom_100;
-            this.btnLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLop.ForeColor = System.Drawing.Color.Gold;
-            this.btnLop.Location = new System.Drawing.Point(156, 122);
-            this.btnLop.Name = "btnLop";
-            this.btnLop.Size = new System.Drawing.Size(118, 97);
-            this.btnLop.TabIndex = 2;
-            this.btnLop.Text = "LỚP";
-            this.btnLop.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLop.UseVisualStyleBackColor = false;
-            this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
-            // 
             // btnGiaoVien
             // 
             this.btnGiaoVien.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -90,7 +57,7 @@
             this.btnGiaoVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGiaoVien.ForeColor = System.Drawing.Color.Gold;
-            this.btnGiaoVien.Location = new System.Drawing.Point(302, 122);
+            this.btnGiaoVien.Location = new System.Drawing.Point(313, 94);
             this.btnGiaoVien.Name = "btnGiaoVien";
             this.btnGiaoVien.Size = new System.Drawing.Size(118, 97);
             this.btnGiaoVien.TabIndex = 3;
@@ -111,7 +78,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "QUẢN LÝ ĐIỂM HỌC SINH\r\nTHCS LÊ QUÝ ĐÔN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.BackgroundImage = global::QLHS.Properties.Resources.studying;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gold;
+            this.button1.Location = new System.Drawing.Point(240, 210);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 97);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "THÔNG TIN GIẢNG DẠY";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // fmain
             // 
@@ -120,11 +101,10 @@
             this.BackgroundImage = global::QLHS.Properties.Resources.thai2_1483_1440041682;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 349);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGiaoVien);
-            this.Controls.Add(this.btnLop);
             this.Controls.Add(this.btnHocSinh);
-            this.Controls.Add(this.btnDiem);
             this.Name = "fmain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly Hoc Sinh";
@@ -135,12 +115,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDiem;
         private System.Windows.Forms.Button btnHocSinh;
-        private System.Windows.Forms.Button btnLop;
         private System.Windows.Forms.Button btnGiaoVien;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

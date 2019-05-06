@@ -17,13 +17,6 @@ namespace QLHS
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            fDiem f = new fDiem();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
 
         private void fHocSinh_Click(object sender, EventArgs e)
         {
@@ -33,13 +26,6 @@ namespace QLHS
             this.Show();
         }
 
-        private void btnLop_Click(object sender, EventArgs e)
-        {
-            fLop f = new fLop();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
 
         private void btnGiaoVien_Click(object sender, EventArgs e)
         {
@@ -57,9 +43,5 @@ namespace QLHS
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

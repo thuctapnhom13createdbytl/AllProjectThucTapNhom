@@ -10,51 +10,51 @@ namespace QLHS.DTO
     public class HocSinh_DTO
     {
 
-        public int MaHocSinh_HS { get; set; }
-        public int MaLop_HS { get; set; }
+        public int MaHocSinh { get; set; }
+        public int MaLop { get; set; }
         public string TenLop { get; set; }
-        public string TenHocSinh_HS { get; set; }
-        public string GioiTinh_HS { get; set; }
-        public Nullable<DateTime> NgaySinh_HS { get; set; }
-        public string DiaChi_HS { get; set; }
-        public string SDT_HS { get; set; }
-        public string TonGiao_HS { get; set; }
-        public string DanToc_HS { get; set; }
-        public string TenCha_HS { get; set; }
-        public string TenMe_HS { get; set; }
+        public string TenHocSinh { get; set; }
+        public string GioiTinh { get; set; }
+        public Nullable<DateTime> NgaySinh { get; set; }
+        public string DiaChi { get; set; }
+        public string SDT { get; set; }
+        public string TonGiao { get; set; }
+        public string DanToc { get; set; }
+        public string TenCha { get; set; }
+        public string TenMe { get; set; }
 
         //private Nullable<DateTime> NgaySinh_HS;
 
         public HocSinh_DTO()
         {
-           this.MaHocSinh_HS = 0;
-            this.MaLop_HS = 0;
+           this.MaHocSinh = 0;
+            this.MaLop = 0;
             this.TenLop = "";
-            this.TenHocSinh_HS = "";
-            this.GioiTinh_HS = "";
-            this.NgaySinh_HS = null;
-            this.DiaChi_HS = "";
-            this.SDT_HS = "";
-            this.TonGiao_HS = "";
-            this.DanToc_HS = "";
-            this.TenCha_HS = "";
-            this.TenMe_HS = "";
+            this.TenHocSinh = "";
+            this.GioiTinh = "";
+            this.NgaySinh = null;
+            this.DiaChi = "";
+            this.SDT = "";
+            this.TonGiao = "";
+            this.DanToc = "";
+            this.TenCha = "";
+            this.TenMe = "";
         }
 
         public HocSinh_DTO(DataRow dr)
         {
-            MaHocSinh_HS = (int)dr["MaHocSinh"];
-            MaLop_HS = (int)dr["MaLop"];
-            TenLop = (string)dr["TenLop"];
-            TenHocSinh_HS = (string)dr["TenHocSinh"];
-            NgaySinh_HS =(DateTime)dr["NgaySinh"];
-            GioiTinh_HS = (string)dr["GioiTinh"];
-            DiaChi_HS = (string)dr["DiaChi"];
-            SDT_HS = (string)dr["SDT"];
-            TonGiao_HS = (string)dr["TonGiao"];
-            DanToc_HS = (string)dr["DanToc"];
-            TenCha_HS = (string)dr["TenCha"];
-            TenMe_HS = (string)dr["TenMe"];
+            MaHocSinh = (int)dr["MaHocSinh"];
+            MaLop = (int)dr["MaLop"];
+            TenLop = dr["TenLop"].ToString();
+            TenHocSinh = dr["TenHocSinh"].ToString();
+            NgaySinh =(DateTime)dr["NgaySinh"];
+            GioiTinh = dr["GioiTinh"].ToString();
+            DiaChi = dr["DiaChi"].ToString();
+            SDT = dr["SDT"].ToString();
+            TonGiao = dr["TonGiao"].ToString();
+            DanToc = dr["DanToc"].ToString();
+            TenCha = dr["TenCha"].ToString();
+            TenMe = dr["TenMe"].ToString();
         }
 
 

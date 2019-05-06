@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLHS.DTO;
+using System.Data;
 
 namespace QLHS.DAO
 {
@@ -21,6 +22,17 @@ namespace QLHS.DAO
             {
                 instance = value;
             }
+        }
+        public List<MonHoc_DTO> LayTatCaMonHoc()
+        {
+            List<MonHoc_DTO> DSMH = new List<MonHoc_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from MonHoc");
+            foreach(DataRow item in data.Rows)
+            {
+                MonHoc_DTO mh = new MonHoc_DTO(item);
+                DSMH.Add(mh);
+            }
+            return DSMH;
         }
     }
 }

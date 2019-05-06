@@ -30,10 +30,10 @@ namespace QLHS.DTO
         {
             MaGiaoVien = (int)dr["MaGiaoVien"];
             MaMonHoc = (int)dr["MaMonHoc"];
-            TenGiaoVien = (string)dr["TenGiaoVien"];
-            TenMonHoc = (string)dr["TenMocHoc"];
-            SDT = (string)dr["SDT"];
-            Email = (string)dr["Email"];
+            TenGiaoVien = dr["TenGiaoVien"].ToString();
+            TenMonHoc = dr["TenMonHoc"].ToString();
+            SDT = dr["SDT"].ToString();
+            Email = dr["Email"].ToString();
         }
     }
 }

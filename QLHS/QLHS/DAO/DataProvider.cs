@@ -19,7 +19,7 @@ namespace QLHS.DAO
         }
 
         private DataProvider() { }
-        private string connectionSTR = @"Data Source=DESKTOP-63VJRHT;Initial Catalog=QLDiemHocSinh;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-FK7IAI2\SQLEXPRESS;Initial Catalog=QLDiemHocSinh;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

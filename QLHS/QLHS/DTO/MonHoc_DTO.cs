@@ -23,7 +23,7 @@ namespace QLHS.DTO
         public MonHoc_DTO(DataRow dr)
         {
             MaMonHoc = (int)dr["MaMonHoc"];
-            TenMonHoc = (string)dr["TenMocHoc"];
+            TenMonHoc = dr["TenMonHoc"].ToString();
             SoTiet = (int)dr["SoTiet"];
         }
     }

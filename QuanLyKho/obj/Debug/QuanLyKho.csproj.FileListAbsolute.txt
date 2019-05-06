@@ -27,3 +27,6 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.cache
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.exe
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.pdb
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.exe
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.pdb
