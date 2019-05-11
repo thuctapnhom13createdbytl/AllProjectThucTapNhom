@@ -11,14 +11,14 @@ namespace QLHS.DTO
     {   public int MaDiemMon { get; set; }
         public int MaMonHoc { get; set; }
         public int MaHocKy { get; set; }
-        public float TrungBinh { get; set; }
+        public double TrungBinh { get; set; }
         public int MaHocSinh { get; set; }
-        public string TenHocSinh { get; set; }
+        public Double Diem15 { get; set; }
+        public Double DiemGiuaKy { get; set; }
+        public Double DiemThi { get; set; }
         public string TenMonHoc { get; set; }
         public string TenHocKy { get; set; }
-        public float Diem15 { get; set; }
-        public float DiemGiuaKy { get; set; }
-        public float DiemThi { get; set; }
+        public string TenHocSinh { get; set; }
 
         public Diem_DTO()
         {
@@ -26,12 +26,12 @@ namespace QLHS.DTO
             this.MaHocKy = 0;
             this.TrungBinh = 0;
             this.MaHocSinh = 0;
-            this.TenHocSinh = "";
-            this.TenMonHoc = "";
-            this.TenHocKy = "";
             this.Diem15 = 0;
             this.DiemGiuaKy = 0;
             this.DiemThi = 0;
+            this.TenHocKy = "";
+            this.TenMonHoc = "";
+            this.TenHocKy = "";
         }
 
         public Diem_DTO(DataRow dr)
@@ -39,14 +39,14 @@ namespace QLHS.DTO
             MaDiemMon = (int)dr["MaDiemMon"];
             MaMonHoc = (int)dr["MaMonHoc"];
             MaHocKy = (int)dr["MaHocKy"];
-            TrungBinh = (float)dr["TrungBinh"];
+            TrungBinh = (double)dr["TrungBinh"];
             MaHocSinh = (int)dr["MaHocSinh"];
-            TenHocSinh = (string)dr["TenHocSinh"];
+            Diem15 = (Double)dr["Diem15"];
+            DiemGiuaKy = (Double)dr["DiemGiuaKy"];
+            DiemThi = (Double)dr["DiemThi"];
             TenMonHoc = (string)dr["TenMonHoc"];
             TenHocKy = (string)dr["TenHocKy"];
-            Diem15 = (float)dr["Diem15"];
-            DiemGiuaKy = (float)dr["Diem15"];
-            DiemThi = (float)dr["Diem15"];
+            TenHocSinh = (string)dr["TenHocSinh"];
         }
     }
 }

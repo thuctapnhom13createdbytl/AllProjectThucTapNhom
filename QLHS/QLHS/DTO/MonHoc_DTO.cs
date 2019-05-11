@@ -11,20 +11,20 @@ namespace QLHS.DTO
     {
         public int MaMonHoc { get; set; }
         public string TenMonHoc { get; set; }
-        public int SoTiet { get; set; }
+       // public int SoTiet { get; set; }
 
         public MonHoc_DTO()
         {
             MaMonHoc = 0;
             TenMonHoc = " ";
-            SoTiet = 0;
+            //SoTiet = 0;
         }
 
         public MonHoc_DTO(DataRow dr)
         {
             MaMonHoc = (int)dr["MaMonHoc"];
             TenMonHoc = dr["TenMonHoc"].ToString();
-            SoTiet = (int)dr["SoTiet"];
+            //SoTiet = (int)dr["SoTiet"];
         }
     }
 }

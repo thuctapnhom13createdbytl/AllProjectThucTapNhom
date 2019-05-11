@@ -43,5 +43,12 @@ namespace QLHS
             }
         }
 
+        private void btnTTGiangDay_Click(object sender, EventArgs e)
+        {
+            fDiem f = new fDiem();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

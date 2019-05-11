@@ -77,6 +77,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDiemHocSinhDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLDiemHocSinhDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemHocSinhDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDiemHocSinhDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemHocSinhDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\fGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +161,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLDiemHocSinhDataSet1.xsc">
+      <DependentUpon>QLDiemHocSinhDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDiemHocSinhDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDiemHocSinhDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDiemHocSinhDataSet1.xss">
+      <DependentUpon>QLDiemHocSinhDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDiemHocSinhDataSet2.xsc">
+      <DependentUpon>QLDiemHocSinhDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLDiemHocSinhDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDiemHocSinhDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDiemHocSinhDataSet2.xss">
+      <DependentUpon>QLDiemHocSinhDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\background-07.png" />
   </ItemGroup>
   <ItemGroup>

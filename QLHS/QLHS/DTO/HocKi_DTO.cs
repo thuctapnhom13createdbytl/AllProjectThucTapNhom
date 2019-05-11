@@ -9,8 +9,8 @@ namespace QLHS.DTO
 {
     public class HocKi_DTO
     {
-        int MaHocKy { get; set; }
-        string TenHocKy { get; set; }
+        public int MaHocKy { get; set; }
+        public string TenHocKy { get; set; }
         public HocKi_DTO()
         {
             MaHocKy = 0;

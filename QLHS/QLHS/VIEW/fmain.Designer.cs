@@ -31,7 +31,7 @@
             this.btnHocSinh = new System.Windows.Forms.Button();
             this.btnGiaoVien = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTTGiangDay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHocSinh
@@ -79,20 +79,21 @@
             this.label1.Text = "QUẢN LÝ ĐIỂM HỌC SINH\r\nTHCS LÊ QUÝ ĐÔN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // btnTTGiangDay
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.BackgroundImage = global::QLHS.Properties.Resources.studying;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gold;
-            this.button1.Location = new System.Drawing.Point(240, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 97);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "THÔNG TIN GIẢNG DẠY";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnTTGiangDay.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnTTGiangDay.BackgroundImage = global::QLHS.Properties.Resources.studying;
+            this.btnTTGiangDay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnTTGiangDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTTGiangDay.ForeColor = System.Drawing.Color.Gold;
+            this.btnTTGiangDay.Location = new System.Drawing.Point(240, 210);
+            this.btnTTGiangDay.Name = "btnTTGiangDay";
+            this.btnTTGiangDay.Size = new System.Drawing.Size(118, 97);
+            this.btnTTGiangDay.TabIndex = 5;
+            this.btnTTGiangDay.Text = "THÔNG TIN GIẢNG DẠY";
+            this.btnTTGiangDay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTTGiangDay.UseVisualStyleBackColor = false;
+            this.btnTTGiangDay.Click += new System.EventHandler(this.btnTTGiangDay_Click);
             // 
             // fmain
             // 
@@ -101,7 +102,7 @@
             this.BackgroundImage = global::QLHS.Properties.Resources.thai2_1483_1440041682;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 349);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTTGiangDay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGiaoVien);
             this.Controls.Add(this.btnHocSinh);
@@ -118,7 +119,7 @@
         private System.Windows.Forms.Button btnHocSinh;
         private System.Windows.Forms.Button btnGiaoVien;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTTGiangDay;
     }
 }
 

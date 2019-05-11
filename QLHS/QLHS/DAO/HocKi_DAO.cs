@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLHS.DTO;
+using System.Data;
+using QLHS.DAO;
 
 namespace QLHS.DAO
 {
@@ -20,6 +23,18 @@ namespace QLHS.DAO
             {
                 instance = value;
             }
+        }
+
+        public List<HocKi_DTO> LoadTatCaHocKi_Diem()
+        {
+            List<HocKi_DTO> dsHocKi_Diem = new List<HocKi_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT DISTINCT dbo.HocKi.MaHocKy,dbo.HocKi.TenHocKy FROM dbo.HocKi LEFT JOIN dbo.DiemMon ON DiemMon.MaHocKy = HocKi.MaHocKy");
+            foreach( DataRow item in data.Rows)
+            {
+                HocKi_DTO hocki_diem = new HocKi_DTO(item);
+                dsHocKi_Diem.Add(hocki_diem);
+            }
+            return dsHocKi_Diem;
         }
     }
 }

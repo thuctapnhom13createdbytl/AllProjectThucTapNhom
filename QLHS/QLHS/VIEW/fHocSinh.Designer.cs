@@ -48,14 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgvHocSinh = new System.Windows.Forms.DataGridView();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtTenCha = new System.Windows.Forms.TextBox();
-            this.txtTenMe = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +60,14 @@
             this.TonGiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTenCha = new System.Windows.Forms.TextBox();
+            this.txtTenMe = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.cbLop = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHocSinh)).BeginInit();
@@ -284,80 +284,6 @@
             this.dtgvHocSinh.Size = new System.Drawing.Size(1256, 309);
             this.dtgvHocSinh.TabIndex = 6;
             // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Location = new System.Drawing.Point(152, 255);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(205, 21);
-            this.cbGioiTinh.TabIndex = 29;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(460, 84);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 23);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Ngày Sinh:";
-            // 
-            // dtpkNgaySinh
-            // 
-            this.dtpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkNgaySinh.Location = new System.Drawing.Point(602, 85);
-            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
-            this.dtpkNgaySinh.Size = new System.Drawing.Size(205, 20);
-            this.dtpkNgaySinh.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(904, 202);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 23);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Ten Cha";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(904, 148);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 23);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Tên mẹ";
-            // 
-            // txtTenCha
-            // 
-            this.txtTenCha.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTenCha.Location = new System.Drawing.Point(999, 202);
-            this.txtTenCha.Multiline = true;
-            this.txtTenCha.Name = "txtTenCha";
-            this.txtTenCha.Size = new System.Drawing.Size(205, 32);
-            this.txtTenCha.TabIndex = 18;
-            // 
-            // txtTenMe
-            // 
-            this.txtTenMe.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTenMe.Location = new System.Drawing.Point(999, 139);
-            this.txtTenMe.Multiline = true;
-            this.txtTenMe.Name = "txtTenMe";
-            this.txtTenMe.Size = new System.Drawing.Size(205, 32);
-            this.txtTenMe.TabIndex = 18;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(460, 255);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 23);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Dân Tộc";
-            // 
             // MaHocSinh
             // 
             this.MaHocSinh.DataPropertyName = "MaHocSinh";
@@ -431,6 +357,80 @@
             this.TenCha.DataPropertyName = "TenCha";
             this.TenCha.HeaderText = "Cha";
             this.TenCha.Name = "TenCha";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Location = new System.Drawing.Point(152, 255);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(205, 21);
+            this.cbGioiTinh.TabIndex = 29;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(460, 84);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 23);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Ngày Sinh:";
+            // 
+            // dtpkNgaySinh
+            // 
+            this.dtpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgaySinh.Location = new System.Drawing.Point(602, 85);
+            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
+            this.dtpkNgaySinh.Size = new System.Drawing.Size(205, 20);
+            this.dtpkNgaySinh.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(904, 202);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 23);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Ten Cha";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(904, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 23);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Tên mẹ";
+            // 
+            // txtTenCha
+            // 
+            this.txtTenCha.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTenCha.Location = new System.Drawing.Point(999, 202);
+            this.txtTenCha.Multiline = true;
+            this.txtTenCha.Name = "txtTenCha";
+            this.txtTenCha.Size = new System.Drawing.Size(205, 32);
+            this.txtTenCha.TabIndex = 18;
+            // 
+            // txtTenMe
+            // 
+            this.txtTenMe.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTenMe.Location = new System.Drawing.Point(999, 139);
+            this.txtTenMe.Multiline = true;
+            this.txtTenMe.Name = "txtTenMe";
+            this.txtTenMe.Size = new System.Drawing.Size(205, 32);
+            this.txtTenMe.TabIndex = 18;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(460, 255);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 23);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Dân Tộc";
             // 
             // btnHuy
             // 

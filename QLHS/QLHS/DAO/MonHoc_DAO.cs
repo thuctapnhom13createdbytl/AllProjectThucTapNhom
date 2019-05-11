@@ -34,5 +34,17 @@ namespace QLHS.DAO
             }
             return DSMH;
         }
+
+        public List<MonHoc_DTO> LayTatCaMonHoc_Diem()
+        {
+            List<MonHoc_DTO> dsMonHoc_Diem = new List<MonHoc_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT DISTINCT dbo.MonHoc.MaMonHoc, dbo.MonHoc.TenMonHoc FROM dbo.MonHoc LEFT JOIN dbo.DiemMon ON DiemMon.MaMonHoc = MonHoc.MaMonHoc");
+            foreach (DataRow item in data.Rows)
+            {
+                MonHoc_DTO monhoc_diem = new MonHoc_DTO(item);
+                dsMonHoc_Diem.Add(monhoc_diem);
+            }
+            return dsMonHoc_Diem;
+        }
     }
 }
