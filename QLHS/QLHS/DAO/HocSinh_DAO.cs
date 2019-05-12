@@ -26,7 +26,7 @@ namespace QLHS.DAO
         public List<HocSinh_DTO> LayTatCaHS()
         {
             List<HocSinh_DTO> DSHS = new List<HocSinh_DTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("select hocsinh.*,TenLop from hocsinh join lop");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select hocsinh.*,TenLop from hocsinh join lop on HocSinh.MaLop = Lop.MaLop ");
             foreach(DataRow item in data.Rows)
             {
                 HocSinh_DTO hs = new HocSinh_DTO(item);
@@ -53,7 +53,7 @@ namespace QLHS.DAO
         {
             try
             {
-                string query = string.Format("update HocSinh set MaLop = {0}, TenHocSinh = N'{1}',GioiTinh = N'{2}',NgaySinh = '{3}', SDT = '{4}', TonGiao = N'{5}',DanToc = N'{6}',TenCha = N'{7}',TenMe = N'{8}' where MaHocSinh = "+MaHS,
+                string query = string.Format("update HocSinh set MaLop = {0}, TenHocSinh = N'{1}',GioiTinh = N'{2}',NgaySinh = '{3}',DiaChi = N'{4}', SDT = '{5}', TonGiao = N'{6}',DanToc = N'{7}',TenCha = N'{8}',TenMe = N'{9}' where MaHocSinh = " + MaHS,
                                                 MaLop, TenHS, GioiTinh, NgaySinh, DiaChi, SDT, TonGiao, DanToc, TenCha, TenMe);
                 int SuaHS = DataProvider.Instance.ExecuteNonQuery(query);
                 return SuaHS;
@@ -80,6 +80,29 @@ namespace QLHS.DAO
         {
             List<HocSinh_DTO> DSHS = new List<HocSinh_DTO>();
             string query = string.Format("select hocsinh.*,TenLop from hocsinh join lop on HocSinh.MaLop = Lop.MaLop where TenHocSinh like N'%{0}%'", param);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                HocSinh_DTO hs = new HocSinh_DTO(item);
+                DSHS.Add(hs);
+            }
+            return DSHS;
+        }
+        public List<HocSinh_DTO> LayHocSinhTheoLop(int id)
+        {
+            List<HocSinh_DTO> DSHS = new List<HocSinh_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select hocsinh.*,TenLop from hocsinh join lop on HocSinh.MaLop = Lop.MaLop where HocSinh.MaLop = " + id);
+            foreach (DataRow item in data.Rows)
+            {
+                HocSinh_DTO hs = new HocSinh_DTO(item);
+                DSHS.Add(hs);
+            }
+            return DSHS;
+        }
+        public List<HocSinh_DTO> TimKiemHSTheoLop(string param,int MaLop)
+        {
+            List<HocSinh_DTO> DSHS = new List<HocSinh_DTO>();
+            string query = string.Format("select hocsinh.*,TenLop from hocsinh join lop on HocSinh.MaLop = Lop.MaLop where TenHocSinh like N'%{0}%' and HocSinh.MaLop = " + MaLop, param);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
             {

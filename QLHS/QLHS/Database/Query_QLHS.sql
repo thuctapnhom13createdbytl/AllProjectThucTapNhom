@@ -20,3 +20,40 @@ begin
 	delete from GiaoVien where MaGiaoVien = @maGV
 end
 delete from GiaoVien where MaGiaoVien = 1
+
+select Lop.*,TenKhoi,TenGiaoVien,MaGiaoVien 
+from Lop left join Khoi on Khoi.MaKhoi = Lop.MaKhoi 
+left join GVCN on Lop.MaLop = GVCN.MaLop 
+left join GiaoVien on GiaoVien.MaGiaoVien = GVCN.MaGaioVien
+
+select GiaoVien.* from GiaoVien join GVCN on GiaoVien.MaGiaoVien = GVCN.MaGaioVien join Lop on Lop.MaLop = GVCN.MaLop
+update GVCN set MaGaioVien = 2 where MaLop = 2
+select * from GVCN
+select hocsinh.*,TenLop from hocsinh join lop on HocSinh.MaLop = Lop.MaLop where HocSinh.MaLop = 2
+select DiemMon.*,TenMonHoc, TenHocKy  from DiemMon join MonHoc on DiemMon.MaMonHoc = MonHoc.MaMonHoc join HocKi on HocKi.MaHocKy = DiemMon.MaHocKy where MaHocSinh = 3
+select * from DiemMon
+select DiemMon.*,TenMonHoc, TenHocKy  from DiemMon join MonHoc on DiemMon.MaMonHoc = MonHoc.MaMonHoc join HocKi on HocKi.MaHocKy = DiemMon.MaHocKy where MaHocSinh = 4
+insert into DiemMon(MaMonHoc,MaHocKy,MaHocSinh,Diem15,DiemGiuaKy,DiemThi) values (2,2,3,8,9,8)
+
+
+
+-- tạo trigger thêm điểm môn học
+alter trigger ThemDiem on DiemMon instead of insert
+as
+declare @DiemTB float,@MaMonHoc int,@MaHocKy int,@MaHocSinh int,@Diem15 float,@DiemGiuaKy float,@DiemThi float
+begin
+	select @DiemTB = ROUND((Diem15+2*DiemGiuaKy+3*DiemThi)/6,1) from inserted
+	select @MaMonHoc = MaMonHoc,@MaHocKy = MaHocKy,@MaHocSinh = MaHocSinh,@Diem15 = Diem15,@DiemGiuaKy = DiemGiuaKy,@DiemThi = DiemThi from inserted
+	insert into DiemMon(MaMonHoc,MaHocKy,MaHocSinh,Diem15,DiemGiuaKy,DiemThi,TrungBinh) values (@MaMonHoc,@MaHocKy,@MaHocSinh,@Diem15,@DiemGiuaKy,@DiemThi,@DiemTB)
+end
+
+insert into DiemMon(MaMonHoc,MaHocKy,MaHocSinh,Diem15,DiemGiuaKy,DiemThi) values (@MaMonHoc,@MaHocKy,@MaHocSinh,@Diem15,@DiemGiuaKy,@DiemThi)
+update DiemMon set TrungBinh = ROUND((Diem15+2*DiemGiuaKy+3*DiemThi)/6,1)
+
+
+select hocsinh.*,TenLop from hocsinh join lop on HocSinh.MaLop = Lop.MaLop where TenHocSinh like N'%hồng%' and HocSinh.MaLop = 3
+select * from HocKi
+select * from MonHoc
+insert into DiemMon(MaMonHoc,MaHocKy,MaHocSinh,Diem15,DiemGiuaKy,DiemThi) values (4,2,4,6,5,6)
+select * from DiemMon where MaHocKy = 2
+update DiemMon set MaMonHoc = 1, MaHocKy = 1, MaHocSinh = 1, Diem15 = 1,DiemGiuaKy = 1,DiemThi = 1,TrungBinh = 1 where MaDiemMon = 1

@@ -64,6 +64,11 @@ namespace QLHS
         {
             try
             {
+                if(txtMaGV.Text != "")
+                {
+                    MessageBox.Show("Giáo viên đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if(txtTenGV.Text == "")
                 {
                     MessageBox.Show("phải nhập tên giáo viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

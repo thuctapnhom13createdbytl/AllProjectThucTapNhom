@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QLHS.DTO;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,17 @@ namespace QLHS.DAO
             {
                 instance = value;
             }
+        }
+        public List<HocKi_DTO> LayTatCahocKy()
+        {
+            List<HocKi_DTO> DSHK = new List<HocKi_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from HocKi");
+            foreach(DataRow item in data.Rows)
+            {
+                HocKi_DTO hk = new HocKi_DTO(item);
+                DSHK.Add(hk);
+            }
+            return DSHK;
         }
     }
 }

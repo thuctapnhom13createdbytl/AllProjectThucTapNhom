@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLHS.VIEW;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,5 +44,12 @@ namespace QLHS
             }
         }
 
+        private void btnThongTinGiangDay_Click(object sender, EventArgs e)
+        {
+            fQuanLyGiangDay f = new fQuanLyGiangDay();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

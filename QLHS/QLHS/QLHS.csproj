@@ -103,6 +103,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\fQuanLyGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fQuanLyGiangDay.Designer.cs">
+      <DependentUpon>fQuanLyGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fThongTinLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fThongTinLopHoc.Designer.cs">
+      <DependentUpon>fThongTinLopHoc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VIEW\fDiem.resx">
       <DependentUpon>fDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +137,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VIEW\fQuanLyGiangDay.resx">
+      <DependentUpon>fQuanLyGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fThongTinLopHoc.resx">
+      <DependentUpon>fThongTinLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

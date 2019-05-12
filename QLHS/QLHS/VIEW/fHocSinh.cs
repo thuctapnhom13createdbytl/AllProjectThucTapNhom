@@ -89,6 +89,11 @@ namespace QLHS
         {
             try
             {
+                if(txtMaHS.Text != "")
+                {
+                    MessageBox.Show("Học sinh đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if(txtTenHS.Text == "")
                 {
                     MessageBox.Show("phải nhập tên học sinh","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -115,7 +120,7 @@ namespace QLHS
         {
             try
             {
-                int sua = HocSinh_DAO.Instance.SuaHS(Convert.ToInt32(txtMaHS.Text),Convert.ToInt32(cbLop.SelectedValue), txtTenHS.Text, cbGioiTinh.Text, dtpkNgaySinh.Value, txtDiaChi.Text, txtSDT.Text, txtTonGiao.Text, txtDanToc.Text, txtTenCha.Text, txtTenMe.Text);
+                int sua = HocSinh_DAO.Instance.SuaHS(Convert.ToInt32(txtMaHS.Text), Convert.ToInt32(cbLop.SelectedValue), txtTenHS.Text, cbGioiTinh.Text, dtpkNgaySinh.Value, txtDiaChi.Text, txtSDT.Text, txtTonGiao.Text, txtDanToc.Text, txtTenCha.Text, txtTenMe.Text);
                 if (sua > 0)
                 {
                     MessageBox.Show("sửa thành công học sinh", "Thông báo!");

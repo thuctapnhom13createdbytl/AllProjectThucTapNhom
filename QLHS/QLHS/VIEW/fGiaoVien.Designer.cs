@@ -30,6 +30,8 @@
         {
             this.tabGiaoVien = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.cbMonHoc = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             this.TenMonHoc_GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbMonHoc = new System.Windows.Forms.ComboBox();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.tabGiaoVien.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvGiaoVien)).BeginInit();
@@ -97,6 +97,25 @@
             this.tabPage1.Size = new System.Drawing.Size(1247, 650);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Giáo Viên";
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(1048, 253);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(111, 36);
+            this.btnHuy.TabIndex = 16;
+            this.btnHuy.Text = "HỦY";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // cbMonHoc
+            // 
+            this.cbMonHoc.FormattingEnabled = true;
+            this.cbMonHoc.Location = new System.Drawing.Point(599, 175);
+            this.cbMonHoc.Name = "cbMonHoc";
+            this.cbMonHoc.Size = new System.Drawing.Size(222, 32);
+            this.cbMonHoc.TabIndex = 15;
             // 
             // label5
             // 
@@ -262,6 +281,7 @@
             this.Email});
             this.dtgvGiaoVien.Location = new System.Drawing.Point(-4, 316);
             this.dtgvGiaoVien.Name = "dtgvGiaoVien";
+            this.dtgvGiaoVien.ReadOnly = true;
             this.dtgvGiaoVien.Size = new System.Drawing.Size(1256, 338);
             this.dtgvGiaoVien.TabIndex = 2;
             // 
@@ -277,12 +297,14 @@
             this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
             this.TenGiaoVien.HeaderText = "Tên Giáo Viên";
             this.TenGiaoVien.Name = "TenGiaoVien";
+            this.TenGiaoVien.ReadOnly = true;
             // 
             // GV_MaMonHoc
             // 
             this.GV_MaMonHoc.DataPropertyName = "MaMonHoc";
             this.GV_MaMonHoc.HeaderText = "Mã môn học";
             this.GV_MaMonHoc.Name = "GV_MaMonHoc";
+            this.GV_MaMonHoc.ReadOnly = true;
             this.GV_MaMonHoc.Visible = false;
             // 
             // TenMonHoc_GV
@@ -290,37 +312,21 @@
             this.TenMonHoc_GV.DataPropertyName = "TenMonHoc";
             this.TenMonHoc_GV.HeaderText = "Môn Học Giảng Dạy";
             this.TenMonHoc_GV.Name = "TenMonHoc_GV";
+            this.TenMonHoc_GV.ReadOnly = true;
             // 
             // SDT
             // 
             this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
             // 
             // Email
             // 
             this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
-            // 
-            // cbMonHoc
-            // 
-            this.cbMonHoc.FormattingEnabled = true;
-            this.cbMonHoc.Location = new System.Drawing.Point(599, 175);
-            this.cbMonHoc.Name = "cbMonHoc";
-            this.cbMonHoc.Size = new System.Drawing.Size(222, 32);
-            this.cbMonHoc.TabIndex = 15;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(1048, 253);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(111, 36);
-            this.btnHuy.TabIndex = 16;
-            this.btnHuy.Text = "HỦY";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.Email.ReadOnly = true;
             // 
             // fGiaoVien
             // 
@@ -330,8 +336,8 @@
             this.ClientSize = new System.Drawing.Size(1254, 688);
             this.Controls.Add(this.tabGiaoVien);
             this.Name = "fGiaoVien";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fGiaoVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Quản lí giáo viên";
             this.tabGiaoVien.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

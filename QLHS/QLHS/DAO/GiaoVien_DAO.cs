@@ -52,7 +52,7 @@ namespace QLHS.DAO
         {
             try
             {
-                string query = string.Format("update GiaoVien set MaMonHoc = {0}, TenGiaoVien = N'{1}',SDT = '',Email = '{2}' where MaGiaoVien = "+MaGV, MaMH, TenGV, SDT, Email);
+                string query = string.Format("update GiaoVien set MaMonHoc = {0}, TenGiaoVien = N'{1}',SDT = '{2}',Email = '{3}' where MaGiaoVien = "+MaGV, MaMH, TenGV, SDT, Email);
                 int Sua = DataProvider.Instance.ExecuteNonQuery(query);
                 return Sua;
             }
