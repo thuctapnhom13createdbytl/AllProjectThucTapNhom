@@ -9,10 +9,6 @@ namespace QuanLyThuVien.DTO
 {
     public class TheThuVien_DTO
     {
-        private string soThe;
-        private string ngayBatDau;
-        private string ngayKetThuc;
-        private int maDocGia;
         public TheThuVien_DTO()
 	    {
             this.SoThe = "";

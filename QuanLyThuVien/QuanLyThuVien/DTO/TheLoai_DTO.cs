@@ -5,8 +5,6 @@ namespace QuanLyThuVien.DTO
 {
     public class TheLoai_DTO
     {
-        private string maTheLoai;
-        private string tenTheLoai;
         public TheLoai_DTO()
         {
             this.MaTheLoai = "";

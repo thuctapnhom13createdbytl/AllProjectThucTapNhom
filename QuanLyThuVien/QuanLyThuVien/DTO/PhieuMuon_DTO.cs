@@ -9,33 +9,35 @@ namespace QuanLyThuVien.DTO
 {
     public class PhieuMuon_DTO
     {
-        private string soPhieuMuon;
-        private string ngayMuon;
-        private string ngayHenTra;
-        private string maNhanVien;
-        private string maDocGia;
         public PhieuMuon_DTO()
         {
             this.SoPhieuMuon = "";
-            this.NgayMuon = "";
-            this.NgayHenTra = "";
+            this.NgayMuon = DateTime.Now;
+            this.NgayHenTra = DateTime.Now;
             this.MaNhanVien = "";
             this.MaDocGia = "";
+            this.TenNhanVien = "";
+            this.TenDocGia = "";
         }
         public PhieuMuon_DTO(DataRow row)
         {
             this.SoPhieuMuon = row["SoPhieuMuon"].ToString();
-            this.NgayMuon = row["NgayMuon"].ToString();
-            this.NgayHenTra = row["NgayHenTra"].ToString();
+            this.NgayMuon = (DateTime)row["NgayMuon"];
+            this.NgayHenTra = (DateTime)row["NgayHenTra"];
             this.MaNhanVien = row["MaNhanVien"].ToString();
             this.MaDocGia = row["MaDocGia"].ToString();
+            this.TenDocGia = row["TenDocGia"].ToString();
+            this.TenNhanVien = row["TenNhanVien"].ToString();
         }
 
         public string SoPhieuMuon { get ; set; }
-        public string NgayMuon { get ; set ; }
-        public string NgayHenTra { get; set ; }
+        public DateTime NgayMuon { get ; set ; }
+        public DateTime NgayHenTra { get; set ; }
         public string MaNhanVien { get; set; }
+        public string TenNhanVien { get; set; }
         public string MaDocGia { get; set; }
+        public string TenDocGia { get; set; }
+
     }
 
 }

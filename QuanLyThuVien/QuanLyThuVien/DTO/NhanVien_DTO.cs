@@ -8,19 +8,15 @@ using System.Data;
 namespace QuanLyThuVien.DTO
 {
     public class NhanVien_DTO
-{
-        private string maNhanVien;
-        private string hoTen;
-        private string diaChi;
-        private string sdt;
-	public NhanVien_DTO()
-	{
+    {
+        public NhanVien_DTO()
+        {
             this.MaNhanVien = "";
             this.HoTen = "";
             this.DiaChi = "";
             this.Sdt = "";
-	}
-        public NhanVien_DTO(string manhanvien,string hoten, string diachi, string sdt)
+        }
+        public NhanVien_DTO(string manhanvien, string hoten, string diachi, string sdt)
         {
             this.MaNhanVien = manhanvien;
             this.HoTen = hoten;
@@ -35,11 +31,11 @@ namespace QuanLyThuVien.DTO
             this.Sdt = row["SDT"].ToString();
         }
 
-     
-        public string HoTen { get ; set ; }
-        public string DiaChi { get ; set ; }
-        public string Sdt { get ; set ; }
-        public string MaNhanVien { get; set ; }
+
+        public string HoTen { get; set; }
+        public string DiaChi { get; set; }
+        public string Sdt { get; set; }
+        public string MaNhanVien { get; set; }
     }
 
 }

@@ -5,10 +5,6 @@ namespace QuanLyThuVien.DTO
 {
     public class VietSach_DTO
     {
-        private string maDauSach;
-        private string maTacGia;
-        private int soTrang;
-        private string vaiTro;
         public VietSach_DTO()
         {
             this.MaDauSach = "";

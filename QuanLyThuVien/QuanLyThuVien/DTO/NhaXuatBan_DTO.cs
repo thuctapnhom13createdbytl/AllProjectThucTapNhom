@@ -8,17 +8,15 @@ using System.Data;
 
 namespace QuanLyThuVien.DTO
 {
-public class NhaXuatBan_DTO
-{
-        private string maNXB;
-        private string tenNXB;
-        private string diaChi;
-	public NhaXuatBan_DTO()
-	{
+    public class NhaXuatBan_DTO
+    {
+
+        public NhaXuatBan_DTO()
+        {
             this.MaNXB = "";
             this.TenNXB = "";
             this.DiaChi = "";
-	}
+        }
         public NhaXuatBan_DTO(string manxb, string tennxb, string diachi)
         {
             this.MaNXB = manxb;
@@ -31,7 +29,7 @@ public class NhaXuatBan_DTO
             this.TenNXB = row["TenNXB"].ToString();
             this.DiaChi = row["DiaChi"].ToString();
         }
-        
+
         public string TenNXB { get; set; }
         public string DiaChi { get; set; }
         public string MaNXB { get; set; }
