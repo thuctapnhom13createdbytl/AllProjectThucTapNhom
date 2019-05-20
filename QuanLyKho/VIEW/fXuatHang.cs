@@ -54,15 +54,15 @@ namespace QuanLyKho.VIEW
         private void EditDataGridView()
         {
             dgvPhieuXuat.Columns["TenKH"].HeaderText = "Khách Hàng";
-            dgvPhieuXuat.Columns["TenKH"].Width = dgvPhieuXuat.Width / 5;
+            dgvPhieuXuat.Columns["TenKH"].Width = dgvPhieuXuat.Width / 4;
             dgvPhieuXuat.Columns["TenSanPham"].HeaderText = "Sản Phẩm";
-            dgvPhieuXuat.Columns["TenSanPham"].Width = dgvPhieuXuat.Width / 5;
+            dgvPhieuXuat.Columns["TenSanPham"].Width = dgvPhieuXuat.Width / 4;
             dgvPhieuXuat.Columns["SoLuong"].HeaderText = "Số Lượng";
-            dgvPhieuXuat.Columns["SoLuong"].Width = dgvPhieuXuat.Width / 5;
+            dgvPhieuXuat.Columns["SoLuong"].Width = dgvPhieuXuat.Width / 4;
             dgvPhieuXuat.Columns["DonGia"].HeaderText = "Đơn Giá";
-            dgvPhieuXuat.Columns["DonGia"].Width = dgvPhieuXuat.Width / 5;
+            dgvPhieuXuat.Columns["DonGia"].Width = dgvPhieuXuat.Width / 4;
             dgvPhieuXuat.Columns["TenNV"].HeaderText = "Nhân Viên";
-            dgvPhieuXuat.Columns["TenNV"].Width = dgvPhieuXuat.Width / 5;
+            dgvPhieuXuat.Columns["TenNV"].Width = dgvPhieuXuat.Width / 4;
             dgvPhieuXuat.Columns["Ma_CTPX"].Visible = false;
             dgvPhieuXuat.Columns["Ma_PX"].Visible = false;
             dgvPhieuXuat.Columns["Ma_Sanpham"].Visible = false;
@@ -70,6 +70,7 @@ namespace QuanLyKho.VIEW
             dgvPhieuXuat.Columns["LoaiSanPham"].Visible = false;
             dgvPhieuXuat.Columns["NhanVien"].Visible = false;
             dgvPhieuXuat.Columns["NhaSanXuat"].Visible = false;
+            dgvPhieuXuat.Columns["TenKH"].Visible = false;
         }
 
         private void dgvPhieuXuat_CellClick(object sender, DataGridViewCellEventArgs e)
