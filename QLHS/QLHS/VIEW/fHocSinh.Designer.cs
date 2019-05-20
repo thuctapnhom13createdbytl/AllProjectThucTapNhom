@@ -390,9 +390,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(904, 202);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 23);
+            this.label7.Size = new System.Drawing.Size(79, 23);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Ten Cha";
+            this.label7.Text = "Tên Cha";
             // 
             // label11
             // 

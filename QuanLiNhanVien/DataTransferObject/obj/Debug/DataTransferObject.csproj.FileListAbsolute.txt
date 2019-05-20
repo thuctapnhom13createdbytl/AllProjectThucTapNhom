@@ -15,3 +15,7 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhan
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.pdb
 D:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.csprojResolveAssemblyReference.cache
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.dll
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\bin\Debug\DataTransferObject.pdb
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.dll
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataTransferObject\obj\Debug\DataTransferObject.pdb

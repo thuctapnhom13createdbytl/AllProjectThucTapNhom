@@ -72,6 +72,8 @@
             // dtgvThanNhan
             // 
             this.dtgvThanNhan.AllowUserToResizeRows = false;
+            this.dtgvThanNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvThanNhan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvThanNhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dtgvThanNhan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvThanNhan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -126,35 +128,30 @@
             this.tenTN.DataPropertyName = "TenTN";
             this.tenTN.HeaderText = "Tên thân nhân";
             this.tenTN.Name = "tenTN";
-            this.tenTN.Width = 300;
             // 
             // gioitinh
             // 
             this.gioitinh.DataPropertyName = "GioiTinh";
             this.gioitinh.HeaderText = "giới tính";
             this.gioitinh.Name = "gioitinh";
-            this.gioitinh.Width = 200;
             // 
             // ngaysinhTN
             // 
             this.ngaysinhTN.DataPropertyName = "NgaySinh";
             this.ngaysinhTN.HeaderText = "Ngày sinh";
             this.ngaysinhTN.Name = "ngaysinhTN";
-            this.ngaysinhTN.Width = 200;
             // 
             // quanhe
             // 
             this.quanhe.DataPropertyName = "QuanHe";
             this.quanhe.HeaderText = "Quan hệ";
             this.quanhe.Name = "quanhe";
-            this.quanhe.Width = 248;
             // 
             // tenNV
             // 
             this.tenNV.DataPropertyName = "tenNV";
             this.tenNV.HeaderText = "Tên nhân viên";
             this.tenNV.Name = "tenNV";
-            this.tenNV.Width = 300;
             // 
             // metroPanel4
             // 
@@ -293,7 +290,7 @@
             this.dtpkNgaySinh.CustomFormat = "";
             this.dtpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpkNgaySinh.Location = new System.Drawing.Point(660, 115);
-            this.dtpkNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpkNgaySinh.Margin = new System.Windows.Forms.Padding(2);
             this.dtpkNgaySinh.Name = "dtpkNgaySinh";
             this.dtpkNgaySinh.Size = new System.Drawing.Size(92, 20);
             this.dtpkNgaySinh.TabIndex = 11;
@@ -306,7 +303,7 @@
             "Nam",
             "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(660, 29);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(92, 21);
             this.cbGioiTinh.TabIndex = 10;

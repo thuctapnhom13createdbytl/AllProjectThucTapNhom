@@ -49,7 +49,7 @@ namespace DataAccessLayer
                 SqlConnection db = DataProvider.dbContext;// ket noi den csdl
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "LoadAllDuAn";
+                cmd.CommandText = "LoadTatCaDuAn";
                 cmd.Connection = db;
                 SqlDataReader reader = cmd.ExecuteReader();// goi den storeprocedure de lay du lieu
 

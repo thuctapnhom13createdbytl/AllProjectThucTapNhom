@@ -527,7 +527,7 @@
             this.metroLabel9.UseCustomBackColor = true;
             this.metroLabel9.UseCustomForeColor = true;
             this.metroLabel9.WrapToLine = true;
-            this.metroLabel9.Click += new System.EventHandler(this.metroLabel9_Click);
+            //this.metroLabel9.Click += new System.EventHandler(this.metroLabel9_Click);
             // 
             // metroLabel7
             // 

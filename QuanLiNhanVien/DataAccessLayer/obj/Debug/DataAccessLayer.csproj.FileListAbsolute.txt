@@ -23,3 +23,10 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhan
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.dll
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\bin\Debug\DataTransferObject.pdb
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLiNhanVien\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
