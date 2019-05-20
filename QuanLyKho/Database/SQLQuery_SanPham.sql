@@ -99,7 +99,7 @@ update NhaSanXuat set Ten_NSX = N'1',DiaChi_NSX = N'1',SDT_NSX = '11',Website_NS
  begin
  select @maSP = Ma_Sanpham from deleted
  update CT_PhieuNhap set Ma_Sanpham = null where Ma_Sanpham = @maSP
- update CT_PhieuNhap set Ma_Sanpham = null where Ma_Sanpham = @maSP
+ update CT_PhieuXuat set Ma_Sanpham = null where Ma_Sanpham = @maSP
  delete from SanPham where Ma_Sanpham = @maSP
  end
 
@@ -146,3 +146,9 @@ CREATE PROC ThemNhanVien (@tenNV nvarchar(50), @gioitinh nvarchar(10), @ngaysinh
 as begin 
 INSERT INTO dbo.NhanVien VALUES(@tenNV, @gioitinh, @ngaysinh, @sdtNV, @emailNV)
 END
+create proc LayTatCaKhachHang
+as
+begin
+select * from KhachHang
+end
+delete from SanPham where Ma_Sanpham = 11
