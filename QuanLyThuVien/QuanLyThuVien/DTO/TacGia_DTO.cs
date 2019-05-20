@@ -10,10 +10,6 @@ namespace QuanLyThuVien.DTO
 {
     public class TacGia_DTO
     {
-        private string maTacGia;
-        private string tenTacGia;
-        private string diaChi;
-        private string sdt;
         public TacGia_DTO()
         {
             this.MaTacGia = "";

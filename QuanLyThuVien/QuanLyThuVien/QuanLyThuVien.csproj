@@ -91,6 +91,12 @@
     <Compile Include="VIEW\fNhanVien.Designer.cs">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmThemChiTietPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmThemChiTietPhieuMuon.Designer.cs">
+      <DependentUpon>frmThemChiTietPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\fSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmThemChiTietPhieuMuon.resx">
+      <DependentUpon>frmThemChiTietPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\fSach.resx">
       <DependentUpon>fSach.cs</DependentUpon>

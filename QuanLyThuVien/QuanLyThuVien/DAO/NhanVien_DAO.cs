@@ -34,6 +34,20 @@ namespace QuanLyThuVien.DAO
             }
             return lstNhanVien;
         }
+
+        public List<NhanVien_DTO> LoadNhanVienComboBox()
+        {
+            List<NhanVien_DTO> lstNhanVien = new List<NhanVien_DTO>();
+            string query = "SELECT * FROM NhanVien";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                NhanVien_DTO nv = new NhanVien_DTO(item);
+                lstNhanVien.Add(nv);
+            }
+            return lstNhanVien;
+        }
+
         public bool ThemNhanVien(string manhanvien, string hoten, string diachi, string sdt)
         {
             try
