@@ -11,7 +11,7 @@ namespace QuanLyKho.DTO
     {
         private int soLuong;
         private string tenNSX;
-        private float donGia;
+        private decimal donGia;
         private int maSP;
         private string tenSP;
         private string thongSoKyThuat;
@@ -19,7 +19,7 @@ namespace QuanLyKho.DTO
         private int maLoaiSP;
         private int maNSX;
 
-        public SanPham_DTO (int soLuong, string tenNSX, float donGia, int maSP, string tenSP, string thongSoKyThuat, string tenLoaiSP, int maLoaiSP, int maNSX)
+        public SanPham_DTO (int soLuong, string tenNSX, decimal donGia, int maSP, string tenSP, string thongSoKyThuat, string tenLoaiSP, int maLoaiSP, int maNSX)
         {
             this.SoLuong = soLuong;
             this.TenNSX = tenNSX;
@@ -36,7 +36,7 @@ namespace QuanLyKho.DTO
         {
             this.SoLuong = (int)row["soLuong"];
             this.TenNSX = row["Ten_NSX"].ToString()!= "" ? row["Ten_NSX"].ToString(): "chưa có nhà sản xuất" ;
-            this.DonGia = (int)row["Gia"];
+            this.DonGia = Convert.ToDecimal(row["Gia"]);
             this.MaSP = (int)row["Ma_Sanpham"];
             this.TenSP = row["TenSanPham"].ToString();
             this.ThongSoKyThuat = row["Thongso_Kt"].ToString();
@@ -122,7 +122,7 @@ namespace QuanLyKho.DTO
             }
         }
 
-        public float DonGia
+        public decimal DonGia
         {
             get
             {

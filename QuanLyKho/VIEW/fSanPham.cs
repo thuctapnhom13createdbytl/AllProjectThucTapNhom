@@ -354,7 +354,7 @@ namespace QuanLyKho.VIEW
                 }
                 else
                 {
-                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
                     if (them)
                     {
                         MessageBox.Show("Thêm sản phẩm thành công");
@@ -401,7 +401,7 @@ namespace QuanLyKho.VIEW
                     }
                     else
                     {
-                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
                         if (sua)
                         {
                             MessageBox.Show("Cập nhật sản phẩm thành công");
