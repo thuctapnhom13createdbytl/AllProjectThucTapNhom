@@ -12,7 +12,7 @@ using QuanLyKho.DTO;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fKhachHang : Form
+    public partial class fKhachHang : MetroFramework.Forms.MetroForm
     {
         BindingSource DanhSachKH = new BindingSource();
         public fKhachHang()
@@ -95,21 +95,30 @@ namespace QuanLyKho.VIEW
             {
                 if (txtMaKH.Text == "")
                 {
-                    MessageBox.Show("Chọn 1 khach hang để xóa");
+                    MessageBox.Show("Chọn 1 khách hàng để xóa");
                 }
                 else
                 {
-                    bool xoa = KhachHang_DAO.Instance.XoaKhachHang(Convert.ToInt32(txtMaKH.Text));
-                    if (xoa)
+                    var xacnhan = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng: " + txtTenKH.Text, "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if(xacnhan == DialogResult.No)
                     {
-                        MessageBox.Show("Xóa thành công");
+                        return;
                     }
                     else
                     {
-                        MessageBox.Show("Xóa thất bại");
+                        bool xoa = KhachHang_DAO.Instance.XoaKhachHang(Convert.ToInt32(txtMaKH.Text));
+                        if (xoa)
+                        {
+                            MessageBox.Show("Xóa thành công");
+                            LayTatCaKH();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thất bại");
+                        }
                     }
+
                 }
-                LayTatCaKH();
 
             }
             catch (Exception ex)
@@ -124,14 +133,20 @@ namespace QuanLyKho.VIEW
             {
                 if (txtTenKH.Text == "")
                 {
-                    MessageBox.Show("Không được để trống tên khach hang");
+                    MessageBox.Show("Không được để trống tên khách hàng");
+                    return;
+                }
+                if(txtMaKH.Text == "")
+                {
+                    MessageBox.Show("Phải chọn 1 khách hàng để cập nhật");
+                    return;
                 }
                 else
                 {
-                    bool sua = KhachHang_DAO.Instance.CapNhatKhachhang(Convert.ToInt16(txtMaKH.Text),txtTenKH.Text.ToString(), txtDiaChi.Text.ToString(), Convert.ToInt32(txtSDT.Text),txtEmail.Text.ToString());
+                    bool sua = KhachHang_DAO.Instance.CapNhatKhachhang(Convert.ToInt32(txtMaKH.Text),txtTenKH.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text,txtEmail.Text.ToString());
                     if (sua)
                     {
-                        MessageBox.Show("Cập nhật khach hang thành công");
+                        MessageBox.Show("Cập nhật khách hàng thành công");
                     }
                     else
                     {
@@ -152,12 +167,21 @@ namespace QuanLyKho.VIEW
             List<KhachHang_DTO> KH = KhachHang_DAO.Instance.TimKiemKH(txtTimKiemKH.Text.ToString());
             if (KH.Count <= 0)
             {
-                MessageBox.Show("Không tìm thấy khach hang nào.");
+                MessageBox.Show("Không tìm thấy khách hàng nào.");
             }
             else
             {
                 this.DanhSachKH.DataSource = KH;
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtTenKH.Text = "";
+            txtMaKH.Text = "";
+            txtSDT.Text = "";
+            txtDiaChi.Text = "";
+            txtEmail.Text = "";
         }
     }
 }

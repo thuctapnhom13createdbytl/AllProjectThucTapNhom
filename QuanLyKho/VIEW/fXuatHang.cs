@@ -12,7 +12,7 @@ using QuanLyKho.DTO;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fXuatHang : Form
+    public partial class fXuatHang : MetroFramework.Forms.MetroForm
     {
         public fXuatHang()
         {

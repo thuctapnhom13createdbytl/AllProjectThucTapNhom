@@ -12,7 +12,7 @@ using QuanLyKho.DAO;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fNhapHang : Form
+    public partial class fNhapHang : MetroFramework.Forms.MetroForm
     {
         private List<NhapHang_DTO> lstPhieuNhap;
         private List<NhapHang_DTO> lstPhieuNhapGoc;
@@ -73,7 +73,7 @@ namespace QuanLyKho.VIEW
             dgvPhieuNhap.Columns["Ma_LoaiSP"].Visible = false;
             dgvPhieuNhap.Columns["Ma_NSX"].Visible = false;
             dgvPhieuNhap.Columns["Ma_NV"].Visible = false;
-            dgvPhieuNhap.Rows[0].Selected = false;
+            //dgvPhieuNhap.Rows[0].Selected = false;
         }
 
         private void dgvPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)

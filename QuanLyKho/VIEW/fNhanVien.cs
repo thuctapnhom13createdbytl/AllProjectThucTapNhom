@@ -12,7 +12,7 @@ using QuanLyKho.DTO;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fNhanVien : Form
+    public partial class fNhanVien : MetroFramework.Forms.MetroForm
     {
         BindingSource DanhSachNV = new BindingSource();
         //BindingSource DanhSach
@@ -95,6 +95,12 @@ namespace QuanLyKho.VIEW
                 if (txtTenNhanVien.Text == "")
                 {
                     MessageBox.Show("Điền Tên Nhân Viên");
+                    return;
+                }
+                if(txtMaNhanVien.Text == "")
+                {
+                    MessageBox.Show("Chọn 1 nhân viên để cập nhật");
+                    return;
                 }
                 else
                 {
@@ -124,20 +130,30 @@ namespace QuanLyKho.VIEW
                 if (txtMaNhanVien.Text =="")
                 {
                     MessageBox.Show("Xóa Thất Bại");
+                    return;
                 }
                 else
                 {
-                    bool xoa = NhanVien_DAO.Instance.XoaNhanVien(Convert.ToInt16(txtMaNhanVien.Text));
-                    if(xoa)
+                    var xacnhan = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên: " + txtTenNhanVien.Text, "xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if(xacnhan == DialogResult.No)
                     {
-                        MessageBox.Show("Xóa Thành Công");
+                        return;
                     }
                     else
                     {
-                        MessageBox.Show("Xoá Thất Bại");
+                        bool xoa = NhanVien_DAO.Instance.XoaNhanVien(Convert.ToInt16(txtMaNhanVien.Text));
+                        if (xoa)
+                        {
+                            MessageBox.Show("Xóa Thành Công");
+                            LayTatCaNV();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xoá Thất Bại");
+                        }
                     }
+
                 }
-                LayTatCaNV();
             }
             catch(Exception ex)
             {
@@ -164,6 +180,16 @@ namespace QuanLyKho.VIEW
             {
                 LayTatCaNV();
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtTenNhanVien.Text = "";
+            txtMaNhanVien.Text = "";
+            txtSdtNhanVien.Text = "";
+            txtEmailNhanVien.Text = "";
+            dtpkNSNV.Value = DateTime.Now;
+            loadcbGioiTinh(cbGioiTinh);
         }
     }
 }

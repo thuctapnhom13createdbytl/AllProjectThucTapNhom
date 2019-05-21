@@ -37,10 +37,12 @@
             // 
             // btnXuatSanPham
             // 
+            this.btnXuatSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuatSanPham.Image = global::QuanLyKho.Properties.Resources.forward_f2;
-            this.btnXuatSanPham.Location = new System.Drawing.Point(133, 210);
+            this.btnXuatSanPham.Location = new System.Drawing.Point(640, 362);
+            this.btnXuatSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.btnXuatSanPham.Name = "btnXuatSanPham";
-            this.btnXuatSanPham.Size = new System.Drawing.Size(113, 90);
+            this.btnXuatSanPham.Size = new System.Drawing.Size(213, 111);
             this.btnXuatSanPham.TabIndex = 5;
             this.btnXuatSanPham.Text = "Xuất sản phẩm";
             this.btnXuatSanPham.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -49,10 +51,12 @@
             // 
             // btnNhapSanPham
             // 
+            this.btnNhapSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhapSanPham.Image = global::QuanLyKho.Properties.Resources.add_48_hot;
-            this.btnNhapSanPham.Location = new System.Drawing.Point(252, 127);
+            this.btnNhapSanPham.Location = new System.Drawing.Point(177, 131);
+            this.btnNhapSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhapSanPham.Name = "btnNhapSanPham";
-            this.btnNhapSanPham.Size = new System.Drawing.Size(113, 90);
+            this.btnNhapSanPham.Size = new System.Drawing.Size(213, 111);
             this.btnNhapSanPham.TabIndex = 4;
             this.btnNhapSanPham.Text = "Nhập sản phẩm";
             this.btnNhapSanPham.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -61,10 +65,12 @@
             // 
             // btnKhachHang
             // 
+            this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.Image = global::QuanLyKho.Properties.Resources.businessmen;
-            this.btnKhachHang.Location = new System.Drawing.Point(371, 210);
+            this.btnKhachHang.Location = new System.Drawing.Point(177, 362);
+            this.btnKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(112, 90);
+            this.btnKhachHang.Size = new System.Drawing.Size(213, 111);
             this.btnKhachHang.TabIndex = 3;
             this.btnKhachHang.Text = "Khách hàng";
             this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -73,10 +79,12 @@
             // 
             // btnNhanVien
             // 
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.Image = global::QuanLyKho.Properties.Resources.suport_F_online;
-            this.btnNhanVien.Location = new System.Drawing.Point(371, 38);
+            this.btnNhanVien.Location = new System.Drawing.Point(640, 131);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(112, 90);
+            this.btnNhanVien.Size = new System.Drawing.Size(213, 111);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -85,10 +93,12 @@
             // 
             // btnSanPham
             // 
+            this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.Image = global::QuanLyKho.Properties.Resources.data_view;
-            this.btnSanPham.Location = new System.Drawing.Point(133, 38);
+            this.btnSanPham.Location = new System.Drawing.Point(406, 245);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(113, 90);
+            this.btnSanPham.Size = new System.Drawing.Size(213, 111);
             this.btnSanPham.TabIndex = 1;
             this.btnSanPham.Text = "Quản lý sản phẩm";
             this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -97,16 +107,17 @@
             // 
             // fmain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 370);
+            this.ClientSize = new System.Drawing.Size(1035, 590);
             this.Controls.Add(this.btnXuatSanPham);
             this.Controls.Add(this.btnNhapSanPham);
             this.Controls.Add(this.btnKhachHang);
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnSanPham);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Quản lý kho hàng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmain_FormClosing);
             this.ResumeLayout(false);
