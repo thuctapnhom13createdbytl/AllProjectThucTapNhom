@@ -12,7 +12,7 @@ namespace BusinessLogicLayer
     {
         public static List<NHANVIEN_DTO> LoadTatCaNhanVien()
         {
-            var lstNhanVien = NHANVIEN_DAL.LoadTatCaNhanVien();
+            List<NHANVIEN_DTO> lstNhanVien = NHANVIEN_DAL.LoadTatCaNhanVien();
             for(int i = 0; i < lstNhanVien.Count; i++)
             {
                 if (lstNhanVien[i].MaNGS == 0)

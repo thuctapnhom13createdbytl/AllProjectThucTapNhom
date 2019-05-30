@@ -16,7 +16,7 @@ namespace QuanLyKho.DTO
         public Nullable<int> Ma_LoaiSP { get; set; }
         public string TenLoai { get; set; }
         public Nullable<int> SoLuong { get; set; }
-        public Nullable<int> DonGia { get; set; }
+        public Nullable<decimal> DonGia { get; set; }
         public Nullable<int> Ma_NSX { get; set; }
         public string Ten_NSX { get; set; }
         public Nullable<int> Ma_NV { get; set; }
@@ -29,7 +29,7 @@ namespace QuanLyKho.DTO
             Ma_PN = (int)dr["Ma_PN"];
             Ma_SanPham = (int)dr["Ma_SanPham"];
             SoLuong = (int)dr["SoLuong"];
-            DonGia = (int)dr["DonGia"];
+            DonGia = Convert.ToDecimal(dr["DonGia"]);
             Ma_NSX = (int)dr["Ma_NSX"];
             Ma_LoaiSP = (int)dr["Ma_LoaiSP"];
             TenSanPham = (string)dr["TenSanPham"];

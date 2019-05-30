@@ -12,7 +12,7 @@ using QuanLyKho.DTO;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fXuatHang : Form
+    public partial class fXuatHang : MetroFramework.Forms.MetroForm
     {
         public fXuatHang()
         {
@@ -106,7 +106,7 @@ namespace QuanLyKho.VIEW
             phieuXuat.Ma_Sanpham = (int)cboTenSP.SelectedValue;
             phieuXuat.TenSanPham = cboTenSP.Text;
             phieuXuat.SoLuong = (int)numSoLuong.Value;
-            phieuXuat.DonGia = int.Parse(txtDonGia.Text);
+            phieuXuat.DonGia = decimal.Parse(txtDonGia.Text);
 
             lstPhieuXuat.Add(phieuXuat);
             dgvPhieuXuat.DataSource = typeof(List<XuatHang_DTO>);
@@ -117,13 +117,13 @@ namespace QuanLyKho.VIEW
         private bool ValidateData()
         {
             int err = 0;
-            int donGia;
+            decimal donGia;
             if (txtTenKH.Text.Trim() == "")
             {
                 txtTenKH.BackColor = Color.Coral;
                 err++;
             }
-            if (!int.TryParse(txtDonGia.Text, out donGia))
+            if (!decimal.TryParse(txtDonGia.Text, out donGia))
             {
                 txtDonGia.BackColor = Color.Coral;
                 err++;

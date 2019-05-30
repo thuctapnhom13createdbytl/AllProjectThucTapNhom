@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fSanPham:Form
+    public partial class fSanPham: MetroFramework.Forms.MetroForm
     {
         BindingSource DanhSachSP = new BindingSource();
         BindingSource DanhSachLSP = new BindingSource();
@@ -128,14 +128,17 @@ namespace QuanLyKho.VIEW
 
         private void btnCapNhatLSP_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa loại sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(result == DialogResult.Yes)
-            {
                 try
                 {
                     if (txtTenLSP.Text == "")
                     {
                         MessageBox.Show("Không được để trống tên loại sản phẩm");
+                        return;
+                    }
+                    if (txtMaLSP.Text == "")
+                    {
+                        MessageBox.Show("phải chọn 1 loại sản phẩm để cập nhật");
+                        return;
                     }
                     else
                     {
@@ -156,8 +159,6 @@ namespace QuanLyKho.VIEW
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
- 
         }
 
         private void btnXoaLSP_Click(object sender, EventArgs e)
@@ -290,14 +291,17 @@ namespace QuanLyKho.VIEW
 
         private void btnSuaNSX_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa nhà sản xuất này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
                 try
                 {
                     if (txtTen_NSX.Text == "")
                     {
                         MessageBox.Show("Không được để trống tên nhà sản xuất");
+                        return;
+                    }
+                    if (txtMa_NSX.Text == "")
+                    {
+                        MessageBox.Show("phải chọn 1 nhà sản suất để cập nhật");
+                        return;
                     }
                     else
                     {
@@ -318,8 +322,6 @@ namespace QuanLyKho.VIEW
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-
         }
 
         private void btnTimKiemNSX_Click(object sender, EventArgs e)
@@ -354,7 +356,7 @@ namespace QuanLyKho.VIEW
                 }
                 else
                 {
-                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
                     if (them)
                     {
                         MessageBox.Show("Thêm sản phẩm thành công");
@@ -390,18 +392,21 @@ namespace QuanLyKho.VIEW
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
                 try
                 {
                     if (txtTenSanPham.Text == "")
                     {
                         MessageBox.Show("Không được để trống tên sản phẩm");
+                        return;
+                    }
+                    if (txtMaSanPham.Text == "")
+                    {
+                        MessageBox.Show("phải chọn 1 sản phẩm để cập nhật");
+                        return;
                     }
                     else
                     {
-                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
                         if (sua)
                         {
                             MessageBox.Show("Cập nhật sản phẩm thành công");
@@ -418,8 +423,6 @@ namespace QuanLyKho.VIEW
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

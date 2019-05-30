@@ -80,7 +80,7 @@ namespace QuanLyKho.DAO
 
             return DanhSachKH;
         }
-        public bool CapNhatKhachhang(int makh, string tenkh, string diachi, int sdt, string email)
+        public bool CapNhatKhachhang(int makh, string tenkh, string diachi, string sdt, string email)
         {
             try
             {

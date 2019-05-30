@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyKho.VIEW
 {
-    public partial class fmain : Form
+    public partial class fmain : MetroFramework.Forms.MetroForm
     {
         public fmain()
         {

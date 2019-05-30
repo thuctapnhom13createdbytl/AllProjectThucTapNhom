@@ -28,7 +28,7 @@ namespace QuanLyKho.DAO
             }
             return DanhSachSP;
         }
-        public bool ThemSanPham(string tenSP, int Ma_NSX,string thongso,int maLSP,int gia,int soluong)
+        public bool ThemSanPham(string tenSP, int Ma_NSX,string thongso,int maLSP,decimal gia,int soluong)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace QuanLyKho.DAO
                 return false;
             }
         }
-        public bool SuaSanPham(int id, string tenSP, int Ma_NSX, string thongso, int maLSP, int gia, int soluong)
+        public bool SuaSanPham(int id, string tenSP, int Ma_NSX, string thongso, int maLSP, decimal gia, int soluong)
         {
             try
             {

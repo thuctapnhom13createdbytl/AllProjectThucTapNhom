@@ -241,6 +241,7 @@
             this.metroLabel5.Text = "Phòng Ban Phụ Trách:";
             this.metroLabel5.UseCustomBackColor = true;
             this.metroLabel5.UseCustomForeColor = true;
+            this.metroLabel5.UseWaitCursor = true;
             this.metroLabel5.WrapToLine = true;
             // 
             // metroLabel4
@@ -254,6 +255,7 @@
             this.metroLabel4.Text = "Địa Điểm:";
             this.metroLabel4.UseCustomBackColor = true;
             this.metroLabel4.UseCustomForeColor = true;
+            this.metroLabel4.UseWaitCursor = true;
             // 
             // metroLabel3
             // 
@@ -266,6 +268,7 @@
             this.metroLabel3.Text = "Tên Dự Án:";
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
+            this.metroLabel3.UseWaitCursor = true;
             // 
             // metroLabel2
             // 
@@ -278,6 +281,7 @@
             this.metroLabel2.Text = "Mã Dự Án:";
             this.metroLabel2.UseCustomBackColor = true;
             this.metroLabel2.UseCustomForeColor = true;
+            this.metroLabel2.UseWaitCursor = true;
             // 
             // metroPanel3
             // 
@@ -313,6 +317,8 @@
             // dtgvDuAn
             // 
             this.dtgvDuAn.AllowUserToResizeRows = false;
+            this.dtgvDuAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvDuAn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvDuAn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dtgvDuAn.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvDuAn.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
