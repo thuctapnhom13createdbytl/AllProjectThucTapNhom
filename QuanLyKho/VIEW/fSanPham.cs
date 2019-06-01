@@ -128,60 +128,70 @@ namespace QuanLyKho.VIEW
 
         private void btnCapNhatLSP_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa loại sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.Yes)
             {
-                if (txtTenLSP.Text == "")
+                try
                 {
-                    MessageBox.Show("Không được để trống tên loại sản phẩm");
-                }
-                else
-                {
-                    bool sua = LoaiSanPham_DAO.Instance.SuaLoaiSanPham(Convert.ToInt16(txtMaLSP.Text),txtTenLSP.Text.ToString(), txtGhiChu.Text.ToString());
-                    if (sua)
+                    if (txtTenLSP.Text == "")
                     {
-                        MessageBox.Show("Cập nhật loại sản phẩm thành công");
+                        MessageBox.Show("Không được để trống tên loại sản phẩm");
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật thất bại");
+                        bool sua = LoaiSanPham_DAO.Instance.SuaLoaiSanPham(Convert.ToInt16(txtMaLSP.Text), txtTenLSP.Text.ToString(), txtGhiChu.Text.ToString());
+                        if (sua)
+                        {
+                            MessageBox.Show("Cập nhật loại sản phẩm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại");
+                        }
                     }
-                }
-                LayTatCaLSP();
+                    LayTatCaLSP();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+ 
         }
 
         private void btnXoaLSP_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa loại sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
             {
-                if (txtMaLSP.Text == "")
+                try
                 {
-                    MessageBox.Show("Chọn 1 loại sản phẩm để xóa");
-                }
-                else
-                {
-                    bool xoa = LoaiSanPham_DAO.Instance.XoaLoaiSanPham(Convert.ToInt16(txtMaLSP.Text));
-                    if (xoa)
+                    if (txtMaLSP.Text == "")
                     {
-                        MessageBox.Show("Xóa thành công");
+                        MessageBox.Show("Chọn 1 loại sản phẩm để xóa");
                     }
                     else
                     {
-                        MessageBox.Show("Xóa thất bại");
+                        bool xoa = LoaiSanPham_DAO.Instance.XoaLoaiSanPham(Convert.ToInt16(txtMaLSP.Text));
+                        if (xoa)
+                        {
+                            MessageBox.Show("Xóa thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thất bại");
+                        }
                     }
-                }
-                LayTatCaLSP();
+                    LayTatCaLSP();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         private void btnTimKiemLSP_Click(object sender, EventArgs e)
@@ -245,60 +255,71 @@ namespace QuanLyKho.VIEW
 
         private void btnXoaNSX_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhà sản xuất này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.Yes)
             {
-                if (txtMa_NSX.Text == "")
+                try
                 {
-                    MessageBox.Show("Chọn 1 nhà sản xuất để xóa");
-                }
-                else
-                {
-                    bool xoa = NhaSanXuat_DAO.Instance.XoaNSX(Convert.ToInt16(txtMa_NSX.Text));
-                    if (xoa)
+                    if (txtMa_NSX.Text == "")
                     {
-                        MessageBox.Show("Xóa thành công");
+                        MessageBox.Show("Chọn 1 nhà sản xuất để xóa");
                     }
                     else
                     {
-                        MessageBox.Show("Xóa thất bại");
+                        bool xoa = NhaSanXuat_DAO.Instance.XoaNSX(Convert.ToInt16(txtMa_NSX.Text));
+                        if (xoa)
+                        {
+                            MessageBox.Show("Xóa thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thất bại");
+                        }
                     }
-                }
-                LayTatCaNSX();
+                    LayTatCaNSX();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+
         }
 
         private void btnSuaNSX_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa nhà sản xuất này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
             {
-                if (txtTen_NSX.Text == "")
+                try
                 {
-                    MessageBox.Show("Không được để trống tên nhà sản xuất");
-                }
-                else
-                {
-                    bool sua = NhaSanXuat_DAO.Instance.SuaNSX(Convert.ToInt16(txtMa_NSX.Text), txtTen_NSX.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString(), txtWebsite.Text.ToString());
-                    if (sua)
+                    if (txtTen_NSX.Text == "")
                     {
-                        MessageBox.Show("Cập nhật nhà sản xuất thành công");
+                        MessageBox.Show("Không được để trống tên nhà sản xuất");
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật thất bại");
+                        bool sua = NhaSanXuat_DAO.Instance.SuaNSX(Convert.ToInt16(txtMa_NSX.Text), txtTen_NSX.Text.ToString(), txtDiaChi.Text.ToString(), txtSDT.Text.ToString(), txtWebsite.Text.ToString());
+                        if (sua)
+                        {
+                            MessageBox.Show("Cập nhật nhà sản xuất thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại");
+                        }
                     }
-                }
-                LayTatCaNSX();
+                    LayTatCaNSX();
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         private void btnTimKiemNSX_Click(object sender, EventArgs e)
@@ -323,12 +344,140 @@ namespace QuanLyKho.VIEW
         }
         #endregion
 
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTenSanPham.Text == "")
+                {
+                    MessageBox.Show("Không được để trống tên sản phẩm");
+                }
+                else
+                {
+                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                    if (them)
+                    {
+                        MessageBox.Show("Thêm sản phẩm thành công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
+                }
+                LayTatCaSP();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuySP_Click(object sender, EventArgs e)
+        {
+            txtTenSanPham.Text = "";
+            txtMaSanPham.Text = "";
+            txtThongSoKyThuat.Text = "";
+            txtDonGia.Text = "";
+            //cbTenNhaSanXuat.SelectedText = "Chưa có tên nhà sản xuất";
+            //cbTenNhaSanXuat.SelectedValue = "";
+            //cbLoaiSanPham.SelectedText = "Chưa có loại sản phẩm";
+            //cbLoaiSanPham.SelectedValue = "";
+            loadcbLSP(cbLoaiSanPham);
+            loadcbNSX(cbTenNhaSanXuat);
+            nrudSoLuong.Value = 0;
+        }
+
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    if (txtTenSanPham.Text == "")
+                    {
+                        MessageBox.Show("Không được để trống tên sản phẩm");
+                    }
+                    else
+                    {
+                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToInt32(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                        if (sua)
+                        {
+                            MessageBox.Show("Cập nhật sản phẩm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật thất bại");
+                        }
+                    }
+                    LayTatCaSP();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
         }
 
-        private void cbTenNhaSanXuat_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.Yes)
+            {
+                try
+                {
+                    if (txtMaSanPham.Text == "")
+                    {
+                        MessageBox.Show("Chọn 1 sản phẩm để xóa");
+                    }
+                    else
+                    {
+                        bool xoa = SanPham_DAO.Instance.XoaSanPham(Convert.ToInt32(txtMaSanPham.Text));
+                        if (xoa)
+                        {
+                            MessageBox.Show("Xóa thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thất bại");
+                        }
+                    }
+                    LayTatCaSP();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+    
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            List<SanPham_DTO> SP = SanPham_DAO.Instance.TimKiemSP(txtTimKiem.Text.ToString());
+            if (SP.Count <= 0)
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm nào.");
+            }
+            else
+            {
+                this.DanhSachSP.DataSource = SP;
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTimKiem.Text == "")
+            {
+                LayTatCaSP();
+            }
+        }
+
+        private void dtgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

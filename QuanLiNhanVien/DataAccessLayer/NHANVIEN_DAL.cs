@@ -16,14 +16,14 @@ namespace DataAccessLayer
             try
             {
                 List<NHANVIEN_DTO> lstNhanVien = new List<NHANVIEN_DTO>();
-                SqlConnection db = DataProvider.dbContext;
+                SqlConnection db = DataProvider.dbContext;// ket noi den csdl
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "LoadAllNhanVien";
                 cmd.Connection = db;
-                SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();// goi den storeprocedure de lay du lieu
                 
-                while (reader.Read())
+                while (reader.Read())// dua du lieu vao lstNhanVien
                 {
                     NHANVIEN_DTO nvDTO = new NHANVIEN_DTO();
                     int MaNGS;

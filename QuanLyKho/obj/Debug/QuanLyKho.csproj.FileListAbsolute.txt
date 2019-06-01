@@ -27,33 +27,3 @@ E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.cache
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.exe
 E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.pdb
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe.config
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.pdb
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csprojAssemblyReference.cache
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fKhachHang.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fmain.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fNhanVien.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fNhapHang.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fSanPham.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fXuatHang.resources
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.cache
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.cache
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.exe
-C:\Users\Asus\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.pdb
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe.config
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.exe
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\bin\Debug\QuanLyKho.pdb
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csprojAssemblyReference.cache
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fKhachHang.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fmain.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fNhanVien.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fNhapHang.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fSanPham.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.VIEW.fXuatHang.resources
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.cache
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.cache
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.exe
-C:\Users\thang\Desktop\KY VI\TTN\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.pdb
