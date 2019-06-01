@@ -29,7 +29,7 @@ namespace QuanLiNhanVien.GUI
             dtgvDuAn.DataSource = typeof(List<DUAN_DTO>);
             dtgvDuAn.DataSource = lstDuAn;
             //EditDataGridView();
-            lstPhongBan = PHONGBAN_BUL.LoadComboBoxPhongBan();
+            lstPhongBan = PHONGBAN_BUL.LoadTatCaPhongBan();
             coboPhongBan.DataSource = lstPhongBan;
             coboPhongBan.DisplayMember = "TenPB";
             coboPhongBan.ValueMember = "MaPB";

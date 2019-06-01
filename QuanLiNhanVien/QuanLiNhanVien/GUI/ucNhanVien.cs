@@ -27,7 +27,7 @@ namespace QuanLiNhanVien.GUI
         {
             lstNhanVien = NHANVIEN_BUL.LoadTatCaNhanVien();
             lstNhanVien_NGS = NHANVIEN_BUL.LoadComboBoxNGS();
-            lstPhongBan = PHONGBAN_BUL.LoadComboBoxPhongBan();
+            lstPhongBan = PHONGBAN_BUL.LoadTatCaPhongBan();
 
             cboNguoiGS.DataSource = lstNhanVien_NGS;
             cboNguoiGS.DisplayMember = "HoTen";

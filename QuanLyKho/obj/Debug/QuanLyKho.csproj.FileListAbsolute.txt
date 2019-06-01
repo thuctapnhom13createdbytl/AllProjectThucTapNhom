@@ -44,3 +44,7 @@ E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\bin\Debug\Metr
 E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\bin\Debug\MetroFramework.dll
 E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\bin\Debug\MetroFramework.Fonts.dll
 E:\study\nam 3\thực tập nhóm\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\bin\Debug\MetroFramework.Design.dll
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\bin\Debug\MetroFramework.dll
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\bin\Debug\MetroFramework.Fonts.dll
+E:\Tai_lieu\HK_Hè\Kì 5\Thực tập nhóm\Git\AllProjectThucTapNhom\QuanLyKho\obj\Debug\QuanLyKho.csproj.CopyComplete

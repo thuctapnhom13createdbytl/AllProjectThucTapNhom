@@ -27,7 +27,7 @@ namespace QuanLyKho.DAO
         public List<KhachHang_DTO> LoadToanBoKhachHang()
         {
             List<KhachHang_DTO> lstKhachHang = new List<KhachHang_DTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("LayTatCaKhachHang");
+            DataTable data = DataProvider.Instance.ExecuteQuery("LoadToanBoKhachHang");
             foreach (DataRow item in data.Rows)
             {
                 KhachHang_DTO kh = new KhachHang_DTO(item);

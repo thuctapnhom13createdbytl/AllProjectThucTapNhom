@@ -1,8 +1,8 @@
-﻿use QLTV
+﻿use QuanLiThuVien
 go
 
 -- tạo proc lấy tất cả thông tin đầu sách
-alter proc LayTatCaDauSach
+CREATE proc LayTatCaDauSach
 as
 begin
 	select DauSach.*, TenNXB, TheLoai.TenTheLoai from 
@@ -12,6 +12,11 @@ end
 go
 ----tạo proc update đầu sách
 
+
+CREATE PROC LayTatCaNhanVien
+AS
+	SELECT * FROM dbo.NhanVien
+go 
 
 --tạo trigger xóa đầu sách
 create trigger XoaDauSach on DauSach instead of delete

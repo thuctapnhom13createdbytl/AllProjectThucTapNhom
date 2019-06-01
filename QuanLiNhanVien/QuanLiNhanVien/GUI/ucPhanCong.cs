@@ -40,7 +40,7 @@ namespace QuanLiNhanVien.GUI
         protected override void OnLoad(EventArgs e)
         {
             lstPhanCong = PHANCONG_BUL.LoadTatCaPhanCong();
-            lstDuAn = DUAN_BUL.LoadComboBoxDuAn();
+            lstDuAn = DUAN_BUL.LoadTatCaDuAn();
             lstNhanVien = NHANVIEN_BUL.LoadTatCaNhanVien();
 
             chklstNhanVien.DataSource = lstNhanVien;
