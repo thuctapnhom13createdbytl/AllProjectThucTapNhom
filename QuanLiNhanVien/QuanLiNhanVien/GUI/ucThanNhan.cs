@@ -71,9 +71,9 @@ namespace QuanLiNhanVien.GUI
                 dtpkNgaySinh.Value = dr.Cells["ngaysinhTN"].Value == null ? DateTime.Now : DateTime.Parse(dr.Cells["ngaysinhTN"].Value.ToString());
                 this.TenTNUpdate = tbTenTN.Text;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Error");
+                return;
             }
         }
 

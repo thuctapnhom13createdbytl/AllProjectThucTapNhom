@@ -200,7 +200,7 @@
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
-            this.btnHuy.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHuy.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnHuy.Location = new System.Drawing.Point(794, 11);
             this.btnHuy.Name = "btnHuy";
@@ -215,7 +215,7 @@
             // btnCapNhat
             // 
             this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
-            this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCapNhat.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnCapNhat.Location = new System.Drawing.Point(523, 11);
             this.btnCapNhat.Name = "btnCapNhat";
@@ -230,7 +230,7 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnXoa.Location = new System.Drawing.Point(649, 11);
             this.btnXoa.Name = "btnXoa";
@@ -245,7 +245,7 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnThem.Location = new System.Drawing.Point(388, 11);
             this.btnThem.Name = "btnThem";
