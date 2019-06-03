@@ -109,6 +109,12 @@
     <Compile Include="VIEW\fThongTinLopHoc.Designer.cs">
       <DependentUpon>fThongTinLopHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\fGVCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fGVCN.Designer.cs">
+      <DependentUpon>fGVCN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VIEW\fGiaoVien.resx">
       <DependentUpon>fGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\fThongTinLopHoc.resx">
       <DependentUpon>fThongTinLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fGVCN.resx">
+      <DependentUpon>fGVCN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

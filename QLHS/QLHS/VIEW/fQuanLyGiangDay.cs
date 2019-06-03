@@ -27,6 +27,7 @@ namespace QLHS.VIEW
 
             dtgvLop.DataSource = DSLop;
             DSLop.DataSource = Lop_DAO.Instance.LayTatCaLop();
+            btnGVCN.Enabled = txtTenGiaoVien.Text == "" && txtLop.Text !="" ? true : false;
         }
 
         private void dtgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +65,23 @@ namespace QLHS.VIEW
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             DSLop.DataSource = Lop_DAO.Instance.TimKiemLop(txtTimKiem.Text);
+        }
+
+        private void btnGVCN_Click(object sender, EventArgs e)
+        {
+            int index = dtgvLop.CurrentCell.RowIndex;
+            DataGridViewRow dr = dtgvLop.Rows[index];
+            int maLop = Convert.ToInt32(dr.Cells["MaLop"].Value);
+            fGVCN f = new fGVCN(maLop);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+            DSLop.DataSource = Lop_DAO.Instance.LayTatCaLop();
+        }
+
+        private void txtTenGiaoVien_TextChanged(object sender, EventArgs e)
+        {
+            btnGVCN.Enabled = txtTenGiaoVien.Text != "" ? false : true;
         }
     }
 }

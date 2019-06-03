@@ -21,5 +21,18 @@ namespace QLHS.DAO
                 instance = value;
             }
         }
+        public int ThemGVCN(int MaLop,int MaGiaoVien)
+        {
+            try
+            {
+                string query = string.Format("insert into GVCN(MaLop,MaGaioVien) values({0},{1})", MaLop,MaGiaoVien);
+                int ThemGV = DataProvider.Instance.ExecuteNonQuery(query);
+                return ThemGV;
+            }
+            catch
+            {
+                return -1;
+            }
+        }
     }
 }

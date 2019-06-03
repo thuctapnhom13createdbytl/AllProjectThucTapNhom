@@ -39,7 +39,7 @@ namespace QLHS.DAO
         {
             try
             {
-                string query = string.Format("insert into GiaoVien(MaMonHoc,TenGiaoVien,SDT,Email) values({0},N'{1}','{1}','{2}')", MaMH, TenGV, SDT, Email);
+                string query = string.Format("insert into GiaoVien(MaMonHoc,TenGiaoVien,SDT,Email) values({0},N'{1}','{2}','{3}')", MaMH, TenGV, SDT, Email);
                 int ThemGV = DataProvider.Instance.ExecuteNonQuery(query);
                 return ThemGV;
             }

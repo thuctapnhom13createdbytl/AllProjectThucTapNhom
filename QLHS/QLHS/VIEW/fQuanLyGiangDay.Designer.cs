@@ -46,6 +46,7 @@
             this.btnDanhSachLop = new System.Windows.Forms.Button();
             this.txtLop = new System.Windows.Forms.TextBox();
             this.txtTenGiaoVien = new System.Windows.Forms.TextBox();
+            this.btnGVCN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvLop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             this.txtKhoi.Location = new System.Drawing.Point(326, 12);
             this.txtKhoi.Name = "txtKhoi";
             this.txtKhoi.ReadOnly = true;
-            this.txtKhoi.Size = new System.Drawing.Size(142, 20);
+            this.txtKhoi.Size = new System.Drawing.Size(179, 20);
             this.txtKhoi.TabIndex = 3;
             this.txtKhoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -204,9 +205,20 @@
             this.txtTenGiaoVien.Location = new System.Drawing.Point(119, 51);
             this.txtTenGiaoVien.Name = "txtTenGiaoVien";
             this.txtTenGiaoVien.ReadOnly = true;
-            this.txtTenGiaoVien.Size = new System.Drawing.Size(349, 20);
+            this.txtTenGiaoVien.Size = new System.Drawing.Size(249, 20);
             this.txtTenGiaoVien.TabIndex = 12;
             this.txtTenGiaoVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTenGiaoVien.TextChanged += new System.EventHandler(this.txtTenGiaoVien_TextChanged);
+            // 
+            // btnGVCN
+            // 
+            this.btnGVCN.Location = new System.Drawing.Point(374, 49);
+            this.btnGVCN.Name = "btnGVCN";
+            this.btnGVCN.Size = new System.Drawing.Size(131, 23);
+            this.btnGVCN.TabIndex = 13;
+            this.btnGVCN.Text = "Chọn giáo viên";
+            this.btnGVCN.UseVisualStyleBackColor = true;
+            this.btnGVCN.Click += new System.EventHandler(this.btnGVCN_Click);
             // 
             // fQuanLyGiangDay
             // 
@@ -214,6 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(702, 592);
+            this.Controls.Add(this.btnGVCN);
             this.Controls.Add(this.txtTenGiaoVien);
             this.Controls.Add(this.btnDanhSachLop);
             this.Controls.Add(this.btnTimKiem);
@@ -254,5 +267,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGVCN;
         private System.Windows.Forms.TextBox txtTenGiaoVien;
+        private System.Windows.Forms.Button btnGVCN;
     }
 }
