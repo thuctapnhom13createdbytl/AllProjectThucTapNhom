@@ -45,7 +45,7 @@ namespace QuanLyKho.VIEW
 
         private void btnNhapSanPham_Click(object sender, EventArgs e)
         {
-            fNhapHang f = new fNhapHang();
+            fDSPhieuNhap f = new fDSPhieuNhap();
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -53,7 +53,7 @@ namespace QuanLyKho.VIEW
 
         private void btnXuatSanPham_Click(object sender, EventArgs e)
         {
-            fXuatHang f = new fXuatHang();
+            fDSPhieuXuat f = new fDSPhieuXuat();
             this.Hide();
             f.ShowDialog();
             this.Show();

@@ -87,5 +87,29 @@ namespace QuanLyKho.DAO
 
             return DanhSachSP;
         }
+        public List<SanPham_DTO> LayTatCaSanPhamTheoNSX(int MaNSX)
+        {
+            List<SanPham_DTO> DanhSachSP = new List<SanPham_DTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SPTheoNSX @MaNSX", new object[] {MaNSX });
+            foreach (DataRow item in data.Rows)
+            {
+                SanPham_DTO SanPham = new SanPham_DTO(item);
+                DanhSachSP.Add(SanPham);
+            }
+            return DanhSachSP;
+        }
+        public bool CapNhatSoLuong(int MaSP,int SoLuong)
+        {
+            try
+            {
+                string query = string.Format("update SanPham set SoLuong = SanPham.SoLuong+{0} where SanPham.Ma_Sanpham = {1}",SoLuong,MaSP);
+                DataProvider.Instance.ExecuteNonQuery(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -9,15 +9,16 @@ namespace QuanLyKho.DTO
 {
     public class SanPham_DTO
     {
-        private int soLuong;
-        private string tenNSX;
-        private decimal donGia;
         private int maSP;
         private string tenSP;
-        private string thongSoKyThuat;
-        private string tenLoaiSP;
-        private int maLoaiSP;
         private int maNSX;
+        private string tenNSX;
+        private int maLoaiSP;
+        private string tenLoaiSP;
+        private int soLuong;
+        private decimal donGia;
+        private string thongSoKyThuat;
+        private Nullable<decimal> tongTien;
 
         public SanPham_DTO (int soLuong, string tenNSX, decimal donGia, int maSP, string tenSP, string thongSoKyThuat, string tenLoaiSP, int maLoaiSP, int maNSX)
         {
@@ -30,6 +31,7 @@ namespace QuanLyKho.DTO
             this.TenLoaiSP = tenLoaiSP;
             this.MaLoaiSP = maLoaiSP;
             this.MaNSX = maNSX;
+            this.TongTien = 0;
         }
 
         public SanPham_DTO (DataRow row)
@@ -43,6 +45,7 @@ namespace QuanLyKho.DTO
             this.TenLoaiSP = row["TenLoai"].ToString() != "" ? row["TenLoai"].ToString() : "chưa có loại sản phẩm" ;
             this.MaLoaiSP = row["ma_loaiSP"].ToString() != "" ? (int)row["ma_loaiSP"] : 0;
             this.MaNSX = row["Ma_NSX"].ToString() != "" ? (int)row["Ma_NSX"] : 0;
+            this.TongTien = 0;
         }
         public int MaSP
         {
@@ -158,6 +161,19 @@ namespace QuanLyKho.DTO
             set
             {
                 maNSX = value;
+            }
+        }
+
+        public decimal? TongTien
+        {
+            get
+            {
+                return tongTien;
+            }
+
+            set
+            {
+                tongTien = value;
             }
         }
     }

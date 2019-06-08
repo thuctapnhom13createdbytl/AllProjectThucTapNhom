@@ -45,6 +45,30 @@
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,23 +82,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CTPhieuNhap_DAO.cs" />
+    <Compile Include="DAO\CTPhieuXuat_DAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\KhachHang_DAO.cs" />
     <Compile Include="DAO\LoaiSanPham_DAO.cs" />
     <Compile Include="DAO\NhanVien_DAO.cs" />
     <Compile Include="DAO\NhapHang_DAO.cs" />
     <Compile Include="DAO\NhaSanXuat_DAO.cs" />
+    <Compile Include="DAO\PhieuNhap_DAO.cs" />
+    <Compile Include="DAO\PhieuXuat_DAO.cs" />
     <Compile Include="DAO\SanPham_DAO.cs" />
     <Compile Include="DAO\XuatHang_DAO.cs" />
+    <Compile Include="DTO\CTPhieuNhap_DTO.cs" />
+    <Compile Include="DTO\CTPhieuXuat_DTO.cs" />
     <Compile Include="DTO\KhachHang_DTO.cs" />
     <Compile Include="DTO\LoaiSanPham_DTO.cs" />
     <Compile Include="DTO\NhanVien_DTO.cs" />
     <Compile Include="DTO\NhapHang_DTO.cs" />
     <Compile Include="DTO\NhaSanXuat_DTO.cs" />
+    <Compile Include="DTO\PhieuNhap_DTO.cs" />
+    <Compile Include="DTO\PhieuXuat_DTO.cs" />
     <Compile Include="DTO\SanPham_DTO.cs" />
     <Compile Include="DTO\XuatHang_DTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyKhoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="VIEW\DataSetHoaDonNhap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHoaDonNhap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\DataSetHoaDonXuat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHoaDonXuat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fHoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fHoaDonXuat.Designer.cs">
+      <DependentUpon>fHoaDonXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fThemPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fThemPhieuXuat.Designer.cs">
+      <DependentUpon>fThemPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fDSPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fDSPhieuNhap.Designer.cs">
+      <DependentUpon>fDSPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fDSPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fDSPhieuXuat.Designer.cs">
+      <DependentUpon>fDSPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\fKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,23 +165,23 @@
     <Compile Include="VIEW\fNhanVien.Designer.cs">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\fNhapHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VIEW\fNhapHang.Designer.cs">
-      <DependentUpon>fNhapHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="VIEW\fSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VIEW\fSanPham.Designer.cs">
       <DependentUpon>fSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\fXuatHang.cs">
+    <Compile Include="VIEW\fThemPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIEW\fXuatHang.Designer.cs">
-      <DependentUpon>fXuatHang.cs</DependentUpon>
+    <Compile Include="VIEW\fThemPhieuNhap.Designer.cs">
+      <DependentUpon>fThemPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\fHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\fHoaDonNhap.Designer.cs">
+      <DependentUpon>fHoaDonNhap.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +193,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VIEW\fHoaDonXuat.resx">
+      <DependentUpon>fHoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fThemPhieuXuat.resx">
+      <DependentUpon>fThemPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fDSPhieuNhap.resx">
+      <DependentUpon>fDSPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fDSPhieuXuat.resx">
+      <DependentUpon>fDSPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,15 +214,17 @@
     <EmbeddedResource Include="VIEW\fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\fNhapHang.resx">
-      <DependentUpon>fNhapHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\fSanPham.resx">
       <DependentUpon>fSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\fXuatHang.resx">
-      <DependentUpon>fXuatHang.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\fThemPhieuNhap.resx">
+      <DependentUpon>fThemPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\fHoaDonNhap.resx">
+      <DependentUpon>fHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\rpNhapHang.rdlc" />
+    <EmbeddedResource Include="VIEW\rpXuatHang.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +235,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyKhoDataSet.xsc">
+      <DependentUpon>QuanLyKhoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyKhoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyKhoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyKhoDataSet.xss">
+      <DependentUpon>QuanLyKhoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VIEW\DataSetHoaDonNhap.xsc">
+      <DependentUpon>DataSetHoaDonNhap.xsd</DependentUpon>
+    </None>
+    <None Include="VIEW\DataSetHoaDonNhap.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHoaDonNhap.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VIEW\DataSetHoaDonNhap.xss">
+      <DependentUpon>DataSetHoaDonNhap.xsd</DependentUpon>
+    </None>
+    <None Include="VIEW\DataSetHoaDonXuat.xsc">
+      <DependentUpon>DataSetHoaDonXuat.xsd</DependentUpon>
+    </None>
+    <None Include="VIEW\DataSetHoaDonXuat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHoaDonXuat.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VIEW\DataSetHoaDonXuat.xss">
+      <DependentUpon>DataSetHoaDonXuat.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -191,6 +310,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1124957994-197.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

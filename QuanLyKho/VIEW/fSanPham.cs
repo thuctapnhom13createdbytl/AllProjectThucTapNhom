@@ -68,7 +68,7 @@ namespace QuanLyKho.VIEW
         #region binding
         void bindingSanPham()
         {
-            txtDonGia.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "DonGia", true, DataSourceUpdateMode.Never));
+            nmDonGia.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "DonGia", true, DataSourceUpdateMode.Never));
             txtMaSanPham.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "MaSP", true, DataSourceUpdateMode.Never));
             txtTenSanPham.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "TenSP", true, DataSourceUpdateMode.Never));
             txtThongSoKyThuat.DataBindings.Add(new Binding("Text", dtgvSanPham.DataSource, "ThongSoKyThuat", true, DataSourceUpdateMode.Never));
@@ -356,7 +356,7 @@ namespace QuanLyKho.VIEW
                 }
                 else
                 {
-                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                    bool them = SanPham_DAO.Instance.ThemSanPham(txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue),txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(nmDonGia.Value), Convert.ToInt32(nrudSoLuong.Value));
                     if (them)
                     {
                         MessageBox.Show("Thêm sản phẩm thành công");
@@ -380,7 +380,7 @@ namespace QuanLyKho.VIEW
             txtTenSanPham.Text = "";
             txtMaSanPham.Text = "";
             txtThongSoKyThuat.Text = "";
-            txtDonGia.Text = "";
+            nmDonGia.Value = 0;
             //cbTenNhaSanXuat.SelectedText = "Chưa có tên nhà sản xuất";
             //cbTenNhaSanXuat.SelectedValue = "";
             //cbLoaiSanPham.SelectedText = "Chưa có loại sản phẩm";
@@ -406,7 +406,7 @@ namespace QuanLyKho.VIEW
                     }
                     else
                     {
-                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(txtDonGia.Text), Convert.ToInt32(nrudSoLuong.Value));
+                        bool sua = SanPham_DAO.Instance.SuaSanPham(Convert.ToInt16(txtMaSanPham.Text), txtTenSanPham.Text.ToString(), Convert.ToInt32(cbTenNhaSanXuat.SelectedValue), txtThongSoKyThuat.Text.ToString(), Convert.ToInt32(cbLoaiSanPham.SelectedValue), Convert.ToDecimal(nmDonGia.Value), Convert.ToInt32(nrudSoLuong.Value));
                         if (sua)
                         {
                             MessageBox.Show("Cập nhật sản phẩm thành công");
